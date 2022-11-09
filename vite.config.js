@@ -12,7 +12,10 @@ export default defineConfig({
     ],
     build: {
         manifest: true,
-        outDir: '../public',
+        outDir: 'public/build',
         emptyOutDir: true,
+        rollupOptions: {
+            input: 'resources/js/app.jsx'
+        }
     }
 });
