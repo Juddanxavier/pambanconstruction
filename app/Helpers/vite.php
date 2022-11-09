@@ -24,7 +24,7 @@ if (! function_exists('vite_assets')) {
         HTML);
         }
         $manifest = json_decode(file_get_contents(
-            public_path('dist/manifest.json')
+            public_path('build/manifest.json')
         ), true);
         return new HtmlString(<<<HTML
         <script type="module" src="/build/{$manifest['resources/js/app.js']['file']}"></script>
