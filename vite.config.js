@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
     plugins: [
@@ -10,12 +11,17 @@ export default defineConfig({
         }),
         react(),
     ],
+    // root: path.resolve(__dirname, '../public_html/build'),
+    // build: {
+    //     manifest: true,
+    //     outDir: 'public',
+    // }
     build: {
+        outDir: path.resolve(__dirname, 'public'),
+        emptyOutDir: false,
         manifest: true,
-        outDir: 'public/build',
-        emptyOutDir: true,
         rollupOptions: {
-            input: 'resources/js/app.jsx'
+          input: 'resources/js/app.jsx',
         }
     }
 });
