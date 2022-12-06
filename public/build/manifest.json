@@ -11,10 +11,6 @@
     "file": "assets/clock.4f7aa5a0.svg",
     "src": "resources/images/clock.svg"
   },
-  "resources/images/medal.svg": {
-    "file": "assets/medal.0a66ea69.svg",
-    "src": "resources/images/medal.svg"
-  },
   "resources/images/rupee.svg": {
     "file": "assets/rupee.87e9f11e.svg",
     "src": "resources/images/rupee.svg"
@@ -22,6 +18,10 @@
   "resources/images/safety.svg": {
     "file": "assets/safety.34115155.svg",
     "src": "resources/images/safety.svg"
+  },
+  "resources/images/medal.svg": {
+    "file": "assets/medal.0a66ea69.svg",
+    "src": "resources/images/medal.svg"
   },
   "resources/js/app.jsx": {
     "file": "assets/app.24fbab0d.js",
@@ -32,7 +32,7 @@
       "resources/js/Pages/Welcome.jsx"
     ],
     "css": [
-      "assets/app.b099d963.css"
+      "assets/app.349d3c81.css"
     ]
   },
   "resources/js/Pages/About.jsx": {
@@ -70,11 +70,11 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.b099d963.css",
+    "file": "assets/app.349d3c81.css",
     "src": "resources/js/app.css"
   },
   "resources/css/filament.css": {
-    "file": "assets/filament.128d87c4.css",
+    "file": "assets/filament.685f8ec9.css",
     "src": "resources/css/filament.css",
     "isEntry": true
   }
