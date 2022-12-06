@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="128" y1="512" x2="896" y2="512">
+	<stop  offset="0" style="stop-color:#669933"/>
+	<stop  offset="0.1727" style="stop-color:#689B36"/>
+	<stop  offset="0.3154" style="stop-color:#70A041"/>
+	<stop  offset="0.4474" style="stop-color:#7DA852"/>
+	<stop  offset="0.5729" style="stop-color:#8FB56A"/>
+	<stop  offset="0.694" style="stop-color:#A7C489"/>
+	<stop  offset="0.8116" style="stop-color:#C4D7B0"/>
+	<stop  offset="0.9244" style="stop-color:#E5EEDD"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<path class="st0" d="M512,64L128,192v384c0,212.1,171.9,384,384,384s384-171.9,384-384V192L512,64z M824,576
+	c0,172.3-139.7,312-312,312S200,748.3,200,576V246l312-110l312,110V576z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="316.9243" y1="520.3" x2="740.575" y2="520.3">
+	<stop  offset="0" style="stop-color:#669933"/>
+	<stop  offset="0.1727" style="stop-color:#689B36"/>
+	<stop  offset="0.3154" style="stop-color:#70A041"/>
+	<stop  offset="0.4474" style="stop-color:#7DA852"/>
+	<stop  offset="0.5729" style="stop-color:#8FB56A"/>
+	<stop  offset="0.694" style="stop-color:#A7C489"/>
+	<stop  offset="0.8116" style="stop-color:#C4D7B0"/>
+	<stop  offset="0.9244" style="stop-color:#E5EEDD"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<path class="st1" d="M378.4,475.1c-14-14.1-36.7-14.1-50.8-0.1c0,0-0.1,0.1-0.1,0.1c-14.1,14-14.1,36.7-0.1,50.8
+	c0,0,0.1,0.1,0.1,0.1l129.4,129.4l2.1,2.1c13.3,13.3,34.8,13.3,48.1,0c0,0,0,0,0,0L730.6,434c13.3-13.3,13.3-34.8,0-48.1
+	c0,0,0,0,0,0l-2.8-2.8c-13.3-13.3-34.8-13.3-48.1,0c0,0,0,0,0,0L483,579.7L378.4,475.1z"/>
+</svg>

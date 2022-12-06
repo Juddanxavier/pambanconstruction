@@ -1,14 +1,20 @@
 import React from 'react';
-import { Link, Head } from '@inertiajs/inertia-react';
-import Navbar from '@/Components/Navbar'
+import { Head } from '@inertiajs/inertia-react';
 import Hero from '@/Components/Hero'
+import ProjectWidget from '@/Components/Projectwidget'
+import Hometile from '@/Components/Hometile'
+import Frontendlayout from '../Layouts/Frontend'
+import Team from '@/Components/Team'
+
 export default function Welcome(props) {
+    
     return (
-        <>
-            <Head title="Welcome" />
-            <Navbar />
+        <Frontendlayout>
+            <Head title="Home - Pamban Contructions" />
             <Hero />
-             Hello world!
-        </>
+            <ProjectWidget />
+            <Hometile />
+            <Team />
+        </Frontendlayout>
     );
 }

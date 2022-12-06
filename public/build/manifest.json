@@ -7,158 +7,75 @@
     "file": "assets/pambanlogomark.e6a80b29.png",
     "src": "resources/images/pambanlogomark.png"
   },
+  "resources/images/clock.svg": {
+    "file": "assets/clock.4f7aa5a0.svg",
+    "src": "resources/images/clock.svg"
+  },
+  "resources/images/medal.svg": {
+    "file": "assets/medal.0a66ea69.svg",
+    "src": "resources/images/medal.svg"
+  },
+  "resources/images/rupee.svg": {
+    "file": "assets/rupee.87e9f11e.svg",
+    "src": "resources/images/rupee.svg"
+  },
+  "resources/images/safety.svg": {
+    "file": "assets/safety.34115155.svg",
+    "src": "resources/images/safety.svg"
+  },
   "resources/js/app.jsx": {
-    "file": "assets/app.f8181d74.js",
+    "file": "assets/app.24fbab0d.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
       "resources/js/Pages/About.jsx",
-      "resources/js/Pages/Auth/ConfirmPassword.jsx",
-      "resources/js/Pages/Auth/ForgotPassword.jsx",
-      "resources/js/Pages/Auth/Login.jsx",
-      "resources/js/Pages/Auth/Register.jsx",
-      "resources/js/Pages/Auth/ResetPassword.jsx",
-      "resources/js/Pages/Auth/VerifyEmail.jsx",
-      "resources/js/Pages/Dashboard.jsx",
       "resources/js/Pages/Welcome.jsx"
     ],
     "css": [
-      "assets/app.aa1b7039.css"
+      "assets/app.b099d963.css"
     ]
   },
   "resources/js/Pages/About.jsx": {
-    "file": "assets/About.4a7a68d1.js",
+    "file": "assets/About.29f5278b.js",
     "src": "resources/js/Pages/About.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "resources/js/app.jsx"
-    ]
-  },
-  "resources/js/Pages/Auth/ConfirmPassword.jsx": {
-    "file": "assets/ConfirmPassword.90faea06.js",
-    "src": "resources/js/Pages/Auth/ConfirmPassword.jsx",
-    "isDynamicEntry": true,
-    "imports": [
       "resources/js/app.jsx",
-      "_PrimaryButton.3685b78d.js",
-      "_TextInput.d5b9bb65.js",
-      "_InputLabel.d225bdba.js",
-      "_ApplicationLogo.18b1d6c5.js"
+      "_Frontend.7fe8d2e7.js"
     ]
   },
-  "_PrimaryButton.3685b78d.js": {
-    "file": "assets/PrimaryButton.3685b78d.js",
-    "imports": [
-      "resources/js/app.jsx",
-      "_ApplicationLogo.18b1d6c5.js"
-    ]
-  },
-  "_TextInput.d5b9bb65.js": {
-    "file": "assets/TextInput.d5b9bb65.js",
+  "_Frontend.7fe8d2e7.js": {
+    "file": "assets/Frontend.7fe8d2e7.js",
     "imports": [
       "resources/js/app.jsx"
-    ]
-  },
-  "_InputLabel.d225bdba.js": {
-    "file": "assets/InputLabel.d225bdba.js",
-    "imports": [
-      "resources/js/app.jsx"
-    ]
-  },
-  "_ApplicationLogo.18b1d6c5.js": {
-    "file": "assets/ApplicationLogo.18b1d6c5.js",
-    "imports": [
-      "resources/js/app.jsx"
-    ]
-  },
-  "resources/js/Pages/Auth/ForgotPassword.jsx": {
-    "file": "assets/ForgotPassword.95657576.js",
-    "src": "resources/js/Pages/Auth/ForgotPassword.jsx",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.jsx",
-      "_PrimaryButton.3685b78d.js",
-      "_TextInput.d5b9bb65.js",
-      "_ApplicationLogo.18b1d6c5.js"
-    ]
-  },
-  "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login.ab14b03f.js",
-    "src": "resources/js/Pages/Auth/Login.jsx",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.jsx",
-      "_PrimaryButton.3685b78d.js",
-      "_TextInput.d5b9bb65.js",
-      "_InputLabel.d225bdba.js",
-      "_ApplicationLogo.18b1d6c5.js"
-    ]
-  },
-  "resources/js/Pages/Auth/Register.jsx": {
-    "file": "assets/Register.fbb35bf4.js",
-    "src": "resources/js/Pages/Auth/Register.jsx",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.jsx",
-      "_PrimaryButton.3685b78d.js",
-      "_TextInput.d5b9bb65.js",
-      "_InputLabel.d225bdba.js",
-      "_ApplicationLogo.18b1d6c5.js"
-    ]
-  },
-  "resources/js/Pages/Auth/ResetPassword.jsx": {
-    "file": "assets/ResetPassword.4d720d8a.js",
-    "src": "resources/js/Pages/Auth/ResetPassword.jsx",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.jsx",
-      "_PrimaryButton.3685b78d.js",
-      "_TextInput.d5b9bb65.js",
-      "_InputLabel.d225bdba.js",
-      "_ApplicationLogo.18b1d6c5.js"
-    ]
-  },
-  "resources/js/Pages/Auth/VerifyEmail.jsx": {
-    "file": "assets/VerifyEmail.03117e3a.js",
-    "src": "resources/js/Pages/Auth/VerifyEmail.jsx",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.jsx",
-      "_PrimaryButton.3685b78d.js",
-      "_ApplicationLogo.18b1d6c5.js"
-    ]
-  },
-  "resources/js/Pages/Dashboard.jsx": {
-    "file": "assets/Dashboard.5269e22c.js",
-    "src": "resources/js/Pages/Dashboard.jsx",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.jsx",
-      "_ApplicationLogo.18b1d6c5.js",
-      "_open-closed.7d03da44.js"
-    ]
-  },
-  "_open-closed.7d03da44.js": {
-    "file": "assets/open-closed.7d03da44.js",
-    "imports": [
-      "resources/js/app.jsx"
-    ]
-  },
-  "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome.e3188de9.js",
-    "src": "resources/js/Pages/Welcome.jsx",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.jsx",
-      "_open-closed.7d03da44.js"
     ],
     "assets": [
       "assets/pambanlogo.aafb3821.png",
       "assets/pambanlogomark.e6a80b29.png"
     ]
   },
+  "resources/js/Pages/Welcome.jsx": {
+    "file": "assets/Welcome.4b8daa04.js",
+    "src": "resources/js/Pages/Welcome.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_Frontend.7fe8d2e7.js"
+    ],
+    "assets": [
+      "assets/clock.4f7aa5a0.svg",
+      "assets/rupee.87e9f11e.svg",
+      "assets/safety.34115155.svg",
+      "assets/medal.0a66ea69.svg"
+    ]
+  },
   "resources/js/app.css": {
-    "file": "assets/app.aa1b7039.css",
+    "file": "assets/app.b099d963.css",
     "src": "resources/js/app.css"
+  },
+  "resources/css/filament.css": {
+    "file": "assets/filament.128d87c4.css",
+    "src": "resources/css/filament.css",
+    "isEntry": true
   }
 }

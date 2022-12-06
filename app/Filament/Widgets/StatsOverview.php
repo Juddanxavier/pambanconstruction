@@ -2,24 +2,29 @@
 
 namespace App\Filament\Widgets;
 
+use App\Models\Project;
+use App\Models\ConstructionSpecification;
+use App\Models\Testimonial;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Card;
 
 class StatsOverview extends BaseWidget
 {
+    protected static ?int $sort = 3;
+
     protected function getCards(): array
     {
+        $projects = Project::all()->count();
+        $speicifications = ConstructionSpecification::all()->count();
+        $testimonal = Testimonial::all()->count();
+
         return [
-            Card::make('Unique Views', '192.1k')
-                ->description('32k increase')
+            Card::make('Total Projects', $projects)
+                ->chart([7,2,10,3,15,4,17]),
+            Card::make('Total Construction Specifications', $speicifications)
+                ->chart([7,2,10,3,15,4,17]),
+            Card::make('Total Testimonals', $testimonal)
                 ->chart([7,2,10,3,15,4,17])
-                ->descriptionIcon('heroicon-s-trending-up'),
-            Card::make('Bounce Rate', '21%')
-                ->description('7% increase')
-                ->descriptionIcon('heroicon-s-trending-down'),
-            Card::make('Average time on page', '3:12')
-                ->description('3% increase')
-                ->descriptionIcon('heroicon-s-trending-up')
         ];
     }
 }

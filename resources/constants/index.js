@@ -2,7 +2,7 @@
 
 export const navLinks = [
     {
-        id: "home",
+        id: "/",
         title: "Home",
         current: true
     },
@@ -20,5 +20,32 @@ export const navLinks = [
         id: "contact",
         title: "Contact",
         current: false
+    }
+]
+
+export const team = [
+    {
+        id: 1,
+        name: "John Doe",
+        profilePicture: 'https://via.placeholder.com/300',
+        designation: "Manager",
+    },
+    {
+        id: 2,
+        name: "Peter Doe",
+        profilePicture: 'https://via.placeholder.com/300',
+        designation: "CFO",
+    },
+    {
+        id: 3,
+        name: "Jane Doe",
+        profilePicture: 'https://via.placeholder.com/300',
+        designation: "Sr.Manager",
+    },
+    {
+        id: 4,
+        name: "John smith",
+        profilePicture: 'https://via.placeholder.com/300',
+        designation: "CEO",
     }
 ]

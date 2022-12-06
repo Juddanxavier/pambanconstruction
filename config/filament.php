@@ -5,7 +5,6 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
 use Filament\Pages;
 use Filament\Widgets;
-use Filament\Widgets\Widget;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -13,7 +12,6 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-// use Filament\Widgets\ProjectStatsOverview;
 
 return [
 
@@ -74,8 +72,8 @@ return [
     |
     */
 
-    // 'brand' => env('APP_NAME'),
-    'brand' => 'Pamban Constructions',
+    'brand' => env('APP_NAME'),
+
     /*
     |--------------------------------------------------------------------------
     | Auth
@@ -223,6 +221,7 @@ return [
     |
     */
 
+    
     'layout' => [
         'actions' => [
             'modal' => [
@@ -238,9 +237,9 @@ return [
             'have_inline_labels' => false,
         ],
         'footer' => [
-            'should_show_logo' => true,
+            'should_show_logo' => false,
         ],
-        'max_content_width' => null,
+        'max_content_width' => '7xl',
         'notifications' => [
             'vertical_alignment' => 'top',
             'alignment' => 'right',
@@ -254,6 +253,7 @@ return [
             'collapsed_width' => null,
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------

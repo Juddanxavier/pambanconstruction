@@ -6,6 +6,7 @@ use App\Models\Project;
 use App\Http\Resources\ProjectResource;
 use App\Models\Testimonial;
 use App\Http\Resources\TestimonialResource;
+use App\Http\Controllers\ProjectController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,11 +22,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/projects', function() {
-    $projects = Project::orderBy('title')->get();
+// Route::get('/projects', function() {
+//     $projects = Project::orderBy('title')->get();
 
-    return ProjectResource::collection($projects);
-});
+//     return ProjectResource::collection($projects);
+// });
+
+Route::get('/projects', [ProjectController::class, 'index']);
 
 Route::get('/testimonial', function() {
     $testimonial = Testimonial::orderBy('name')->get();

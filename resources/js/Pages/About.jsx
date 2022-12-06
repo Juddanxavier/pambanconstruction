@@ -1,8 +1,14 @@
+import { Head } from '@inertiajs/inertia-react'
 import React from 'react'
+import Frontendlayout from '../Layouts/Frontend'
 
 function About() {
   return (
-    <div>Coming soon...</div>
+    <Frontendlayout>
+      <Head title="About" />
+<div>Coming soon...</div>
+    </Frontendlayout>
+    
   )
 }
 

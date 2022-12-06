@@ -1,13 +1,19 @@
 import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+import laravel, {refreshPaths } from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: 'resources/js/app.jsx',
-            refresh: true,
+            input: [
+                'resources/js/app.jsx',
+                'resource/css/filament.css'
+            ],
+            refresh: [
+                ...refreshPaths,
+                'app/Http/Livewire/**'
+            ],
         }),
         react(),
     ],
@@ -21,7 +27,10 @@ export default defineConfig({
         emptyOutDir: false,
         manifest: true,
         rollupOptions: {
-          input: 'resources/js/app.jsx',
+            input: [
+                'resources/js/app.jsx',
+                'resources/css/filament.css'
+            ],
         }
     }
 });
