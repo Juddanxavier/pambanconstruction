@@ -6,8 +6,8 @@ import Hometile from '@/Components/Hometile'
 import Frontendlayout from '../Layouts/Frontend'
 import Team from '@/Components/Team'
 
-export default function Welcome(props) {
-    
+export default function Welcome() {
+
     return (
         <Frontendlayout>
             <Head title="Home - Pamban Contructions" />
@@ -15,6 +15,7 @@ export default function Welcome(props) {
             <ProjectWidget />
             <Hometile />
             <Team />
-        </Frontendlayout>
+        </Frontendlayout> 
+
     );
 }

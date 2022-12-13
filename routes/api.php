@@ -35,3 +35,5 @@ Route::get('/testimonial', function() {
 
     return TestimonialResource::collection($testimonial);
 });
+
+Route::get('/projects/{slug}', [ProjectController::class, 'detail']);

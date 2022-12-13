@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
+            $table->string('slug');
             $table->text('address');
             $table->text('description');
             $table->text('construction_specifications')->nullable();

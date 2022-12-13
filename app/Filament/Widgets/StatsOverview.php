@@ -23,7 +23,7 @@ class StatsOverview extends BaseWidget
                 ->chart([7,2,10,3,15,4,17]),
             Card::make('Total Construction Specifications', $speicifications)
                 ->chart([7,2,10,3,15,4,17]),
-            Card::make('Total Testimonals', $testimonal)
+            Card::make('Total Testimonials', $testimonal)
                 ->chart([7,2,10,3,15,4,17])
         ];
     }

@@ -25,6 +25,8 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Columns\BadgeColumn;
 use Livewire\TemporaryUploadedFile;
+use Camya\Filament\Forms\Components\TitleWithSlugInput;
+use Filament\Forms\Components\Textarea;
 
 class ProjectResource extends Resource
 {
@@ -52,18 +54,25 @@ class ProjectResource extends Resource
                             Tabs\Tab::make('General')
                                 ->icon('heroicon-o-identification')
                                 ->schema([
-                                    TextInput::make('title')->required()->columnSpan('full'),
+                                    TitleWithSlugInput::make(
+                                        fieldTitle: 'title',
+                                        fieldSlug: 'slug',
+                                        urlPath: '/projects/',
+                                        titleRules: [
+                                            'required',
+                                            'string',
+
+                                        ],
+                                    )->columnSpan('full'),
                                     TextInput::make('address')->required(),
-                                    RichEditor::make('description')
-                                        ->required(),
+                                    Textarea::make('description')->required(),
                                     // Select::make
                                     Radio::make('status')->options([
                                         'Upcoming' => 'Upcoming',
                                         'Ongoing' => 'Ongoing',
                                         'Completed' => 'Completed',
                                     ])->inline()->required(),
-                                    RichEditor::make('location')
-                                    ->required()->disableAllToolbarButtons(),
+                                    RichEditor::make('location')->required(),
                                 ]),
                             Tabs\Tab::make('Constructions Specifications')
                                 ->icon('heroicon-o-clipboard-check')

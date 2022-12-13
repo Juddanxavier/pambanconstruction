@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Foundation\Application;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -15,13 +15,14 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome');
-});
+Route::get('/', [ProjectController::class, 'index'])->name('project.index');
 
+Route::get('project/{slug}', [ProjectController::class, 'detail'])->name('project.detail');
 
 Route::get('about', function() {
     return Inertia::render('About');
 });
 
+Route::resource('/', ProjectController::class);
+// Route::resource('/{slug}', ProjectController::class);
 require __DIR__.'/auth.php';
