@@ -17,7 +17,7 @@ use Inertia\Inertia;
 
 Route::get('/', [ProjectController::class, 'index'])->name('project.index');
 
-Route::get('project/{slug}', [ProjectController::class, 'detail'])->name('project.detail');
+Route::get('/{slug}', [ProjectController::class, 'detail'])->name('project.detail');
 
 Route::get('about', function() {
     return Inertia::render('About');

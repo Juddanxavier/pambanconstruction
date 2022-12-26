@@ -24,7 +24,7 @@ class ProjectResource extends JsonResource
             'location' => $this->location,
             'description' => $this->description,
             'status' => $this->status,
-            'gallery' => $this->gallery,
+            'gallery' => asset('/storage/' . $this->gallery),
             // 'gallery' => Storage::url('demo'),
         ];
     }

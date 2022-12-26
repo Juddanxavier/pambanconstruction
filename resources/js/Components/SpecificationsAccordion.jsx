@@ -23,10 +23,7 @@ const SpecificationsAccordion = () => {
     })
   return (
     <div>
-        <div className="flex flex-col justify-center item-center md:mt-32 md:mx-10 p-10 rounded-xl h-auto w-auto py-20 bg-transparent">
-            <div className="text-xl2">
-            Project Specifications
-            </div>
+        <div className="rounded-xl h-auto w-auto bg-transparent">
             {specifications.map(item => {
                 return(
                     <div key={item.id}>

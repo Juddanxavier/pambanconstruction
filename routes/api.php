@@ -28,12 +28,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return ProjectResource::collection($projects);
 // });
 
-Route::get('/projects', [ProjectController::class, 'index']);
+// Route::get('/projects', [ProjectController::class, 'index']);
 
-Route::get('/testimonial', function() {
-    $testimonial = Testimonial::orderBy('name')->get();
+// Route::get('/testimonial', function() {
+//     $testimonial = Testimonial::orderBy('name')->get();
 
-    return TestimonialResource::collection($testimonial);
-});
+//     return TestimonialResource::collection($testimonial);
+// });
 
 Route::get('/projects/{slug}', [ProjectController::class, 'detail']);

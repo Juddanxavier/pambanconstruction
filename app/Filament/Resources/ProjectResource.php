@@ -72,7 +72,7 @@ class ProjectResource extends Resource
                                         'Ongoing' => 'Ongoing',
                                         'Completed' => 'Completed',
                                     ])->inline()->required(),
-                                    RichEditor::make('location')->required(),
+                                    TextInput::make('location')->required()->helperText('Right on google map location then click on latitude and longitude to copy, paste here'),
                                 ]),
                             Tabs\Tab::make('Constructions Specifications')
                                 ->icon('heroicon-o-clipboard-check')

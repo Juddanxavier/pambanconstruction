@@ -12,7 +12,7 @@ const AccordionUI = ({title, children, Id, Index, setIndex}) => {
     <>
     <div onClick={() => handleSetIndex(Id)} className="flex items-center group cursor-pointer w-full mx-auto h-16 justify-between font-bold text-left text-slate-700 p-2 border-b border-slate-200 bg-transparent">
         <div className="flex group cursor-pointer">
-            <div className="text-slate-700 font-semibold">
+            <div className="font-semibold">
                 {title}
             </div>
         </div>

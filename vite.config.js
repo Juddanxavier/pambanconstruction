@@ -17,6 +17,9 @@ export default defineConfig({
         }),
         react(),
     ],
+    commonjsOptions: {
+        esmExternals: true,
+     },
     // root: path.resolve(__dirname, '../public_html/build'),
     // build: {
     //     manifest: true,
