@@ -1,67 +1,53 @@
 import React, { useState } from 'react'
+import Lightbox from 'react-image-lightbox'
 
-const ProjectUpdates = (props) => {
-    // console.log(props.update_gallery)
+const ProjectUpdates = ({ updates }) => {
+    const date = updates.map(date => {
+        return date.update_month
+    })
+    const galleryImage = updates
+    const [dates, setDates] = useState(date)
+    const [selectedDate, setSelectedDate] = useState(date[0])
+    const [images, setImages] = useState(galleryImage)
+    const [isOpen, setIsOpen] = useState(false)
+    const [photoIndex, setPhotoIndex] = useState(0)
 
-    // const updates = props.update_gallery.map((update, index)=> {
-    // const [selectedTab, setSelectedTab] = useState(updates)
-    // console.log(updates);
-
-    // const updatedProject = updates.map((update, index) => {
-        // console.log(update)
-        // const images = update.update_gallery.map((image, index) => {
-        //     return <img key={index} src={image} alt="gallery" />
-//         })
-//         console.log(update)
-//     return (
-// <div className="relative">
-// <h2 className="text-3xl">Hello</h2>
-
-//             <div className="flex border-b border-gray-300">
-//                 <div key={index}>
-//                     <h1>
-//                         {update.update_month}
-//                     </h1>
-//                     {images}
-//                 </div>
-                {/* {updates.updates.map(date => (
-                    <button key={date}
-                        className={`w-1/2 text-center py-2 font-medium ${date === selectedTab ? 'bg-gray-200' : 'bg-white'}`}
-                        onClick={() => setSelectedTab(date)} >
-                            {date}
-                        </button>
-                ))} */}
-            {/* </div>
+    const handleDateChange = event => {
+        setSelectedDate(event.target.value)
+    }
+    const filteredImages = images.filter(image => image.update_month === selectedDate)
+    return (
+        <div className="container mx-auto">
+            {dates.map((date, index) => (
+                <button key={index} value={date} type="button" className='py-2.5 my-4 px-5 mb-2 text-sm font-medium text-gray-900 focus:outline-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700' onClick={handleDateChange}>{date}</button>
+            ))}
+            <div className="flex flex-wrap justify-around">
+                {filteredImages.map((gallery, index) => (
+                    <div key={gallery.update_month} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:py-8">
+                        {gallery.update_gallery.map((image, index) => (
+                            <div key={index} className="overflow-hidden	relative col-span-1 h-96 w-96 sm:h-64 sm:w-64">
+                                <img className="rounded-lg object-cover h-full w-full transition duration-500 ease-in-out transform hover:scale-125 cursor-pointer" src={`storage/${image}`}
+                                    onClick={() => setIsOpen(true)} alt={image} />
+                                {isOpen && (
+                                    <Lightbox
+                                        mainSrc={`storage/${gallery.update_gallery[photoIndex]}`}
+                                        nextSrc={gallery.update_gallery[(photoIndex + 1) % gallery.update_gallery.length]}
+                                        prevSrc={gallery.update_gallery[(photoIndex + gallery.update_gallery.length - 1) % gallery.update_gallery.length]}
+                                        onCloseRequest={() => setIsOpen(false)}
+                                        onMovePrevRequest={() =>
+                                            setPhotoIndex((photoIndex + gallery.update_gallery.length - 1) % gallery.update_gallery.length)
+                                        }
+                                        onMoveNextRequest={() =>
+                                            setPhotoIndex((photoIndex + 1) % gallery.update_gallery.length)
+                                        } />
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div>
         </div>
     )
-}) */}
-
-const [updateMonth, setUpdateMonth] = useState(null)
-
-const handleClick = update_month => {
-    setUpdateMonth(update_month)
-}
-console.log(props)
-return (
-    <div>
-        {props.update_gallery.map((item, index) => (            
-            <div key={index}>
-                <button key={index}
-                        className= "w-1/2 text-center py-2 font-medium"
-                        onClick={() => handleClick(item.update_month)} >
-                            {item.update_month}
-                        </button>
-                        {updateMonth === item.update_month && (
-                            <div>
-                                {item.update_gallery.map(image =>(
-                                <img src={`storage/${image}`} alt={image} />
-                            ))}
-                            </div>
-                        )}
-            </div>
-        ))}
-    </div>
-)
 }
 
 export default ProjectUpdates

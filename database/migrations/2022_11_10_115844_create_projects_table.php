@@ -18,6 +18,8 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('slug');
+            $table->string('area');
+            $table->string('uds');
             $table->text('address');
             $table->text('description');
             $table->text('construction_specifications')->nullable();
@@ -25,6 +27,7 @@ return new class extends Migration
             $table->text('location');
             $table->json('updates')->nullable();
             $table->json('gallery')->nullable();
+            $table->json('files')->nullable();
         });
     }
 

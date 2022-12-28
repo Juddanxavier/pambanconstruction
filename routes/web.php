@@ -26,3 +26,17 @@ Route::get('about', function() {
 Route::resource('/', ProjectController::class);
 // Route::resource('/{slug}', ProjectController::class);
 require __DIR__.'/auth.php';
+
+// routes/web.php
+
+Route::get('/storage/{filename}', function ($filename) {
+  // Retrieve the file from storage
+  $path = Storage::disk('local')->path('storage/' . $filename);
+  // Check if the file exists
+  if (file_exists($path)) {
+    // Send the file data back to the frontend
+    return response()->download($path);
+  }
+  // Return a 404 error if the file does not exist
+  return response()->json(['error' => 'File not found'], 404);
+});

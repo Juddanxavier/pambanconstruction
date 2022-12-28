@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import laravel, {refreshPaths } from 'laravel-vite-plugin';
+import laravel, { refreshPaths } from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
@@ -19,7 +19,7 @@ export default defineConfig({
     ],
     commonjsOptions: {
         esmExternals: true,
-     },
+    },
     // root: path.resolve(__dirname, '../public_html/build'),
     // build: {
     //     manifest: true,

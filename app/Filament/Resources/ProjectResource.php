@@ -57,13 +57,18 @@ class ProjectResource extends Resource
                                     TitleWithSlugInput::make(
                                         fieldTitle: 'title',
                                         fieldSlug: 'slug',
-                                        urlPath: '/projects/',
+                                        urlPath: '/',
                                         titleRules: [
                                             'required',
                                             'string',
 
                                         ],
                                     )->columnSpan('full'),
+                                    Grid::make(2)
+                                        ->schema([
+                                            TextInput::make('area')->required()->numeric()->suffix('Sq.Ft'),
+                                    TextInput::make('uds')->required()->numeric()->suffix('Sq.Ft')
+                                        ]),
                                     TextInput::make('address')->required(),
                                     Textarea::make('description')->required(),
                                     // Select::make
@@ -106,9 +111,7 @@ class ProjectResource extends Resource
                                 ->schema([
                                     FileUpload::make('gallery')
                                         ->disk('public')
-                                        ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                                            return (string) str($file->getClientOriginalName());
-                                        })
+                                        ->preserveFilenames()
                                         ->image()
                                         ->multiple()
                                         ->label('Project Image')
@@ -121,7 +124,23 @@ class ProjectResource extends Resource
                                         ->removeUploadedFileButtonPosition('right')
                                         ->panelLayout('compact'),
                                 ]),
-
+Tabs\Tab::make('Brochures')
+                                ->icon('heroicon-o-book-open')
+                                ->schema([
+                                    Repeater::make('BrochureRep')
+                                        ->schema([
+                                    TextInput::make('name'),
+                                            FileUpload::make('Brochure')
+                                                ->disk('public')
+                                                ->directory('brochures')
+                                                ->preserveFilenames()
+                                                ->label('Brochure')
+                                                ->maxFiles(1)
+                                                ->removeUploadedFileButtonPosition('right')
+                                                ->reactive(),
+                                        ])
+                                        ->itemLabel(fn(array $state): ?string => $state['name'] ?? null)->collapsible(),
+                                    ]),
                             Tabs\Tab::make('Project Updates')
                                 ->icon('heroicon-o-check-circle')
                                 ->schema([
@@ -130,9 +149,7 @@ class ProjectResource extends Resource
                                             DatePicker::make('update_month')->displayFormat('F-Y')->format('F-y')->reactive(),
                                             FileUpload::make('update_gallery')
                                                 ->disk('public')
-                                                ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                                                    return (string) str($file->getClientOriginalName());
-                                                })
+                                                ->preserveFilenames()
                                                 ->image()
                                                 ->multiple()
                                                 ->label('Project updates')

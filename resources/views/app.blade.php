@@ -14,6 +14,7 @@
         @viteReactRefresh
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         @inertiaHead
+        <script>var global = global || window;</script>
     </head>
     <body class="antialiased text-gray-600">
         @inertia

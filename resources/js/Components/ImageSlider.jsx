@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { ArrowLongRightIcon, ArrowLongLeftIcon } from '@heroicons/react/24/solid'
 
-const ImageSlider = ({slides}) => {
+const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const sliderStyle = {
     height: '100%',
     position: 'relative'
   }
-  console.log(currentIndex)
   const slideStyles = {
     width: '100%',
     height: '100%',
@@ -40,15 +39,15 @@ const ImageSlider = ({slides}) => {
   }
   return (
     <div style={sliderStyle}>
-      
-    <div className='h-full w-full'>
-        <img className="object-contain rounded h-full w-full " src={`storage/${slides[currentIndex]}`} alt="" />
-    </div>
-    <div className="flex flex-row-reverse mr-6">
-    <div className="my-5 mr-12" style={leftArrow} onClick={goToPrevious}>      <ArrowLongLeftIcon className="h-8 w-8 text-slate-500"/>
-</div>
-      <div className="my-5" style={rightArrow} onClick={goToNext}><ArrowLongRightIcon className="h-8 w-8 text-slate-500"/></div>
-    </div>
+
+      <div className='h-full w-full rounded'>
+        <img className="object-contain rounded-lg h-full w-full " src={`storage/${slides[currentIndex]}`} alt="" />
+      </div>
+      <div className="flex flex-row-reverse mr-6">
+        <div className="my-5 mr-12" style={leftArrow} onClick={goToPrevious}>      <ArrowLongLeftIcon className="h-8 w-8 text-slate-500" />
+        </div>
+        <div className="my-5" style={rightArrow} onClick={goToNext}><ArrowLongRightIcon className="h-8 w-8 text-slate-500" /></div>
+      </div>
     </div>
   )
 }
