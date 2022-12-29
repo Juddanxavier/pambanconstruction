@@ -3,8 +3,6 @@ import React from 'react'
 
 export default function RecentPost(projects) {
     var projects = usePage().props.recentProjects;
-
-    console.log(projects)
     return (
         <div className="mt-10">
             {projects.map(item => (
