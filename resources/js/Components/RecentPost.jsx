@@ -11,10 +11,10 @@ export default function RecentPost(projects) {
                 <div key={item.id} className="flex flex-row">
                     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                         <a href={item.slug}>
-                            <img className="rounded-t-lg" src={`storage/${item.gallery[0]}`} alt="" />
+                            <img className="transition duration-500 ease-in-out transform hover:scale-125 cursor-pointer rounded-t-lg" src={`storage/${item.gallery[0]}`} alt="" />
                         </a>
                         <div className="p-5">
-                            <a href="#">
+                            <a href={item.slug}>
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.title}</h5>
                             </a>
                             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.description.substring(0, 150) + "..."}</p>
