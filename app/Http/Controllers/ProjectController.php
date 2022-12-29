@@ -23,10 +23,19 @@ class ProjectController extends Controller
     }
     public function detail($slug) {
         $projectDetail = Project::where('slug', $slug)->first();
-
+        $recentProjects = Project::latest('updated_at')->limit(5)->select(
+                    'id',
+                    'title',
+                    'slug', 
+                    'gallery',
+                    'description'
+                )->get();
         return Inertia::render(
-            'Projectdetail',
-            compact('projectDetail')
+            'Projectdetail',[
+                'projectDetail' => $projectDetail,
+                'recentProjects' => $recentProjects
+            ]
+            // compact('projectDetail', 'recentProjects')
             // ['projectDetail' => $projectDetail]
         );
     }

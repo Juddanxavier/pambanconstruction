@@ -127,17 +127,16 @@ class ProjectResource extends Resource
 Tabs\Tab::make('Brochures')
                                 ->icon('heroicon-o-book-open')
                                 ->schema([
-                                    Repeater::make('BrochureRep')
+                                    Repeater::make('files')
                                         ->schema([
                                     TextInput::make('name'),
-                                            FileUpload::make('Brochure')
+                                            FileUpload::make('file_path')
                                                 ->disk('public')
                                                 ->directory('brochures')
                                                 ->preserveFilenames()
                                                 ->label('Brochure')
                                                 ->maxFiles(1)
                                                 ->removeUploadedFileButtonPosition('right')
-                                                ->reactive(),
                                         ])
                                         ->itemLabel(fn(array $state): ?string => $state['name'] ?? null)->collapsible(),
                                     ]),
@@ -146,7 +145,7 @@ Tabs\Tab::make('Brochures')
                                 ->schema([
                                     Repeater::make('updates')
                                         ->schema([
-                                            DatePicker::make('update_month')->displayFormat('F-Y')->format('F-y')->reactive(),
+                                            DatePicker::make('update_month')->displayFormat('F-yy')->format('F-yy')->reactive(),
                                             FileUpload::make('update_gallery')
                                                 ->disk('public')
                                                 ->preserveFilenames()
@@ -162,7 +161,7 @@ Tabs\Tab::make('Brochures')
                                                 ->removeUploadedFileButtonPosition('right')
                                                 ->panelLayout('compact'),
                                         ])
-                                        ->itemLabel(fn(array $state): ?string => $state['id'] ?? null)->collapsible(),
+                                        ->itemLabel(fn(array $state): ?string => $state['update_month'] ?? null)->collapsible(),
                                 ]),
                         ]),
 

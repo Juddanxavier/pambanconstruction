@@ -7,6 +7,7 @@ import LocationMap from '../Components/LocationMap'
 import ProjectUpdates from '../Components/ProjectUpdates'
 import EmiCalculator from '@/Components/EmiCalculator'
 import DownloadButton from '@/Components/Filedownload'
+import RecentPost from '@/Components/RecentPost'
 
 function ProjectDetail() {
   const data = usePage().props.projectDetail
@@ -26,6 +27,7 @@ function ProjectDetail() {
     zoom: 15
   }
   const updates = data.updates
+
   return (
     <Frontendlayout>
       <Head title="Project" />
@@ -76,18 +78,22 @@ function ProjectDetail() {
             <div className='text-white'>USD</div>
             <span className="text-4xl font-black text-white">{data.uds}</span>
           </div>
-          <div>
-            <EmiCalculator />
-          </div>
-          <h1 className="text-2xl text-slate-800 font-bold mb-4">Download Brochures</h1>
-          <div className="flex flex-col mx-auto items-center">
-            {data.brochure.map(item => (
-              <DownloadButton fileName="moringa.pdf" name={"Moringa"} />
+          <h1 className="text-2xl text-slate-800 mt-6 font-bold mb-4">Download Brochures</h1>
+          <div className="flex flex-col">
+            {data.files.map((item, index) => (
+              <DownloadButton key={index} fileName={`storage/${item.file_path}`} name={item.name} />
 
             ))}
 
           </div>
+          <div>
+            <EmiCalculator />
+          </div>
+
         </div>
+        <div className="w-auto my-10">
+          <span className='text-2xl text-slate-800 font-bold mb-10'>Recent Projects</span>
+          <RecentPost /></div>
       </div>
     </Frontendlayout>
 
