@@ -11,13 +11,18 @@ import RecentPost from '@/Components/RecentPost'
 
 function ProjectDetail() {
   const data = usePage().props.projectDetail
-  console.log(data);
+  console.log(data)
   const containerStyles = {
     // width: "100%",
     // height: "100%",
     margin: "0 auto"
   };
-  const [lat, lon] = data.location.split(',').map(s => s.trim())
+  var [lat, lon] = []
+  if (Object.values(data.location).some(isNaN)) {
+    [lat, lon] = [0, 0]  
+  } else {
+  [lat, lon] = data.location.split(',').map(s => s.trim())
+  }
   const mapProps = {
     center: {
       lat: parseFloat(lat),
@@ -72,11 +77,11 @@ function ProjectDetail() {
           </div>
           <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4 border-b-white border-b-2">
             <div className='text-white'>Area</div>
-            <span className="text-4xl font-black text-white">{data.area}</span>
+            <span className="text-4xl font-black text-white">{data.area} Sq.Ft</span>
           </div>
           <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4">
             <div className='text-white'>USD</div>
-            <span className="text-4xl font-black text-white">{data.uds}</span>
+            <span className="text-4xl font-black text-white">{data.uds} Sq.Ft</span>
           </div>
           <h1 className="text-2xl text-slate-800 mt-6 font-bold mb-4">Download Brochures</h1>
           <div className="flex flex-col">
@@ -89,11 +94,13 @@ function ProjectDetail() {
           <div>
             <EmiCalculator />
           </div>
-
+</div>
         </div>
-        <div className="w-auto my-10">
-          <span className='text-2xl text-slate-800 font-bold mb-10'>Recent Projects</span>
-          <RecentPost /></div>
+        <div className="flex justify-between w-auto mx-10 md:mx-20">
+          <span className='text-2xl text-slate-800 font-bold mb-10'>Recent Projects</span><a className="text-left text-lg hover:text-indigo-600	" href="/projects">View All Projects</a>
+      </div>
+      <div className=" w-auto mx-10 md:mx-20">
+      <RecentPost />
       </div>
     </Frontendlayout>
 

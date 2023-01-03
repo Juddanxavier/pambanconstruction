@@ -23,10 +23,12 @@ use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Tabs\Tab;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
-use Filament\Tables\Columns\BadgeColumn;
 use Livewire\TemporaryUploadedFile;
 use Camya\Filament\Forms\Components\TitleWithSlugInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Checkbox;
+use Filament\Tables\Columns\ToggleColumn;
+use Filament\Tables\Columns\SelectColumn;
 
 class ProjectResource extends Resource
 {
@@ -64,11 +66,14 @@ class ProjectResource extends Resource
 
                                         ],
                                     )->columnSpan('full'),
-                                    Grid::make(2)
+                                    Grid::make(3)
                                         ->schema([
                                             TextInput::make('area')->required()->numeric()->suffix('Sq.Ft'),
-                                    TextInput::make('uds')->required()->numeric()->suffix('Sq.Ft')
+                                    TextInput::make('uds')->required()->numeric()->suffix('Sq.Ft'),
+                                    Checkbox::make('is_featured')->inline(false)->label('Is Featured?')
+
                                         ]),
+                                        
                                     TextInput::make('address')->required(),
                                     Textarea::make('description')->required(),
                                     // Select::make
@@ -177,13 +182,13 @@ Tabs\Tab::make('Brochures')
                 TextColumn::make('id')->sortable(),
                 TextColumn::make('title')->searchable(),
                 TextColumn::make('status')->sortable(),
-                BadgeColumn::make('status')
-                    ->colors([
-                        'primary' => 'Upcoming',
-                        'warning' => 'Ongoing',
-                        'success' => 'Completed',
-                    ]),
-                // ImageColumn::make('gallery')->square(),
+                SelectColumn::make('status')->options([
+                                        'Upcoming' => 'Upcoming',
+                                        'Ongoing' => 'Ongoing',
+                                        'Completed' => 'Completed',
+                                    ])->rules(['required'])->disablePlaceholderSelection(),
+                ToggleColumn::make('is_featured')
+
             ])
             ->filters([
                 SelectFilter::make('status')-> options([

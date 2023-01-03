@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Lightbox from 'react-image-lightbox'
+// import Lightbox from 'react-image-lightbox'
 
 const ProjectUpdates = ({ updates }) => {
     const date = updates.map(date => {
@@ -17,7 +17,7 @@ const ProjectUpdates = ({ updates }) => {
     }
     const filteredImages = images.filter(image => image.update_month === selectedDate)
     return (
-        <div className="container mx-auto">
+        <div className="">
             {dates.map((date, index) => (
                 <button key={index} value={date} type="button" className='py-2.5 my-4 px-5 mb-2 text-sm font-medium text-gray-900 focus:outline-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700' onClick={handleDateChange}>{date}</button>
             ))}
@@ -26,9 +26,9 @@ const ProjectUpdates = ({ updates }) => {
                     <div key={gallery.update_month} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:py-8">
                         {gallery.update_gallery.map((image, index) => (
                             <div key={index} className="overflow-hidden	relative col-span-1 h-96 w-96 sm:h-64 sm:w-64">
-                                <img className="rounded-lg object-cover h-full w-full transition duration-500 ease-in-out transform hover:scale-125 cursor-pointer" src={`storage/${image}`}
+                                <img className="rounded-sm object-cover h-full w-full transition duration-500 ease-in-out transform hover:scale-125 cursor-pointer" src={`storage/${image}`}
                                     onClick={() => setIsOpen(true)} alt={image} />
-                                {isOpen && (
+                                {/* {isOpen && (
                                     <Lightbox
                                         mainSrc={`storage/${gallery.update_gallery[photoIndex]}`}
                                         nextSrc={gallery.update_gallery[(photoIndex + 1) % gallery.update_gallery.length]}
@@ -40,7 +40,7 @@ const ProjectUpdates = ({ updates }) => {
                                         onMoveNextRequest={() =>
                                             setPhotoIndex((photoIndex + 1) % gallery.update_gallery.length)
                                         } />
-                                )}
+                                )} */}
                             </div>
                         ))}
                     </div>

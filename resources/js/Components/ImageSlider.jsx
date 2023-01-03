@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowLongRightIcon, ArrowLongLeftIcon } from '@heroicons/react/24/solid'
 
 const ImageSlider = ({ slides }) => {
+  const pathUrl = import.meta.env.VITE_STORAGE_IMG;
   const [currentIndex, setCurrentIndex] = useState(0)
   const sliderStyle = {
     height: '100%',
@@ -41,7 +42,7 @@ const ImageSlider = ({ slides }) => {
     <div style={sliderStyle}>
 
       <div className='h-full w-full rounded'>
-        <img className="object-contain rounded-lg h-full w-full " src={`storage/${slides[currentIndex]}`} alt="" />
+        <img className="object-contain rounded-sm h-full w-full " src={pathUrl + slides[currentIndex]} alt="" />
       </div>
       <div className="flex flex-row-reverse mr-6">
         <div className="my-5 mr-12" style={leftArrow} onClick={goToPrevious}>      <ArrowLongLeftIcon className="h-8 w-8 text-slate-500" />

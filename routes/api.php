@@ -22,13 +22,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/projects', function() {
-//     $projects = Project::orderBy('title')->get();
+Route::get('/projectsAPI', [ProjectController::class, 'ProjectsAPI']);
 
-//     return ProjectResource::collection($projects);
-// });
 
-// Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/projectfeatured', [ProjectController::class, 'index']);
 
 // Route::get('/testimonial', function() {
 //     $testimonial = Testimonial::orderBy('name')->get();
@@ -36,4 +33,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return TestimonialResource::collection($testimonial);
 // });
 
-Route::get('/projects/{slug}', [ProjectController::class, 'detail']);
+// Route::get('/projects/{slug}', [ProjectController::class, 'detail']);

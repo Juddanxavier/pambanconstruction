@@ -9,12 +9,13 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'slug', 'area', 'uds', 'address', 'construction_specifications', 'description', 'updates', 'status', 'location', 'gallery', 'files'];
+    protected $fillable = ['title', 'slug', 'area', 'uds', 'is_featured', 'address', 'construction_specifications', 'description', 'updates', 'status', 'location', 'gallery', 'files'];
 
     protected $casts =  [
         'gallery' => 'array',
         'updates' => 'array',
         'construction_specifications' => 'array',
-        'files' => 'array'
+        'files' => 'array',
+        'is_featured' => 'boolean'
     ];
 }

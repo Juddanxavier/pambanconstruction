@@ -4,6 +4,7 @@ import Clock from './clock.svg';
 import Rupee from './rupee.svg';
 import Safety from './safety.svg';
 import Medal from './medal.svg';
+import Pinkbuilding from './Pinkbuilding.jpg'
 
 export {
     logo,
@@ -11,5 +12,6 @@ export {
     Clock,
     Rupee,
     Safety,
-    Medal
+    Medal,
+    Pinkbuilding
 };

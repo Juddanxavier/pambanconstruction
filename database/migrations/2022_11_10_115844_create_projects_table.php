@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('slug');
             $table->string('area');
             $table->string('uds');
+            $table->boolean('is_featured')->default(0);
             $table->text('address');
             $table->text('description');
             $table->text('construction_specifications')->nullable();

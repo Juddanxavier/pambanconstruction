@@ -7,17 +7,17 @@ export const navLinks = [
         current: true
     },
     {
-        id: "about",
+        id: "/about",
         title: "About",
         current: false
     },
     {
-        id: "projects",
+        id: "/projects",
         title: "Projects",
         current: false
     },
     {
-        id: "contact",
+        id: "/contact",
         title: "Contact",
         current: false
     }

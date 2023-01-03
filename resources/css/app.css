@@ -6,3 +6,10 @@
 body {
     background-color: #f9f8f5;
 }
+
+.pinkbulding {
+    background-image: url('../images/pinkbuilding.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

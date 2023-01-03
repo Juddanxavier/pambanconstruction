@@ -15,16 +15,23 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [ProjectController::class, 'index'])->name('project.index');
+// Route::get('/', [ProjectController::class, 'index']);
 
-Route::get('/{slug}', [ProjectController::class, 'detail'])->name('project.detail');
+Route::get('project/{slug}', [ProjectController::class, 'detail']);
 
-Route::get('about', function() {
+Route::get('/about', function() {
     return Inertia::render('About');
+})->name('pages.about');
+Route::get('/', function() {
+    return Inertia::render('Welcome');
+})->name('pages.home');
+Route::get('projects', function() {
+  return Inertia::render('Projects');
 });
-
-Route::resource('/', ProjectController::class);
-// Route::resource('/{slug}', ProjectController::class);
+// Route::resource('/', ProjectController::class);
+// Route::resource('/{slug}', function(){
+//   return Inertia::render('Projectsdetail');
+// });
 require __DIR__.'/auth.php';
 
 // routes/web.php
