@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-// import Lightbox from 'react-image-lightbox'
-
+import Lightbox from 'react-18-image-lightbox'
 const ProjectUpdates = ({ updates }) => {
     const date = updates.map(date => {
         return date.update_month
@@ -11,6 +10,7 @@ const ProjectUpdates = ({ updates }) => {
     const [images, setImages] = useState(galleryImage)
     const [isOpen, setIsOpen] = useState(false)
     const [photoIndex, setPhotoIndex] = useState(0)
+    const pathUrl = import.meta.env.VITE_STORAGE_IMG;
 
     const handleDateChange = event => {
         setSelectedDate(event.target.value)
@@ -26,11 +26,11 @@ const ProjectUpdates = ({ updates }) => {
                     <div key={gallery.update_month} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:py-8">
                         {gallery.update_gallery.map((image, index) => (
                             <div key={index} className="overflow-hidden	relative col-span-1 h-96 w-96 sm:h-64 sm:w-64">
-                                <img className="rounded-sm object-cover h-full w-full transition duration-500 ease-in-out transform hover:scale-125 cursor-pointer" src={`storage/${image}`}
+                                <img className="rounded-sm object-cover h-full w-full transition duration-500 ease-in-out transform hover:scale-125 cursor-pointer" src={ pathUrl + image}
                                     onClick={() => setIsOpen(true)} alt={image} />
-                                {/* {isOpen && (
+                                {isOpen && (
                                     <Lightbox
-                                        mainSrc={`storage/${gallery.update_gallery[photoIndex]}`}
+                                        mainSrc={pathUrl + gallery.update_gallery[photoIndex]}
                                         nextSrc={gallery.update_gallery[(photoIndex + 1) % gallery.update_gallery.length]}
                                         prevSrc={gallery.update_gallery[(photoIndex + gallery.update_gallery.length - 1) % gallery.update_gallery.length]}
                                         onCloseRequest={() => setIsOpen(false)}
@@ -40,7 +40,7 @@ const ProjectUpdates = ({ updates }) => {
                                         onMoveNextRequest={() =>
                                             setPhotoIndex((photoIndex + 1) % gallery.update_gallery.length)
                                         } />
-                                )} */}
+                                )}
                             </div>
                         ))}
                     </div>

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { format } from "date-fns";
 import { Link } from "@inertiajs/inertia-react";
 import Axios from "@/Services";
-// import { Link } from '@inertiajs/inertia'
+import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 
 const ProjectWidget = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -13,7 +12,6 @@ const ProjectWidget = () => {
         await Axios.get("/projectfeatured")
             .then((res) => {
                 setProjects(res.data);
-                console.log(projects);
             })
             .catch((err) => console.error(err));
     };
@@ -22,23 +20,23 @@ const ProjectWidget = () => {
     }, []);
     return (
         <div>
-                <div className="flex p-10 md:mx-10 justify-between">
+                <div className="flex p-10 md:m-10 text-slate-800 justify-between">
                     <h1 className="text-left font-bold text-2xl">Featured Projects</h1>
-                <a className="text-left text-lg hover:text-indigo-600	" href="/projects">View All Projects</a>
+                <Link className="flex flex-row text-left text-lg text-indigo-500 hover:text-indigo-800" href="/projects">View All Projects <ArrowLongRightIcon className="w-6 pl-2"/></Link>
                 </div>
-                <div className="grid grid-col justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 md:mx-20 md:mb-10">
+                <div className="grid grid-col justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-12 md:mx-20 md:mb-10">
                     {projects.map((project) => (
                         <Link
                             key={project.id}
-                            className="mt-3 block"
+                            className="mt-3 block "
                             href={`project/${project.slug}`}
                         >
-                            <div className="bg-transparent rounded-sm  max-w-xs md:max-w-none overflow-hidden">
+                            <div className="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 bg-white border rounded-sm shadow-md  max-w-xs md:max-w-none overflow-hidden">
                                 <img
                                     key={project.id}
                                     src={ pathUrl + project.gallery[0]}
                                     alt={project.title}
-                                    className="h-56 lg:h-60 w-full object-cover rounded-md"
+                                    className="h-56 lg:h-60 w-full object-cover rounded-t-sm"
                                 />
                                 <div className="p-4">
                                     {/* <span className="text-sm text-gray-400">

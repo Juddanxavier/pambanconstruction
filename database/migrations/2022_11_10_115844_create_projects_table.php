@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->string('area');
             $table->string('uds');
-            $table->boolean('is_featured')->default(0);
+            $table->boolean('is_featured')->default(false);
             $table->text('address');
             $table->text('description');
             $table->text('construction_specifications')->nullable();

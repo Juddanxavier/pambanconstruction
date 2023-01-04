@@ -17,6 +17,11 @@ export const navLinks = [
         current: false
     },
     {
+        id: "/blog",
+        title: "Blog",
+        current: false
+    },
+    {
         id: "/contact",
         title: "Contact",
         current: false

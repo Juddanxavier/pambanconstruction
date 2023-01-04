@@ -7,6 +7,7 @@ use App\Http\Resources\ProjectResource;
 use App\Models\Testimonial;
 use App\Http\Resources\TestimonialResource;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\BlogController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -26,7 +27,7 @@ Route::get('/projectsAPI', [ProjectController::class, 'ProjectsAPI']);
 
 
 Route::get('/projectfeatured', [ProjectController::class, 'index']);
-
+Route::get('/blogAll', [BlogController::class, 'widgetGet']);
 // Route::get('/testimonial', function() {
 //     $testimonial = Testimonial::orderBy('name')->get();
 

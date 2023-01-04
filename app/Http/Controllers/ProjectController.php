@@ -32,14 +32,12 @@ class ProjectController extends Controller
         );
 
         if($s = $request->input('s')) {
-            // $query->where('title', 'LIKE', '%' . $s . '%')->get();
             $query->whereRaw("title LIKE '%" . $s . "%'");
         }
         if($sort = $request->input('sort')) {
             $query->whereRaw("status LIKE '%" . $sort . "%'");
-            // $query->where('status', 'LIKE', '%'. $s .'%')->get();
         }
-        $perPage = 3;
+        $perPage = 6;
         $page = $request->input('page', 1);
         $total = $query->count();
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Modernbuilding } from '../../images/index'
 
 function Hero() {
   return (
@@ -30,14 +31,14 @@ function Hero() {
       </div>
       <div className="flex md:w-1/2 items-end -pb-15">
       <img
-          src="https://source.unsplash.com/7H77FWkK_x4/1600x900"
+          src={Modernbuilding}
           className="h-70 w-full"
-          alt=""
+          alt="modern building"
         />
       </div>
     </div>
 
-    <div className="text-white py-10 bg-indigo-700 w-full px-10 md:px-32">
+    <div className="text-white py-10 bg-slate-900 w-full px-10 md:px-32">
         <div className="container">
         <div className="md:w-1/3">
         <p className="text-2xl font-semibold">

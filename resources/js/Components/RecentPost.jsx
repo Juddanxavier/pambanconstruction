@@ -4,6 +4,7 @@ import React from 'react'
 export default function RecentPost(projects) {
     const pathUrl = import.meta.env.VITE_STORAGE_IMG;
     var projects = usePage().props.recentProjects;
+
     return (
                 <div className="grid grid-cols-1 md:grid-cols-3 md:pb-8 pb-2 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
                     {projects.map((item, index) => (

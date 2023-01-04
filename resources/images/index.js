@@ -5,6 +5,7 @@ import Rupee from './rupee.svg';
 import Safety from './safety.svg';
 import Medal from './medal.svg';
 import Pinkbuilding from './Pinkbuilding.jpg'
+import Modernbuilding from './modernbuilding.png'
 
 export {
     logo,
@@ -13,5 +14,6 @@ export {
     Rupee,
     Safety,
     Medal,
-    Pinkbuilding
+    Pinkbuilding,
+    Modernbuilding
 };

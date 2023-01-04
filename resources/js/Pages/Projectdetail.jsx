@@ -1,5 +1,5 @@
 import SpecificationsAccordion from '@/Components/SpecificationsAccordion'
-import { Head, usePage } from '@inertiajs/inertia-react'
+import { Head, Link, usePage } from '@inertiajs/inertia-react'
 import React from 'react'
 import Frontendlayout from '../Layouts/Frontend'
 import ImageSlider from '../Components/ImageSlider'
@@ -8,6 +8,7 @@ import ProjectUpdates from '../Components/ProjectUpdates'
 import EmiCalculator from '@/Components/EmiCalculator'
 import DownloadButton from '@/Components/Filedownload'
 import RecentPost from '@/Components/RecentPost'
+import { ArrowLongRightIcon } from '@heroicons/react/24/solid'
 
 function ProjectDetail() {
   const data = usePage().props.projectDetail
@@ -35,7 +36,7 @@ function ProjectDetail() {
 
   return (
     <Frontendlayout>
-      <Head title="Project" />
+      <Head title={`${data.title} - Pamban Construction`} />
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center item-center min-h-96 mt-5 py-10 md:px-20 bg-slate-100">
         <div className="flex flex-col md:items-left items-center justify-center md:justify-left col-span-1">
           <div>
@@ -52,7 +53,7 @@ function ProjectDetail() {
         <div className="md:col-span-2">
           <div>
             <span className='text-2xl text-slate-800 font-bold'>Description</span>
-            <p className="text-lg my-5">{data.description}</p>
+            <p className="text-gray-600 text-xl antialiased tracking-wide leading-relaxed my-5 text-justify">{data.description}</p>
           </div>
           <div className="mt-10">
             <span className='text-2xl my-8 text-slate-800 font-bold'>Construction Specifications</span>
@@ -97,7 +98,7 @@ function ProjectDetail() {
 </div>
         </div>
         <div className="flex justify-between w-auto mx-10 md:mx-20">
-          <span className='text-2xl text-slate-800 font-bold mb-10'>Recent Projects</span><a className="text-left text-lg hover:text-indigo-600	" href="/projects">View All Projects</a>
+          <span className='text-2xl text-slate-800 font-bold mb-10'>Recent Projects</span><Link className="flex flex-row text-left text-lg text-indigo-500 hover:text-indigo-800" href="/projects">View All Projects <ArrowLongRightIcon className="w-6 pl-2"/></Link>
       </div>
       <div className=" w-auto mx-10 md:mx-20">
       <RecentPost />
