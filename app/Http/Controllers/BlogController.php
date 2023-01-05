@@ -26,12 +26,17 @@ class BlogController extends Controller
         );
     }
     public function Bloglist(Request $request) {
-        $query = Blog::all();
-        $perPage = 6;
+        $query = Blog::query();
+        $perPage = 9;
         $page = $request->input('page', 1);
         $total = $query->count();
 
         $result = $query->offset(($page - 1) * $perPage)->limit($perPage)->get();
-
+        return [
+            'data' => $result,
+            'total' => $total,
+            'page' => $page,
+            'last_page' => ceil($total / $perPage)
+        ];
     }
 }

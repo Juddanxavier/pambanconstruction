@@ -27,7 +27,8 @@ Route::get('/projectsAPI', [ProjectController::class, 'ProjectsAPI']);
 
 
 Route::get('/projectfeatured', [ProjectController::class, 'index']);
-Route::get('/blogAll', [BlogController::class, 'widgetGet']);
+Route::get('blogwidget', [BlogController::class, 'widgetGet']);
+Route::get('/blogAll', [BlogController::class, 'Bloglist']);
 // Route::get('/testimonial', function() {
 //     $testimonial = Testimonial::orderBy('name')->get();
 

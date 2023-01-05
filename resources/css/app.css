@@ -14,6 +14,13 @@ body {
     background-position: center;
 }
 
+.interior {
+    background-image: url('../images/interior.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .lightbox-overlay {
     position: fixed;
     top: 0;

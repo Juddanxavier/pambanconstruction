@@ -33,7 +33,7 @@ export default function Welcome() {
                 </div>
             </div>
             <Blogwidget />
-            <div className="flex flex-col mx-10 md:mx-20 my-10">
+            <div className="flex flex-col mx-10 md:mx-20 my-20">
                 <span className="md:text-9xl text-7xl font-black text-slate-900 uppercase leading-normal justify-center">
                     We'd love to hear from you!
                 </span>

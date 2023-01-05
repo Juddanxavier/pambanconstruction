@@ -1,4 +1,5 @@
 import Axios from '@/Services'
+import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import { Link } from '@inertiajs/inertia-react'
 import React, { useEffect, useState } from 'react'
 import HtmlParser from 'react-html-parser';
@@ -8,7 +9,7 @@ export default function Blogwidget() {
 
     const [blog, setBlog] = useState([])
     const getData = async () => {
-        await Axios.get('/blogAll')
+        await Axios.get('/blogwidget')
             .then(res => {
                 setBlog(res.data)
             }).catch(err => {
@@ -20,25 +21,29 @@ export default function Blogwidget() {
     }, [])
     
     return (
-        <div>
+        <main>
       <div className="flex px-10 md:mx-10 text-slate-800 justify-center">
                     <h1 className="text-left font-bold text-2xl">Blogs and News</h1>
                 </div>
-      <div className="grid gap-12 lg:grid-cols-2 m-20">          
+          <div className="my-20 flex flex-col gap-[30px]"> 
           {blog.map((item) => (
-              <div key={item.id } className="rounded-sm group sm:flex space-x-6 bg-white bg-opacity-50 shadow-md">
-          <img src={pathUrl + item.image} alt={item.image} loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-sm transition duration-500 group-hover:rounded-sm" />
-          <div className="sm:w-7/12 pl-0 p-5">
-            <div className="space-y-2">
-              <div className="space-y-4">
+            
+              <div className="flex justify-center md:flex-row flex-col gap-1">
+          <Link href={`blog/${item.slug}`}>
+              <div className="m-4 md:w-full md:flex md:items-center">
+                
+                <img src={pathUrl + item.image} alt={item.image}  className="md:w-[270px] w-full h-[250px] rounded-sm object-cover" />
+            <div className="flex-1 md:ml-[62px] flex flex-col max-w-[500px]">
                 <h4 className="text-2xl font-semibold text-cyan-900 capitalize">{item.title}</h4>
-                              <span className="text-gray-600">{HtmlParser(item.content.substring(0, 200)) }</span>
+                  <span className="text-gray-600 text-justify mr-4">{HtmlParser(item.content.substring(0, 200))}</span>
+                  
               </div>
-              <Link href={`blog/${item.slug}`} className="block w-max text-indigo-600">Read more</Link>
-            </div>
-          </div>
+                  <span className="block lg:flex hidden items-center justify-center w-[100px] h-[100px] rounded-full bg-transparent border-[1px] border-slate-800"><ArrowUpRightIcon className="w-16" /></span>
+                  
+          </div></Link>
         </div>
           ))}
-    </div></div>
+        </div>
+    </main>
   )
 }

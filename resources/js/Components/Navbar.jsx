@@ -1,9 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import {navLinks} from '../../constants/index'
 import {logo, logoMark} from '../../images/index.js'
 import { Link } from '@inertiajs/inertia-react'
+import { motion as m } from 'framer-motion'
+import { navVariants } from '@/FramerMotion/Variants'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -11,6 +13,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
+    <m.main variants={navVariants} initial="hidden" animate="show">
     <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
@@ -83,6 +86,7 @@ Lets Talk</button>
           </Disclosure.Panel>
         </>
       )}
-    </Disclosure>
+      </Disclosure>
+      </m.main>
   )
 }
