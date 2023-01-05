@@ -8,7 +8,6 @@ export const fadeIn = (direction) => ({
     show: direction === 'up' ? { y: 0, opacity: 1 } : { y: 0, opacity: 1 },
     exit: direction === 'up' ? { y: '-100%', opacity: 0 } : { y: '100%', opacity: 0 },
   transition: {
-        duration: 2,
         type: "tween",
       duration: 0.8
 

@@ -28,7 +28,7 @@ export default function Blogwidget() {
           <div className="my-20 flex flex-col gap-[30px]"> 
           {blog.map((item) => (
             
-              <div className="flex justify-center md:flex-row flex-col gap-1">
+              <div key={item.id} className="flex justify-center md:flex-row flex-col gap-1">
           <Link href={`blog/${item.slug}`}>
               <div className="m-4 md:w-full md:flex md:items-center">
                 

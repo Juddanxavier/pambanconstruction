@@ -1,7 +1,11 @@
 {
-  "resources/images/clock.svg": {
-    "file": "assets/clock.4f7aa5a0.svg",
-    "src": "resources/images/clock.svg"
+  "resources/images/pinkbuilding.jpg": {
+    "file": "assets/pinkbuilding.905336ff.jpg",
+    "src": "resources/images/pinkbuilding.jpg"
+  },
+  "resources/images/interior.png": {
+    "file": "assets/interior.bb306485.png",
+    "src": "resources/images/interior.png"
   },
   "resources/images/pambanlogo.png": {
     "file": "assets/pambanlogo.aafb3821.png",
@@ -10,6 +14,10 @@
   "resources/images/pambanlogomark.png": {
     "file": "assets/pambanlogomark.e6a80b29.png",
     "src": "resources/images/pambanlogomark.png"
+  },
+  "resources/images/clock.svg": {
+    "file": "assets/clock.4f7aa5a0.svg",
+    "src": "resources/images/clock.svg"
   },
   "resources/images/rupee.svg": {
     "file": "assets/rupee.87e9f11e.svg",
@@ -23,31 +31,41 @@
     "file": "assets/medal.0a66ea69.svg",
     "src": "resources/images/medal.svg"
   },
+  "resources/images/modernbuilding.png": {
+    "file": "assets/modernbuilding.b8fb38c7.png",
+    "src": "resources/images/modernbuilding.png"
+  },
   "resources/js/app.jsx": {
-    "file": "assets/app.d01944f7.js",
+    "file": "assets/app.ade21bfd.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
       "resources/js/Pages/About.jsx",
+      "resources/js/Pages/Blog.jsx",
+      "resources/js/Pages/Bloglist.jsx",
       "resources/js/Pages/Projectdetail.jsx",
       "resources/js/Pages/Projects.jsx",
       "resources/js/Pages/Welcome.jsx"
     ],
     "css": [
-      "assets/app.ebca3b8a.css"
+      "assets/app.9513e616.css"
+    ],
+    "assets": [
+      "assets/pinkbuilding.905336ff.jpg",
+      "assets/interior.bb306485.png"
     ]
   },
   "resources/js/Pages/About.jsx": {
-    "file": "assets/About.b246229c.js",
+    "file": "assets/About.fec055b1.js",
     "src": "resources/js/Pages/About.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.84443ecb.js"
+      "_Frontend.80f2113b.js"
     ]
   },
-  "_Frontend.84443ecb.js": {
-    "file": "assets/Frontend.84443ecb.js",
+  "_Frontend.80f2113b.js": {
+    "file": "assets/Frontend.80f2113b.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -56,45 +74,95 @@
       "assets/pambanlogomark.e6a80b29.png"
     ]
   },
-  "resources/js/Pages/Projectdetail.jsx": {
-    "file": "assets/Projectdetail.12abaae8.js",
-    "src": "resources/js/Pages/Projectdetail.jsx",
+  "resources/js/Pages/Blog.jsx": {
+    "file": "assets/Blog.bb887572.js",
+    "src": "resources/js/Pages/Blog.jsx",
     "isDynamicEntry": true,
     "imports": [
+      "_Frontend.80f2113b.js",
       "resources/js/app.jsx",
-      "_Frontend.84443ecb.js"
+      "_HtmlParser.60fcc3ea.js"
     ]
   },
-  "resources/js/Pages/Projects.jsx": {
-    "file": "assets/Projects.a22421d4.js",
-    "src": "resources/js/Pages/Projects.jsx",
-    "isDynamicEntry": true,
+  "_HtmlParser.60fcc3ea.js": {
+    "file": "assets/HtmlParser.60fcc3ea.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
+  "resources/js/Pages/Bloglist.jsx": {
+    "file": "assets/Bloglist.35b31a90.js",
+    "src": "resources/js/Pages/Bloglist.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Frontend.80f2113b.js",
+      "_index.347ad3a0.js",
+      "resources/js/app.jsx",
+      "_HtmlParser.60fcc3ea.js"
+    ]
+  },
+  "_index.347ad3a0.js": {
+    "file": "assets/index.347ad3a0.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Projectdetail.jsx": {
+    "file": "assets/Projectdetail.9fe9c0fb.js",
+    "src": "resources/js/Pages/Projectdetail.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_Frontend.80f2113b.js",
+      "_ArrowLongRightIcon.0a89612c.js"
+    ]
+  },
+  "_ArrowLongRightIcon.0a89612c.js": {
+    "file": "assets/ArrowLongRightIcon.0a89612c.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Projects.jsx": {
+    "file": "assets/Projects.e776c4c0.js",
+    "src": "resources/js/Pages/Projects.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_Frontend.80f2113b.js",
+      "_index.347ad3a0.js"
+    ]
+  },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome.9738f865.js",
+    "file": "assets/Welcome.2887314c.js",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.84443ecb.js"
+      "_Frontend.80f2113b.js",
+      "_index.347ad3a0.js",
+      "_ArrowLongRightIcon.0a89612c.js",
+      "_HtmlParser.60fcc3ea.js"
     ],
     "assets": [
       "assets/clock.4f7aa5a0.svg",
       "assets/rupee.87e9f11e.svg",
       "assets/safety.34115155.svg",
-      "assets/medal.0a66ea69.svg"
+      "assets/medal.0a66ea69.svg",
+      "assets/modernbuilding.b8fb38c7.png"
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.ebca3b8a.css",
+    "file": "assets/app.9513e616.css",
     "src": "resources/js/app.css"
   },
   "resources/css/filament.css": {
-    "file": "assets/filament.11537139.css",
+    "file": "assets/filament.993f43b5.css",
     "src": "resources/css/filament.css",
     "isEntry": true
+  },
+  "resources/images/Pinkbuilding.jpg": {
+    "file": "assets/pinkbuilding.905336ff.jpg",
+    "src": "resources/images/Pinkbuilding.jpg"
   }
 }
