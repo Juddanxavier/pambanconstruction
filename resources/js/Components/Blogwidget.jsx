@@ -8,13 +8,26 @@ export default function Blogwidget() {
         const pathUrl = import.meta.env.VITE_STORAGE_IMG;
 
     const [blog, setBlog] = useState([])
-    const getData = async () => {
-        await Axios.get('/blogwidget')
-            .then(res => {
-                setBlog(res.data)
-            }).catch(err => {
-                console.error(err)
-            })
+  const getData = async () => {
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', 'api/blogwidget')
+    xhr.setRequestHeader('Content-Type', 'application/xml')
+    xhr.responseType = 'json'
+    xhr.onload = () => {
+      console.log(xhr.response)
+    }
+    xhr.send()
+      // await Axios.get('/blogwidget', {
+      //   headers: {
+      //     // 'Access-Control-Allow-Origin': '*',
+      //     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+      //     }
+      //   })
+      //       .then(res => {
+      //           setBlog(res.data)
+      //       }).catch(err => {
+      //           console.error(err)
+      //       })
     }
     useEffect(() => {
       getData()

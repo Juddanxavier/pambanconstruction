@@ -32,6 +32,7 @@ class ProjectController extends Controller
         );
 
         if($s = $request->input('s')) {
+            // $query->where('title', 'LIKE', '%' . $s . '%')->get();
             $query->whereRaw("title LIKE '%" . $s . "%'");
         }
         if($sort = $request->input('sort')) {

@@ -9,7 +9,12 @@ const ProjectWidget = () => {
         const pathUrl = import.meta.env.VITE_STORAGE_IMG;
 
     const getProjects = async () => {
-        await Axios.get("/projectfeatured")
+        await Axios.get("/projectfeatured", {
+        headers: {
+          'Content-Type': 'application/text',
+          'Access-control-All-orgin': '*'
+          }
+        })
             .then((res) => {
                 setProjects(res.data);
             })
