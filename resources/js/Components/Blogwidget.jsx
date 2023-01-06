@@ -14,20 +14,10 @@ export default function Blogwidget() {
     xhr.setRequestHeader('Content-Type', 'application/xml')
     xhr.responseType = 'json'
     xhr.onload = () => {
-      console.log(xhr.response)
+      setBlog(xhr.response)
     }
     xhr.send()
-      // await Axios.get('/blogwidget', {
-      //   headers: {
-      //     // 'Access-Control-Allow-Origin': '*',
-      //     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-      //     }
-      //   })
-      //       .then(res => {
-      //           setBlog(res.data)
-      //       }).catch(err => {
-      //           console.error(err)
-      //       })
+
     }
     useEffect(() => {
       getData()

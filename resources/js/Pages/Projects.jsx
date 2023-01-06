@@ -25,24 +25,25 @@ export default function () {
             if (filter.page) {
                 arr.push(`page=${filter.page}`);
             }
-            await Axios.get(`/projectsAPI?${arr.join("&")}`)
-                .then((res) => {
-                    // setProjects([...projects, ...res.data.data]);
-                    console.log(res.data.last_page);
-                    setProjects(
-                        filter.page === 1
-                            ? res.data.data
-                            : [...[...projects, ...res.data.data]]
-                    );
-                    setLastPage(res.data.last_page);
-                    setIsLoading(true);
-                })
-                .catch((err) => console.error(err))
-                .finally(
-                    setTimeout(() => {
-                        setIsLoading(false);
-                    }, 1000)
+    const xhr = await new XMLHttpRequest()
+    xhr.open('GET', `api/projectsAPI?${arr.join("&")}`)
+    xhr.setRequestHeader('Content-Type', 'application/xml')
+    xhr.responseType = 'json'
+            xhr.onload = () => {
+                setProjects(
+                    filter.page === 1
+                        ? xhr.response.data
+                        : [...[...projects, ...xhr.response.data]]
                 );
+                setLastPage(xhr.response.last_page);
+                setIsLoading(true);
+                // setBlog(xhr.response)
+                setTimeout(() => {
+                    setIsLoading(false);
+                }, 1000)
+            }
+    xhr.send()
+    
         })();
     }, [filter]);
     return (

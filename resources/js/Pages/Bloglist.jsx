@@ -19,22 +19,36 @@ useEffect(() => {
             if (filter.page) {
                 arr.push(`page=${filter.page}`);
             }
-            await Axios.get(`/blogAll?${arr.join("&")}`)
-                .then((res) => {
-                    setBlogs(
+            const xhr = await new XMLHttpRequest()
+            xhr.open('GET', `api/blogAll?${arr.join("&")}`)
+    xhr.setRequestHeader('Content-Type', 'application/xml')
+    xhr.responseType = 'json'
+    xhr.onload = () => {
+      setBlogs(
                         filter.page === 1
-                            ? res.data.data
-                            : [...[...blogs, ...res.data.data]]
+                            ? xhr.response.data
+                            : [...[...blogs, ...xhr.response.data]]
                     );
-                    setLastPage(res.data.last_page);
+                    setLastPage(xhr.response.last_page);
                     setIsLoading(true);
-                })
-                .catch((err) => console.error(err))
-                .finally(
-                    setTimeout(() => {
-                        setIsLoading(false);
-                    }, 1000)
-                );
+    }
+    xhr.send()
+            // await Axios.get(`api/blogAll?${arr.join("&")}`)
+            //     .then((res) => {
+            //         setBlogs(
+            //             filter.page === 1
+            //                 ? res.data.data
+            //                 : [...[...blogs, ...res.data.data]]
+            //         );
+            //         setLastPage(res.data.last_page);
+            //         setIsLoading(true);
+            //     })
+            //     .catch((err) => console.error(err))
+            //     .finally(
+            //         setTimeout(() => {
+            //             setIsLoading(false);
+            //         }, 1000)
+            //     );
         })();
 }, [filter]);
    const load = () => {

@@ -15,7 +15,7 @@ export default function Welcome() {
         <Frontendlayout>
             <Head title="Home - Pamban Contructions" />
             <Hero />
-            {/* <ProjectWidget /> */}
+            <ProjectWidget />
             <Hometile />
             <div className="grid grid-cols-1 md:grid-cols-2 my-10 md:my-20 lg:grid-cols-4 md:px-20 px-10 text-center">
                 <div className="text-slate-900 text-2xl font-bold">

@@ -8,20 +8,18 @@ const ProjectWidget = () => {
     const [projects, setProjects] = useState([]);
         const pathUrl = import.meta.env.VITE_STORAGE_IMG;
 
-    const getProjects = async () => {
-        await Axios.get("/projectfeatured", {
-        headers: {
-          'Content-Type': 'application/text',
-          'Access-control-All-orgin': '*'
-          }
-        })
-            .then((res) => {
-                setProjects(res.data);
-            })
-            .catch((err) => console.error(err));
-    };
+     const getData = async () => {
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', 'api/projectfeatured')
+    xhr.setRequestHeader('Content-Type', 'application/xml')
+    xhr.responseType = 'json'
+    xhr.onload = () => {
+      setProjects(xhr.response)
+    }
+    xhr.send()
+    }
     useEffect(() => {
-        getProjects();
+        getData();
     }, []);
     return (
         <div>
