@@ -19,7 +19,7 @@ export default function Blog() {
               </div>
           </div>
           <div className="md:mx-20 h-96">
-              <img className="object-cover w-full h-full md:rounded-lg" src={`storage/${data.blog.image}`} alt={data.blog.image} />
+              <img className="object-cover w-full h-full md:rounded-lg" src={pathUrl + `storage/${data.blog.image}`} alt={data.blog.image} />
           </div>
           <div className="flex grid m-10 md:m-20 justify-center">
               <div className="max-w-5xl text-gray-600 text-xl antialiased tracking-wide leading-relaxed text-justify">{HtmlParser(data.blog.content)}</div>

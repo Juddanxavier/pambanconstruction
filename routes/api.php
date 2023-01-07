@@ -36,7 +36,3 @@ Route::get('/blogAll', [BlogController::class, 'Bloglist']);
 // });
 
 // Route::get('/projects/{slug}', [ProjectController::class, 'detail']);
-
-Route::get('/demo-url',  function  (Request $request)  {
-   return response()->json(['Laravel CORS Demo']);
-});
