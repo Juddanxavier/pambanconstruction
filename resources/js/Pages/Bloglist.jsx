@@ -82,7 +82,7 @@ useEffect(() => {
     }
   return (
     <Frontendlayout>
-      <Head title="Project" />
+      <Head title="Blogs & News" />
       <div className="interior grid grid-cols-1 justify-center item-center h-96 mt-5 py-10 md:px-20">
                 {/* <img src={Pinkbuilding} alt="pink Building"  /> */}
                 <div className="flex flex-col md:items-center items-center justify-center col-span-1">

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import HtmlParser from 'react-html-parser';
 
 export default function Blogwidget() {
-        const pathUrl = import.meta.env.VITE_STORAGE_IMG;
+        const pathUrl = 'https://pambanconstructions.com/'
 
     const [blog, setBlog] = useState([])
   const getData = async () => {
@@ -35,7 +35,7 @@ export default function Blogwidget() {
           <Link href={`blog/${item.slug}`}>
               <div className="m-4 md:w-full md:flex md:items-center">
                 
-                <img src={item.image} alt={item.image}  className="md:w-[270px] w-full h-[250px] rounded-sm object-cover" />
+                <img src={pathUrl + item.image} alt={item.image}  className="md:w-[270px] w-full h-[250px] rounded-sm object-cover" />
             <div className="flex-1 md:ml-[62px] flex flex-col max-w-[500px]">
                 <h4 className="text-2xl font-semibold text-cyan-900 capitalize">{item.title}</h4>
                   <span className="text-gray-600 text-justify mr-4">{HtmlParser(item.content.substring(0, 200))}</span>
