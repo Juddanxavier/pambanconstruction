@@ -11,7 +11,7 @@ export default function Blogdetail() {
   });
       const [lastPage, setLastPage] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-      const pathUrl = import.meta.env.VITE_STORAGE_IMG;
+      const pathUrl = 'https://pambanconstructions.com/'
 
 useEffect(() => {
         (async () => {
@@ -33,22 +33,6 @@ useEffect(() => {
                     setIsLoading(true);
     }
     xhr.send()
-            // await Axios.get(`api/blogAll?${arr.join("&")}`)
-            //     .then((res) => {
-            //         setBlogs(
-            //             filter.page === 1
-            //                 ? res.data.data
-            //                 : [...[...blogs, ...res.data.data]]
-            //         );
-            //         setLastPage(res.data.last_page);
-            //         setIsLoading(true);
-            //     })
-            //     .catch((err) => console.error(err))
-            //     .finally(
-            //         setTimeout(() => {
-            //             setIsLoading(false);
-            //         }, 1000)
-            //     );
         })();
 }, [filter]);
    const load = () => {
@@ -116,7 +100,7 @@ useEffect(() => {
       <div className="grid gap-12 lg:grid-cols-2 m-20">          
           {blogs.map((item) => (
               <div key={item.id } className="rounded-sm group sm:flex space-x-6 bg-white bg-opacity-50 shadow-md">
-          <img src={`storage/${item.image}`} alt={item.image} loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-sm transition duration-500 group-hover:rounded-sm" />
+          <img src={pathUrl + `storage/${item.image}`} alt={item.image} loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-sm transition duration-500 group-hover:rounded-sm" />
           <div className="sm:w-7/12 pl-0 p-5">
             <div className="space-y-2">
               <div className="space-y-4">
