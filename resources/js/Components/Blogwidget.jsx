@@ -32,7 +32,7 @@ export default function Blogwidget() {
           {blog.map((item) => (
             
               <div key={item.id} className="flex justify-center md:flex-row flex-col gap-1">
-          <Link href={`blog/${item.slug}`}>
+          <Link href={item.slug}>
               <div className="m-4 md:w-full md:flex md:items-center">
                 
                 <img src={pathUrl + item.image} alt={item.image}  className="md:w-[270px] w-full h-[250px] rounded-sm object-cover" />
