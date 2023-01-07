@@ -29,7 +29,7 @@ Route::get('/', function() {
 Route::get('projects', function() {
   return Inertia::render('Projects');
 });
-Route::get('/blogs', function() {
+Route::get('/blog', function() {
   return Inertia::render('Bloglist');
 });
 // Route::resource('/', ProjectController::class);
