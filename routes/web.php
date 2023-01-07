@@ -51,3 +51,6 @@ Route::get('/storage/{filename}', function ($filename) {
   // Return a 404 error if the file does not exist
   return response()->json(['error' => 'File not found.'], 404);
 });
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});
