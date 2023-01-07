@@ -11,10 +11,6 @@
     "file": "assets/pambanlogo.aafb3821.png",
     "src": "resources/images/pambanlogo.png"
   },
-  "resources/images/pambanlogomark.png": {
-    "file": "assets/pambanlogomark.e6a80b29.png",
-    "src": "resources/images/pambanlogomark.png"
-  },
   "resources/images/rupee.svg": {
     "file": "assets/rupee.87e9f11e.svg",
     "src": "resources/images/rupee.svg"
@@ -22,6 +18,10 @@
   "resources/images/clock.svg": {
     "file": "assets/clock.4f7aa5a0.svg",
     "src": "resources/images/clock.svg"
+  },
+  "resources/images/pambanlogomark.png": {
+    "file": "assets/pambanlogomark.e6a80b29.png",
+    "src": "resources/images/pambanlogomark.png"
   },
   "resources/images/medal.svg": {
     "file": "assets/medal.0a66ea69.svg",
@@ -36,7 +36,7 @@
     "src": "resources/images/modernbuilding.png"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app.51c58bf0.js",
+    "file": "assets/app.e042a925.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
@@ -56,16 +56,16 @@
     ]
   },
   "resources/js/Pages/About.jsx": {
-    "file": "assets/About.76e8b551.js",
+    "file": "assets/About.6714bde0.js",
     "src": "resources/js/Pages/About.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.222fea26.js"
+      "_Frontend.34276beb.js"
     ]
   },
-  "_Frontend.222fea26.js": {
-    "file": "assets/Frontend.222fea26.js",
+  "_Frontend.34276beb.js": {
+    "file": "assets/Frontend.34276beb.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -75,74 +75,74 @@
     ]
   },
   "resources/js/Pages/Blog.jsx": {
-    "file": "assets/Blog.eea7e352.js",
+    "file": "assets/Blog.ef544ca1.js",
     "src": "resources/js/Pages/Blog.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.222fea26.js",
+      "_Frontend.34276beb.js",
       "resources/js/app.jsx",
-      "_HtmlParser.a2f264a7.js"
+      "_HtmlParser.f848196e.js"
     ]
   },
-  "_HtmlParser.a2f264a7.js": {
-    "file": "assets/HtmlParser.a2f264a7.js",
+  "_HtmlParser.f848196e.js": {
+    "file": "assets/HtmlParser.f848196e.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Bloglist.jsx": {
-    "file": "assets/Bloglist.5fccdd6e.js",
+    "file": "assets/Bloglist.936cc1b9.js",
     "src": "resources/js/Pages/Bloglist.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.222fea26.js",
-      "_index.a8af04e9.js",
+      "_Frontend.34276beb.js",
+      "_index.bf0e0b39.js",
       "resources/js/app.jsx",
-      "_HtmlParser.a2f264a7.js"
+      "_HtmlParser.f848196e.js"
     ]
   },
-  "_index.a8af04e9.js": {
-    "file": "assets/index.a8af04e9.js",
+  "_index.bf0e0b39.js": {
+    "file": "assets/index.bf0e0b39.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projectdetail.jsx": {
-    "file": "assets/Projectdetail.d589a26b.js",
+    "file": "assets/Projectdetail.bbbed341.js",
     "src": "resources/js/Pages/Projectdetail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.222fea26.js",
-      "_ArrowLongRightIcon.4cac737e.js"
+      "_Frontend.34276beb.js",
+      "_ArrowLongRightIcon.5910e5dc.js"
     ]
   },
-  "_ArrowLongRightIcon.4cac737e.js": {
-    "file": "assets/ArrowLongRightIcon.4cac737e.js",
+  "_ArrowLongRightIcon.5910e5dc.js": {
+    "file": "assets/ArrowLongRightIcon.5910e5dc.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projects.jsx": {
-    "file": "assets/Projects.98259e1f.js",
+    "file": "assets/Projects.3ccbd363.js",
     "src": "resources/js/Pages/Projects.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.222fea26.js",
-      "_index.a8af04e9.js"
+      "_Frontend.34276beb.js",
+      "_index.bf0e0b39.js"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome.a8a276e6.js",
+    "file": "assets/Welcome.8fb05ddd.js",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.222fea26.js",
-      "_ArrowLongRightIcon.4cac737e.js",
-      "_index.a8af04e9.js",
-      "_HtmlParser.a2f264a7.js"
+      "_Frontend.34276beb.js",
+      "_ArrowLongRightIcon.5910e5dc.js",
+      "_index.bf0e0b39.js",
+      "_HtmlParser.f848196e.js"
     ],
     "assets": [
       "assets/clock.4f7aa5a0.svg",

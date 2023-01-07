@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ArrowLongRightIcon, ArrowLongLeftIcon } from '@heroicons/react/24/solid'
 
 const ImageSlider = ({ slides }) => {
-  const pathUrl = import.meta.env.VITE_STORAGE_IMG;
+  const pathUrl = 'https://pambanconstructions.com/';
   const [currentIndex, setCurrentIndex] = useState(0)
   const sliderStyle = {
     height: '100%',
