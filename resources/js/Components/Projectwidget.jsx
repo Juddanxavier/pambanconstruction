@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "@inertiajs/inertia-react";
-import Axios from "@/Services";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 
 const ProjectWidget = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [projects, setProjects] = useState([]);
         const pathUrl = import.meta.env.VITE_STORAGE_IMG;
-
+console.log(pathUrl)
      const getData = async () => {
     const xhr = new XMLHttpRequest()
     xhr.open('GET', 'api/projectfeatured')
