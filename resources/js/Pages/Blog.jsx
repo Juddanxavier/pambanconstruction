@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 import HtmlParser from 'react-html-parser';
 
 export default function Blog() {
-    const pathUrl = import.meta.env.VITE_STORAGE_IMG;
+    const pathUrl = 'https://pambanconstructions.com/'
     const data = usePage().props
     const date = format(new Date(data.blog.created_at), "EEEE, MMMM d, yyyy")
   return (
