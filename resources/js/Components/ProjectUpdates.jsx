@@ -10,7 +10,7 @@ const ProjectUpdates = ({ updates }) => {
     const [images, setImages] = useState(galleryImage)
     const [isOpen, setIsOpen] = useState(false)
     const [photoIndex, setPhotoIndex] = useState(0)
-    const pathUrl = import.meta.env.VITE_STORAGE_IMG;
+    const pathUrl = 'http://pambanconstructions.com/'
 
     const handleDateChange = event => {
         setSelectedDate(event.target.value)
