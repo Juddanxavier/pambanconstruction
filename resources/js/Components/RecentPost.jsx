@@ -12,7 +12,7 @@ export default function RecentPost(projects) {
                             <div className="rounded-sm shadow-md">
                                 <img
                                     className="rounded-t-sm  w-full h-64 object-cover"
-                                    src={pathUrl + item.gallery[0] }
+                                    src={pathUrl + `storage/${item.gallery[0]}` }
                                     alt={item.gallery[0]}
                                 />
                                 <div className="flex flex-col p-7">

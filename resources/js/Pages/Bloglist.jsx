@@ -116,7 +116,7 @@ useEffect(() => {
       <div className="grid gap-12 lg:grid-cols-2 m-20">          
           {blogs.map((item) => (
               <div key={item.id } className="rounded-sm group sm:flex space-x-6 bg-white bg-opacity-50 shadow-md">
-          <img src={pathUrl + item.image} alt={item.image} loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-sm transition duration-500 group-hover:rounded-sm" />
+          <img src={`storage/${project.image}`} alt={item.image} loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-sm transition duration-500 group-hover:rounded-sm" />
           <div className="sm:w-7/12 pl-0 p-5">
             <div className="space-y-2">
               <div className="space-y-4">

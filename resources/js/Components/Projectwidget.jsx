@@ -36,7 +36,7 @@ console.log(pathUrl)
                             <div className="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 bg-white border rounded-sm shadow-md  max-w-xs md:max-w-none overflow-hidden">
                                 <img
                                     key={project.id}
-                                    src={ pathUrl + project.gallery[0]}
+                                    src={ pathUrl + `storage/${project.gallery[0]}`}
                                     alt={project.title}
                                     className="h-56 lg:h-60 w-full object-cover rounded-t-sm"
                                 />
