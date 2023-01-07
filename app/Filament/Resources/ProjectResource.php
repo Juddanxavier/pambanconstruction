@@ -116,7 +116,6 @@ class ProjectResource extends Resource
                                 ->schema([
                                     FileUpload::make('gallery')
                                         ->disk('public')
-                                        ->directory('projects')
                                         ->preserveFilenames()
                                         ->image()
                                         ->multiple()
@@ -154,6 +153,7 @@ Tabs\Tab::make('Brochures')
                                             DatePicker::make('update_month')->displayFormat('F-yy')->format('F-yy')->reactive(),
                                             FileUpload::make('update_gallery')
                                                 ->disk('public')
+                                                ->directory('update_gallery')
                                                 ->preserveFilenames()
                                                 ->image()
                                                 ->multiple()
