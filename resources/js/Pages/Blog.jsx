@@ -9,13 +9,14 @@ export default function Blog() {
     const pathUrl = 'https://pambanconstructions.com/'
     const data = usePage().props
     const date = format(new Date(data.blog.created_at), "EEEE, MMMM d, yyyy")
+    console.log(data)
   return (
     <Frontendlayout>
           <Head title={`${data.blog.title} - Pamban Construction`} />
           <div className="flex flex-col text-5xl my-10">
               <h1 className="mx-auto capitalize font-bold text-slate-900">{data.blog.title}</h1>
               <div className="flex justify-center text-sm font-bold text-gray-500 mt-5">
-                  <UserCircleIcon className="w-6 mx-2"/>{data.auth.user.name} | <ClockIcon className="w-6 mx-2"/>{date}
+                  <UserCircleIcon className="w-6 mx-2"/> | <ClockIcon className="w-6 mx-2"/>{date}
               </div>
           </div>
           <div className="md:mx-20 h-96">
