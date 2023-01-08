@@ -4,13 +4,13 @@ import React, { useEffect, useState } from 'react'
 import HtmlParser from 'react-html-parser';
 
 export default function Blogwidget() {
-        const pathUrl = 'https://pambanconstructions.com/'
+        const pathUrl = 'https://127.0.0.1:800/storage/'
 
     const [blog, setBlog] = useState([])
   const getData = async () => {
     const xhr = new XMLHttpRequest()
     xhr.open('GET', 'api/blogwidget')
-    xhr.setRequestHeader('Content-Type', 'application/xml')
+    xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.responseType = 'json'
     xhr.onload = () => {
       setBlog(xhr.response)
