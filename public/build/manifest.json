@@ -11,13 +11,13 @@
     "file": "assets/pambanlogo.aafb3821.png",
     "src": "resources/images/pambanlogo.png"
   },
-  "resources/images/pambanlogomark.png": {
-    "file": "assets/pambanlogomark.e6a80b29.png",
-    "src": "resources/images/pambanlogomark.png"
-  },
   "resources/images/clock.svg": {
     "file": "assets/clock.4f7aa5a0.svg",
     "src": "resources/images/clock.svg"
+  },
+  "resources/images/pambanlogomark.png": {
+    "file": "assets/pambanlogomark.e6a80b29.png",
+    "src": "resources/images/pambanlogomark.png"
   },
   "resources/images/rupee.svg": {
     "file": "assets/rupee.87e9f11e.svg",
@@ -36,7 +36,7 @@
     "src": "resources/images/modernbuilding.png"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app.1cb8e9b1.js",
+    "file": "assets/app.022cfb7a.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
@@ -48,7 +48,7 @@
       "resources/js/Pages/Welcome.jsx"
     ],
     "css": [
-      "assets/app.9382544e.css"
+      "assets/app.dd755c23.css"
     ],
     "assets": [
       "assets/pinkbuilding.905336ff.jpg",
@@ -56,16 +56,17 @@
     ]
   },
   "resources/js/Pages/About.jsx": {
-    "file": "assets/About.e528286d.js",
+    "file": "assets/About.958001d3.js",
     "src": "resources/js/Pages/About.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.f003d6a2.js"
+      "_Frontend.b2ba2420.js",
+      "_Prefooter.8719a4e1.js"
     ]
   },
-  "_Frontend.f003d6a2.js": {
-    "file": "assets/Frontend.f003d6a2.js",
+  "_Frontend.b2ba2420.js": {
+    "file": "assets/Frontend.b2ba2420.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -74,66 +75,73 @@
       "assets/pambanlogomark.e6a80b29.png"
     ]
   },
+  "_Prefooter.8719a4e1.js": {
+    "file": "assets/Prefooter.8719a4e1.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
   "resources/js/Pages/Blog.jsx": {
-    "file": "assets/Blog.60a9f6a0.js",
+    "file": "assets/Blog.8295abb1.js",
     "src": "resources/js/Pages/Blog.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.f003d6a2.js",
+      "_Frontend.b2ba2420.js",
       "resources/js/app.jsx",
-      "_HtmlParser.308fcc59.js"
+      "_HtmlParser.2dd280a4.js"
     ]
   },
-  "_HtmlParser.308fcc59.js": {
-    "file": "assets/HtmlParser.308fcc59.js",
+  "_HtmlParser.2dd280a4.js": {
+    "file": "assets/HtmlParser.2dd280a4.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Bloglist.jsx": {
-    "file": "assets/Bloglist.f59840ee.js",
+    "file": "assets/Bloglist.75c6da87.js",
     "src": "resources/js/Pages/Bloglist.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.f003d6a2.js",
+      "_Frontend.b2ba2420.js",
       "resources/js/app.jsx",
-      "_HtmlParser.308fcc59.js"
+      "_HtmlParser.2dd280a4.js"
     ]
   },
   "resources/js/Pages/Projectdetail.jsx": {
-    "file": "assets/Projectdetail.f72d227e.js",
+    "file": "assets/Projectdetail.979ed5d0.js",
     "src": "resources/js/Pages/Projectdetail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.f003d6a2.js",
-      "_ArrowLongRightIcon.4b6a0019.js"
+      "_Frontend.b2ba2420.js",
+      "_ArrowLongRightIcon.a74e72bf.js"
     ]
   },
-  "_ArrowLongRightIcon.4b6a0019.js": {
-    "file": "assets/ArrowLongRightIcon.4b6a0019.js",
+  "_ArrowLongRightIcon.a74e72bf.js": {
+    "file": "assets/ArrowLongRightIcon.a74e72bf.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projects.jsx": {
-    "file": "assets/Projects.0d9d46fa.js",
+    "file": "assets/Projects.53ce29d4.js",
     "src": "resources/js/Pages/Projects.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.f003d6a2.js"
+      "_Frontend.b2ba2420.js"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome.6e7065e9.js",
+    "file": "assets/Welcome.7bbd8f4b.js",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.f003d6a2.js",
-      "_ArrowLongRightIcon.4b6a0019.js",
-      "_HtmlParser.308fcc59.js"
+      "_Frontend.b2ba2420.js",
+      "_ArrowLongRightIcon.a74e72bf.js",
+      "_HtmlParser.2dd280a4.js",
+      "_Prefooter.8719a4e1.js"
     ],
     "assets": [
       "assets/clock.4f7aa5a0.svg",
@@ -144,11 +152,11 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.9382544e.css",
+    "file": "assets/app.dd755c23.css",
     "src": "resources/js/app.css"
   },
   "resources/css/filament.css": {
-    "file": "assets/filament.182e991f.css",
+    "file": "assets/filament.0ce06266.css",
     "src": "resources/css/filament.css",
     "isEntry": true
   },
