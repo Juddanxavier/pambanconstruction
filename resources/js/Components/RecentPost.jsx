@@ -2,7 +2,7 @@ import { Link, usePage } from '@inertiajs/inertia-react';
 import React from 'react'
 
 export default function RecentPost(projects) {
-    const pathUrl = 'https://pambanconstructions.com/'
+    const pathUrl = import.meta.env.VITE_STORAGE_IMG;
     var projects = usePage().props.recentProjects;
 
     return (
