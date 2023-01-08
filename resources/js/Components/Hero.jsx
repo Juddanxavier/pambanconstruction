@@ -9,19 +9,19 @@ function Hero() {
     <div className="flex flex-wrap h-auto">
       <div className="md:w-1/2 h-auto">
         <div className="mx-16 md:mx-32 mt-16 md:mt-48">
-        <m.h1 variants={fadeIn("down")}className="mx-auto text-4xl md:text-6xl font-black text-slate-800 uppercase">Transforming spaces, shaping communities</m.h1>
+        <m.h1 variants={fadeIn("down")} className="mx-auto text-3xl md:text-6xl font-bold text-slate-800 uppercase ">Transforming spaces, shaping communities</m.h1>
         <div className="flex my-24 font-light text-gray-500">
             <div className="pr-4">
               <m.span variants={fadeIn("down")} className="uppercase">Apartments</m.span>
-              <m.p variants={fadeIn("down")} className="text-1xl text-gray-900 font-bold pt-2">Residential homes</m.p>
+              <m.p variants={fadeIn("down")} className="text-1xl text-indigo-900 font-bold pt-2">Residential homes</m.p>
             </div>
             <div className="pr-4">
               <m.span variants={fadeIn("down")} className="uppercase">Office</m.span>
-              <m.p variants={fadeIn("down")} className="text-1xl text-gray-900 font-bold pt-2">Joint Venture</m.p>
+              <m.p variants={fadeIn("down")} className="text-1xl text-indigo-900 font-bold pt-2">Joint Venture</m.p>
             </div>
             <div className="pr-4">
               <m.span variants={fadeIn("down")} className="uppercase">Renovation</m.span>
-              <m.p variants={fadeIn("down")} className="text-1xl text-gray-900 font-bold pt-2">Commerical Building</m.p>
+              <m.p variants={fadeIn("down")} className="text-1xl text-indigo-900 font-bold pt-2">Commerical Building</m.p>
             </div>
           </div>
         {/* <div

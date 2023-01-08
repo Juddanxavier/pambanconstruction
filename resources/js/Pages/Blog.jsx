@@ -16,14 +16,15 @@ export default function Blog() {
           <div className="flex flex-col text-5xl my-10">
               <h1 className="mx-auto capitalize font-bold text-slate-900">{data.blog.title}</h1>
               <div className="flex justify-center text-sm font-bold text-gray-500 mt-5">
-                  <UserCircleIcon className="w-6 mx-2"/> | <ClockIcon className="w-6 mx-2"/>{date}
+                  {/* <UserCircleIcon className="w-6 mx-2" /> | */}
+                  <ClockIcon className="w-6 mx-2" />{date}
               </div>
           </div>
           <div className="md:mx-20 h-96">
               <img className="object-cover w-full h-full md:rounded-lg" src={pathUrl + `storage/${data.blog.image}`} alt={data.blog.image} />
           </div>
           <div className="flex grid m-10 md:m-20 justify-center">
-              <div className="max-w-5xl text-gray-600 text-xl antialiased tracking-wide leading-relaxed text-justify">{HtmlParser(data.blog.content)}</div>
+              <div className="max-w-5xl text-xl antialiased tracking-wide text-justify">{HtmlParser(data.blog.content)}</div>
           </div>
           </Frontendlayout>
   )

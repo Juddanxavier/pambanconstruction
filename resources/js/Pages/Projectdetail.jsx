@@ -52,8 +52,8 @@ function ProjectDetail() {
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-6 mt-5 py-10 px-10 md:px-20">
         <div className="md:col-span-2">
           <div>
-            <span className='text-2xl text-slate-800 font-bold'>Description</span>
-            <p className="text-gray-600 text-xl antialiased tracking-wide leading-relaxed my-5 text-justify">{data.description}</p>
+            <span className='text-xl text-slate-800 font-bold'>Description</span>
+            <p className="text-xl tracking-wide antialiased my-5 text-justify">{data.description}</p>
           </div>
           <div className="mt-10">
             <span className='text-2xl my-8 text-slate-800 font-bold'>Construction Specifications</span>

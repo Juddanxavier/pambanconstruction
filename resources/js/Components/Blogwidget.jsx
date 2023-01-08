@@ -4,13 +4,13 @@ import React, { useEffect, useState } from 'react'
 import HtmlParser from 'react-html-parser';
 
 export default function Blogwidget() {
-        const pathUrl = 'https://127.0.0.1:800/storage/'
+        const pathUrl = import.meta.env.VITE_STORAGE_IMG
 
     const [blog, setBlog] = useState([])
   const getData = async () => {
     const xhr = new XMLHttpRequest()
     xhr.open('GET', 'api/blogwidget')
-    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.setRequestHeader('Content-Type', 'application/xml')
     xhr.responseType = 'json'
     xhr.onload = () => {
       setBlog(xhr.response)
@@ -40,9 +40,10 @@ export default function Blogwidget() {
                   <span className="text-gray-600 text-justify mr-4">{HtmlParser(item.content.substring(0, 200))}</span>
                   
               </div>
-                  <span className="block lg:flex hidden items-center justify-center w-[100px] h-[100px] rounded-full bg-transparent border-[1px] border-slate-800"><ArrowUpRightIcon className="w-16" /></span>
+                  <span className="block lg:flex hidden items-center justify-center w-[84px] h-[84px] rounded-full bg-transparent hover:bg-indigo-900 border-[2px] border-indigo-800"><ArrowUpRightIcon className="w-12 text-indigo-900 hover:text-white" /></span>
                   
-          </div></Link>
+              </div>
+            </Link>
         </div>
           ))}
         </div>

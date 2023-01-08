@@ -21,18 +21,18 @@ function Footer() {
                         <Link href="/about" className="hover:underline">About</Link>
                     </li>
                     <li>
-                        <Link href="/projects" className="hover:underline">Projects</Link>
+                        <Link href="/contact" className="hover:underline">Contact</Link>
                     </li>
                 </ul>
             </div>
             <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">What We Do</h2>
                 <ul className="text-gray-600 dark:text-gray-400">
                     <li className="mb-4">
-                        <Link href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</Link>
+                        <Link href="/projects" className="hover:underline ">Projects</Link>
                     </li>
                     <li>
-                        <Link href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</Link>
+                        <Link href="/blogs" className="hover:underline">Blog</Link>
                     </li>
                 </ul>
             </div>

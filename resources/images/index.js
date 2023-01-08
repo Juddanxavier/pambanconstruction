@@ -6,6 +6,7 @@ import Safety from './safety.svg';
 import Medal from './medal.svg';
 import Pinkbuilding from './Pinkbuilding.jpg'
 import Modernbuilding from './modernbuilding.png'
+import Interior from './interior.png'
 
 export {
     logo,
@@ -15,5 +16,6 @@ export {
     Safety,
     Medal,
     Pinkbuilding,
-    Modernbuilding
+    Modernbuilding,
+    Interior
 };

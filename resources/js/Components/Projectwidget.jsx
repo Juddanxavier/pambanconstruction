@@ -33,7 +33,7 @@ console.log(pathUrl)
                             className="mt-3 block "
                             href={`project/${project.slug}`}
                         >
-                            <div className="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 bg-white border rounded-sm shadow-md  max-w-xs md:max-w-none overflow-hidden">
+                            <div className="hover:bg-gray-100 dark:border-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 bg-white border rounded-md shadow-sm  max-w-xs md:max-w-none overflow-hidden">
                                 <img
                                     key={project.id}
                                     src={ pathUrl + `storage/${project.gallery[0]}`}
@@ -41,20 +41,12 @@ console.log(pathUrl)
                                     className="h-56 lg:h-60 w-full object-cover rounded-t-sm"
                                 />
                                 <div className="p-4">
-                                    {/* <span className="text-sm text-gray-400">
-                                        {format(
-                                            new Date(project.created_at),
-                                            "LLLL-yyyy"
-                                        )}
-                                    </span> */}
-                                    <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2">
+                                    
+                                    <h3 className="font-bold text-lg leading-6 text-slate-700 my-2 uppercase">
                                         {project.title}
                                     </h3>
-                                    <h1 className="font-semi-bold">{ project.address}</h1>
-                                    {/* <p className="paragraph-normal text-gray-600">
-                                        {project.description.substring(0, 150) +
-                                            "..."}
-                                    </p> */}
+                                    <h1 className="font-semi-bold text-gray-400">{ project.address}</h1>
+                                    
                                 </div>
                             </div>
                         </Link>
