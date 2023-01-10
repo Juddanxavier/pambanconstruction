@@ -40,7 +40,7 @@ export default function Blogwidget() {
                   <span className="text-gray-600 text-justify mr-4">{HtmlParser(item.content.substring(0, 200))}</span>
                   
               </div>
-                  <span className="block lg:flex hidden items-center justify-center w-[84px] h-[84px] rounded-full bg-transparent hover:bg-indigo-900 border-[2px] border-indigo-800"><ArrowUpRightIcon className="w-12 text-indigo-900 hover:text-white" /></span>
+                  <span className="block lg:flex hidden items-center justify-center w-[84px] h-[84px] rounded-full bg-transparent hover:bg-blue-600 border-[2px] border-blue-600"><ArrowUpRightIcon className="w-12 text-blue-600 hover:text-white" /></span>
                   
               </div>
             </Link>

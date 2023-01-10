@@ -15,6 +15,9 @@ module.exports = {
             fontFamily: {
                 sans: ['Roboto', ...defaultTheme.fontFamily.sans],
             },
+            height: {
+                100: '48rem',
+            },
             colors: {
                 danger: colors.rose,
                 primary: colors.blue,
@@ -24,5 +27,8 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms')],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 };
+

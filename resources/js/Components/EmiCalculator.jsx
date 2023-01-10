@@ -23,7 +23,7 @@ function EmiCalculator() {
             <h1 className="text-2xl text-slate-800 font-bold mb-4">EMI Calculator</h1>
             <form className="w-full max-w-lg">
                 <div className="flex flex-wrap -mx-3 mb-6">
-                    <div className="w-full px-3 mb-6 md:mb-0">
+                    <div className=" px-3 mb-6 md:mb-0">
                         <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="loan-amount">
                             Loan Amount
                         </label>
@@ -38,7 +38,7 @@ function EmiCalculator() {
                     </div>
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
-                    <div className="w-full px-3 mb-6 md:mb-0">
+                    <div className="px-3 mb-6 md:mb-0">
                         <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="interest-rate">
                             Interest Rate
                         </label>
@@ -53,7 +53,7 @@ function EmiCalculator() {
                     </div>
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
-                    <div className="w-full px-3 mb-6 md:mb-0">
+                    <div className="px-3 mb-6 md:mb-0">
                         <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="interest-rate">
                             Loan Tenure in Months
                         </label>

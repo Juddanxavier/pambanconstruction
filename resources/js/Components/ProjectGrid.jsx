@@ -114,7 +114,7 @@ export default function ProjectGrid(props) {
                             <div className="rounded-sm shadow-md">
                                 <img
                                     className="rounded-t-sm  w-full h-64 object-cover"
-                                    src={`storage/${item.gallery[0]}`}
+                                    src={pathUrl + item.gallery[0]}
                                     alt={item.gallery[0]}
                                 />
                                 <div className="flex flex-col p-7">
@@ -123,7 +123,7 @@ export default function ProjectGrid(props) {
                                             {item.status}
                                         </div>
                                     </div>
-                                    <h2 className="text-xl font-bold truncate mt-1">
+                                    <h2 className="text-xl font-bold truncate mt-1 capitalize">
                                         {item.title}
                                     </h2>
                                     <p className="text-base text-gray-600 mt-1">

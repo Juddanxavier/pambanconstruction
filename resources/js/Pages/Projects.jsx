@@ -1,6 +1,5 @@
 import ProjectGrid from "@/Components/ProjectGrid";
 import Frontendlayout from "@/Layouts/Frontend";
-import Axios from "@/Services";
 import { Head } from "@inertiajs/inertia-react";
 import React, { useEffect, useState } from "react";
 

@@ -12,25 +12,25 @@ function About() {
         <div className="flex flex-col">
         <h1 className="font-bold text-slate-800">About us</h1>
           <div className="grid lg:grid-cols-5 grid-cols-1 my-5">
-            <div className="col-span-3 md:text-6xl text-3xl text-indigo-800 font-bold">Exceeding Expectations with Every Project</div>
+            <div className="col-span-3 md:text-6xl text-3xl text-blue-600 font-bold">Exceeding Expectations with Every Project</div>
             <div className="capitialize mt-3 text-slate-800 col-span-2 text-xl sm:text-center">Learn more about the company, the team behind and how we do things right.</div>
         </div>
         </div>
         <div className="grid grid-cols-1 my-10 md:my-20 lg:grid-cols-3 md:px-20 px-10 text-center">
                 <div>
             <p className="font-bold text-8xl text-slate-900">100+</p>
-                                <p className="font-bold mt-5 text-indigo-800">Our Satified Customer.</p>
+                                <p className="font-bold mt-5 text-blue-600">Our Satified Customer.</p>
 
             <p className="mx-3 text-slate-600">we are proud of the work we do and the relationships we have built with our clients. </p>
                 </div>
           <div>
             <p className="font-bold text-8xl text-slate-900">50+</p>
-                    <p className="font-bold mt-5 text-indigo-800">Buildings Built.</p>
+                    <p className="font-bold mt-5 text-blue-600">Buildings Built.</p>
                     <p className="mx-3 text-slate-600">we are proud of the work we do and the relationships we have built with our clients. </p>
                 </div>
           <div>
                                 <p className="font-bold text-8xl text-slate-900">20+</p>
-            <p className="font-bold mt-5 text-indigo-800">Years of Operation.</p>
+            <p className="font-bold mt-5 text-blue-600">Years of Operation.</p>
             <p className="mx-3 text-slate-600">we are proud of the work we do and the relationships we have built with our clients. </p>
                 </div>
             </div>
@@ -41,7 +41,7 @@ function About() {
             </div>
       <div></div>
       <div className="flex md:mx-20 m-10 bg-blue-50 rounded-lg p-10">
-        <p className="md:text-5xl text-2xl font-black antialiased text-indigo-800 md:mx-20 text-center leading-normal	">
+        <p className="md:text-3xl text-2xl font-black antialiased text-blue-600 md:mx-20 text-center leading-normal	uppercase">
           We are commited to construct and deliver affordable housing to all, with best-in-class quality and safety standards.
         </p>
       </div>

@@ -38,7 +38,7 @@ function Hometile() {
                     </p>
                 </div>
             </m.div>
-            <m.div variants={fadeIn("down")} className="relative overflow-hidden h-96 rounded-3xl bg-indigo-100 lg:col-span-2 flex flex-col justify-center px-10 cursor-pointer ">
+            <m.div variants={fadeIn("down")} className="relative overflow-hidden h-96 rounded-3xl bg-blue-100 lg:col-span-2 flex flex-col justify-center px-10 cursor-pointer ">
                 <img
                     className="h-96 w-96 absolute -right-36 hover:-translate-x-4 duration-700 opacity-20"
                     src={Medal}

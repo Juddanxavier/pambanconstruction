@@ -106,7 +106,7 @@ useEffect(() => {
                 <h4 className="text-2xl font-semibold text-cyan-900 capitalize">{item.title}</h4>
                               <span className="text-gray-600">{HtmlParser(item.content.substring(0, 200)) }</span>
               </div>
-              <Link href={ `blog/${item.slug}`} className="block w-max text-indigo-600">Read more</Link>
+              <Link href={ `blog/${item.slug}`} className="block w-max text-blue-600">Read more</Link>
             </div>
           </div>
         </div>

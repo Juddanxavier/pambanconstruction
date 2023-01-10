@@ -32,10 +32,13 @@ Route::get('projects', function() {
 Route::get('/blog', function() {
   return Inertia::render('Bloglist');
 });
-// Route::resource('/', ProjectController::class);
-// Route::resource('/{slug}', function(){
-//   return Inertia::render('Projectsdetail');
-// });
+Route::get('/terms', function() {
+  return Inertia::render('Terms');
+})->name('pages.terms');
+Route::get('/privacy', function() {
+  return Inertia::render('Privacy');
+})->name('pages.privacy');
+// Route::inertia('/terms', 'Tc');
 require __DIR__.'/auth.php';
 
 // routes/web.php

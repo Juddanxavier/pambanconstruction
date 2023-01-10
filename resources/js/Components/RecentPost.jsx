@@ -17,7 +17,7 @@ export default function RecentPost(projects) {
                                 />
                                 <div className="flex flex-col p-7">
                                     <div className="flex flex-row">
-                                        <div className=" text-xs uppercase font-bold bg-indigo-100 p-1 px-2 text-slate-500 rounded-md text-xs uppercase font-bold bg-indigo-100 p-1 px-2 text-slate-500 rounded-md">
+                                        <div className=" text-xs uppercase font-bold bg-blue-100 p-1 px-2 text-slate-500 rounded-md text-xs uppercase font-bold bg-blue-100 p-1 px-2 text-slate-500 rounded-md">
                                             {item.status}
                                         </div>
                                     </div>

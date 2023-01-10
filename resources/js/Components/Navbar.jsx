@@ -1,11 +1,9 @@
 import React from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon,  XMarkIcon } from '@heroicons/react/24/outline'
 import {navLinks} from '../../constants/index'
 import {logo, logoMark} from '../../images/index.js'
 import { Link } from '@inertiajs/inertia-react'
-import { motion as m } from 'framer-motion'
-import { navVariants } from '@/FramerMotion/Variants'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -13,7 +11,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <m.main variants={navVariants} initial="hidden" animate="show">
+    <main>
     <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
@@ -21,7 +19,7 @@ export default function Navbar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:bg-indigo-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -50,7 +48,7 @@ export default function Navbar() {
                         key={item.id}
                         href={item.id}
                         className={classNames(
-                          item.current ? 'text-indigo-700' : 'text-grey-500	  hover:text-indigo-700',
+                          item.current ? 'text-blue-700' : 'text-grey-500	  hover:text-blue-700',
                           'px-3 py-2 rounded-md text-sm font-bold'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -74,7 +72,7 @@ Lets Talk</button>
                   as="a"
                   href={item.id}
                   className={classNames(
-                    item.current ? 'text-indigo-700' : 'text-gray-700  hover:text-indigo-700',
+                    item.current ? 'text-blue-700' : 'text-gray-700  hover:text-blue-700',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
@@ -87,6 +85,6 @@ Lets Talk</button>
         </>
       )}
       </Disclosure>
-      </m.main>
+      </main>
   )
 }
