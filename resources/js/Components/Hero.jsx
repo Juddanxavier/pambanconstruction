@@ -13,15 +13,15 @@ function Hero() {
         <div className="flex my-24 font-light text-gray-500">
             <div className="pr-4">
               <m.span variants={fadeIn("down")} className="uppercase">Apartments</m.span>
-              <m.p variants={fadeIn("down")} className="text-1xl text-blue-600 font-bold pt-2">Residential homes</m.p>
+              <m.p variants={fadeIn("down")} className="text-1xl text-blue-800 font-bold pt-2">Residential homes</m.p>
             </div>
             <div className="pr-4">
               <m.span variants={fadeIn("down")} className="uppercase">Office</m.span>
-              <m.p variants={fadeIn("down")} className="text-1xl text-blue-600 font-bold pt-2">Joint Venture</m.p>
+              <m.p variants={fadeIn("down")} className="text-1xl text-blue-800 font-bold pt-2">Joint Venture</m.p>
             </div>
             <div className="pr-4">
               <m.span variants={fadeIn("down")} className="uppercase">Renovation</m.span>
-              <m.p variants={fadeIn("down")} className="text-1xl text-blue-600 font-bold pt-2">Commerical Building</m.p>
+              <m.p variants={fadeIn("down")} className="text-1xl text-blue-800 font-bold pt-2">Commerical Building</m.p>
             </div>
           </div>
         {/* <div
