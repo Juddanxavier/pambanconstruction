@@ -5,7 +5,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 const ProjectWidget = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [projects, setProjects] = useState([]);
-        const pathUrl = 'http://pambanconstructions.com/'
+    const pathUrl = import.meta.env.VITE_STORAGE_IMG;
 console.log(pathUrl)
      const getData = async () => {
     const xhr = new XMLHttpRequest()
@@ -36,7 +36,7 @@ console.log(pathUrl)
                             <div className="hover:bg-gray-100 dark:border-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 bg-white border rounded-md shadow-sm  max-w-xs md:max-w-none overflow-hidden">
                                 <img
                                     key={project.id}
-                                    src={ pathUrl + `storage/${project.gallery[0]}`}
+                                    src={ pathUrl + project.gallery[0]}
                                     alt={project.title}
                                     className="h-56 lg:h-60 w-full object-cover rounded-t-sm"
                                 />
