@@ -9,7 +9,7 @@ export default function Keypoints() {
               <p className="text-lg my-10">We are highly respected construction company in Chennai, known for delivering high-quality residential and commercial projects to its customers. The company's team has over 35 years of experience in the industry, and incorporates technology into its construction processes to improve efficiency and deliver top-quality results. Pamban Construction has a strong focus on customer satisfaction, as evidenced by its completion of over 40 successful projects and its more than 100 happy customers. The company's innovative approaches to design and construction set it apart in the industry.</p>
           </div>
           <div>
-              <div className="grid md:grid-cols-2 gap-12">
+              <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
                   <div className="bg-white w-100 h-64 rounded-sm md:shadow-sm md:shadow-indigo-300/50 p-10">
                       <span><CheckBadgeIcon  className="w-12 text-blue-800"/></span>
                       <h1 className="font-bold text-lg text-blue-800">Quality</h1>
