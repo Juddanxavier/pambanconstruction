@@ -7,14 +7,6 @@
     "file": "assets/interior.bb306485.png",
     "src": "resources/images/interior.png"
   },
-  "resources/images/clock.svg": {
-    "file": "assets/clock.4f7aa5a0.svg",
-    "src": "resources/images/clock.svg"
-  },
-  "resources/images/rupee.svg": {
-    "file": "assets/rupee.87e9f11e.svg",
-    "src": "resources/images/rupee.svg"
-  },
   "resources/images/pambanlogo.png": {
     "file": "assets/pambanlogo.aafb3821.png",
     "src": "resources/images/pambanlogo.png"
@@ -23,9 +15,17 @@
     "file": "assets/pambanlogomark.e6a80b29.png",
     "src": "resources/images/pambanlogomark.png"
   },
+  "resources/images/clock.svg": {
+    "file": "assets/clock.4f7aa5a0.svg",
+    "src": "resources/images/clock.svg"
+  },
   "resources/images/safety.svg": {
     "file": "assets/safety.34115155.svg",
     "src": "resources/images/safety.svg"
+  },
+  "resources/images/rupee.svg": {
+    "file": "assets/rupee.87e9f11e.svg",
+    "src": "resources/images/rupee.svg"
   },
   "resources/images/medal.svg": {
     "file": "assets/medal.0a66ea69.svg",
@@ -36,7 +36,7 @@
     "src": "resources/images/modernbuilding.png"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app.77325fd6.js",
+    "file": "assets/app.7f2b3455.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
@@ -50,7 +50,7 @@
       "resources/js/Pages/Welcome.jsx"
     ],
     "css": [
-      "assets/app.bc46c0a1.css"
+      "assets/app.f4d22a2f.css"
     ],
     "assets": [
       "assets/pinkbuilding.905336ff.jpg",
@@ -58,17 +58,17 @@
     ]
   },
   "resources/js/Pages/About.jsx": {
-    "file": "assets/About.280a8aac.js",
+    "file": "assets/About.fe9f6cea.js",
     "src": "resources/js/Pages/About.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.cf914154.js",
-      "_Prefooter.a3d7058a.js"
+      "_Frontend.050dff4a.js",
+      "_Prefooter.4497838a.js"
     ]
   },
-  "_Frontend.cf914154.js": {
-    "file": "assets/Frontend.cf914154.js",
+  "_Frontend.050dff4a.js": {
+    "file": "assets/Frontend.050dff4a.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -77,92 +77,92 @@
       "assets/pambanlogomark.e6a80b29.png"
     ]
   },
-  "_Prefooter.a3d7058a.js": {
-    "file": "assets/Prefooter.a3d7058a.js",
+  "_Prefooter.4497838a.js": {
+    "file": "assets/Prefooter.4497838a.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Blog.jsx": {
-    "file": "assets/Blog.b704a8ec.js",
+    "file": "assets/Blog.eea6dd72.js",
     "src": "resources/js/Pages/Blog.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.cf914154.js",
+      "_Frontend.050dff4a.js",
       "resources/js/app.jsx",
-      "_HtmlParser.3a1f7d42.js"
+      "_HtmlParser.9b0a8454.js"
     ]
   },
-  "_HtmlParser.3a1f7d42.js": {
-    "file": "assets/HtmlParser.3a1f7d42.js",
+  "_HtmlParser.9b0a8454.js": {
+    "file": "assets/HtmlParser.9b0a8454.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Bloglist.jsx": {
-    "file": "assets/Bloglist.f0321496.js",
+    "file": "assets/Bloglist.13572db8.js",
     "src": "resources/js/Pages/Bloglist.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.cf914154.js",
+      "_Frontend.050dff4a.js",
       "resources/js/app.jsx",
-      "_HtmlParser.3a1f7d42.js"
+      "_HtmlParser.9b0a8454.js"
     ]
   },
   "resources/js/Pages/Privacy.jsx": {
-    "file": "assets/Privacy.a2aa029c.js",
+    "file": "assets/Privacy.0aff9192.js",
     "src": "resources/js/Pages/Privacy.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.cf914154.js",
+      "_Frontend.050dff4a.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projectdetail.jsx": {
-    "file": "assets/Projectdetail.623ab018.js",
+    "file": "assets/Projectdetail.79c612dd.js",
     "src": "resources/js/Pages/Projectdetail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.cf914154.js",
-      "_ArrowLongRightIcon.ba15a1a2.js",
-      "_Prefooter.a3d7058a.js"
+      "_Frontend.050dff4a.js",
+      "_ArrowLongRightIcon.488a3477.js",
+      "_Prefooter.4497838a.js"
     ]
   },
-  "_ArrowLongRightIcon.ba15a1a2.js": {
-    "file": "assets/ArrowLongRightIcon.ba15a1a2.js",
+  "_ArrowLongRightIcon.488a3477.js": {
+    "file": "assets/ArrowLongRightIcon.488a3477.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projects.jsx": {
-    "file": "assets/Projects.017ee939.js",
+    "file": "assets/Projects.cbec1f6c.js",
     "src": "resources/js/Pages/Projects.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.cf914154.js"
+      "_Frontend.050dff4a.js"
     ]
   },
   "resources/js/Pages/Terms.jsx": {
-    "file": "assets/Terms.5b66fc13.js",
+    "file": "assets/Terms.abd30147.js",
     "src": "resources/js/Pages/Terms.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.cf914154.js",
+      "_Frontend.050dff4a.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome.789fb888.js",
+    "file": "assets/Welcome.8fc0a68b.js",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_ArrowLongRightIcon.ba15a1a2.js",
-      "_Frontend.cf914154.js",
-      "_HtmlParser.3a1f7d42.js",
-      "_Prefooter.a3d7058a.js"
+      "_ArrowLongRightIcon.488a3477.js",
+      "_Frontend.050dff4a.js",
+      "_HtmlParser.9b0a8454.js",
+      "_Prefooter.4497838a.js"
     ],
     "assets": [
       "assets/clock.4f7aa5a0.svg",
@@ -173,11 +173,11 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.bc46c0a1.css",
+    "file": "assets/app.f4d22a2f.css",
     "src": "resources/js/app.css"
   },
   "resources/css/filament.css": {
-    "file": "assets/filament.b845c2b5.css",
+    "file": "assets/filament.b1309543.css",
     "src": "resources/css/filament.css",
     "isEntry": true
   },

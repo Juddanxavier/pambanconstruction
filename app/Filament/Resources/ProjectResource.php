@@ -116,6 +116,7 @@ class ProjectResource extends Resource
                                 ->schema([
                                     FileUpload::make('gallery')
                                         ->disk('public')
+                                        ->directory('projects')
                                         ->preserveFilenames()
                                         ->image()
                                         ->multiple()
