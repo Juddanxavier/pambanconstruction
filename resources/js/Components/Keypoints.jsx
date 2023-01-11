@@ -32,6 +32,6 @@ export default function Keypoints() {
                   </div>
               </div>
           </div>
-            </div>
+         </div>
   )
 }
