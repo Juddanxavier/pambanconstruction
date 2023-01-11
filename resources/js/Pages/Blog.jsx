@@ -14,7 +14,7 @@ export default function Blog() {
     <Frontendlayout>
           <Head title={`${data.blog.title} - Pamban Construction`} />
           <div className="flex flex-col text-3xl my-10">
-              <h1 className="mx-auto capitalize mx-10 md:mx-20 justify-center font-bold text-slate-900">{data.blog.title}</h1>
+              <h1 className="mx-auto capitalize mx-10 md:mx-20 text-center font-bold text-slate-900">{data.blog.title}</h1>
               <div className="flex justify-center text-sm font-bold text-gray-500 mt-5">
                   {/* <UserCircleIcon className="w-6 mx-2" /> | */}
                   <ClockIcon className="w-6 mx-2" />{date}
