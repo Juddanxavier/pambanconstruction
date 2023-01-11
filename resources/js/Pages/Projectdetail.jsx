@@ -43,8 +43,8 @@ function ProjectDetail() {
         <ImageSlider slides={data.gallery}/>
       </div>
       <div className="flex flex-col mt-20 mb-10 mt-20 md:mx-20 mx-10">
-        <span className="text-5xl font-bold mb-5 capitalize text-slate-800">{ data.title }</span>
-        <p className="text-xl tracking-wide">{data.description }</p>
+        <span className="text-3xl font-bold mb-5 capitalize text-slate-800">{ data.title }</span>
+        <p className="text-lg tracking-wide">{data.description }</p>
       </div>
       <div className="grid grid-flow-row-dense grid-cols-1 md:grid-cols-3 mb-20 mx-10 md:mx-20">
         <div className="col-span-2 p-5">
@@ -72,7 +72,7 @@ function ProjectDetail() {
         <div className="p-4 bg-blue-50 text-slate-800 rounded-sm">
           <div className="flex flex-col">
             <div className="flex">
-              <h1 className="text-2xl font-bold text-blue-600">Project Specifications</h1>
+              <h1 className="text-2xl font-bold text-blue-800">Project Specifications</h1>
             </div>
             <div className="flex flex-col">
               <span className="text-xl mt-2">Status / <strong>{data.status}</strong></span>
@@ -80,7 +80,7 @@ function ProjectDetail() {
               <span className="text-xl mt-2">UDS / <strong>{data.uds} Sq.ft</strong></span>
             </div>
             <div className="flex flex-col">
-              <h1 className="text-2xl my-5 font-bold text-blue-600">Download Brochure</h1>
+              <h1 className="text-2xl my-5 font-bold text-blue-800">Download Brochure</h1>
               <DownloadButton />
             </div>
           </div>
