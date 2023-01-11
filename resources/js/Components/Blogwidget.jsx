@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import HtmlParser from 'react-html-parser';
 
 export default function Blogwidget() {
-        const pathUrl = 'http://pambanconstructions.com/'
+        const pathUrl = 'https://pambanconstructions.com/'
 
     const [blog, setBlog] = useState([])
   const getData = async () => {

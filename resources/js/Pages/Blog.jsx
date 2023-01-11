@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 import HtmlParser from 'react-html-parser';
 
 export default function Blog() {
-    // const pathUrl = 'http://127.0.0.1:8000/'
+    const pathUrl = 'https://pambanconstructions.com/'
     const data = usePage().props
     const date = format(new Date(data.blog.created_at), "EEEE, MMMM d, yyyy")
     console.log(data)
@@ -21,7 +21,7 @@ export default function Blog() {
               </div>
           </div>
           <div className="md:mx-20 h-96">
-              <img className="object-cover w-full h-full md:rounded-lg" src={`storage/${data.blog.image}`} alt={data.blog.image} />
+              <img className="object-cover w-full h-full md:rounded-lg" src={pathUrl + `storage/${data.blog.image}`} alt={data.blog.image} />
           </div>
           <div className="flex grid m-10 md:m-20 justify-center">
               <div className="max-w-5xl text-xl antialiased tracking-wide text-justify">{HtmlParser(data.blog.content)}</div>

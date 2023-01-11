@@ -36,7 +36,7 @@
     "src": "resources/images/modernbuilding.png"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app.4ff457d5.js",
+    "file": "assets/app.4ded91ac.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
@@ -58,17 +58,17 @@
     ]
   },
   "resources/js/Pages/About.jsx": {
-    "file": "assets/About.52d00f2f.js",
+    "file": "assets/About.e422a6c6.js",
     "src": "resources/js/Pages/About.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.443a8648.js",
-      "_Prefooter.e88241d2.js"
+      "_Frontend.6c32c219.js",
+      "_Prefooter.2da70a44.js"
     ]
   },
-  "_Frontend.443a8648.js": {
-    "file": "assets/Frontend.443a8648.js",
+  "_Frontend.6c32c219.js": {
+    "file": "assets/Frontend.6c32c219.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -77,92 +77,92 @@
       "assets/pambanlogomark.e6a80b29.png"
     ]
   },
-  "_Prefooter.e88241d2.js": {
-    "file": "assets/Prefooter.e88241d2.js",
+  "_Prefooter.2da70a44.js": {
+    "file": "assets/Prefooter.2da70a44.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Blog.jsx": {
-    "file": "assets/Blog.095ec3ce.js",
+    "file": "assets/Blog.3cb60238.js",
     "src": "resources/js/Pages/Blog.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.443a8648.js",
+      "_Frontend.6c32c219.js",
       "resources/js/app.jsx",
-      "_HtmlParser.72a7ae0f.js"
+      "_HtmlParser.379fde86.js"
     ]
   },
-  "_HtmlParser.72a7ae0f.js": {
-    "file": "assets/HtmlParser.72a7ae0f.js",
+  "_HtmlParser.379fde86.js": {
+    "file": "assets/HtmlParser.379fde86.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Bloglist.jsx": {
-    "file": "assets/Bloglist.90d668f6.js",
+    "file": "assets/Bloglist.51d65b75.js",
     "src": "resources/js/Pages/Bloglist.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.443a8648.js",
+      "_Frontend.6c32c219.js",
       "resources/js/app.jsx",
-      "_HtmlParser.72a7ae0f.js"
+      "_HtmlParser.379fde86.js"
     ]
   },
   "resources/js/Pages/Privacy.jsx": {
-    "file": "assets/Privacy.4d1ba2d3.js",
+    "file": "assets/Privacy.bcf574cb.js",
     "src": "resources/js/Pages/Privacy.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.443a8648.js",
+      "_Frontend.6c32c219.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projectdetail.jsx": {
-    "file": "assets/Projectdetail.b929f5e1.js",
+    "file": "assets/Projectdetail.32cd5712.js",
     "src": "resources/js/Pages/Projectdetail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.443a8648.js",
-      "_ArrowLongRightIcon.f72c9444.js",
-      "_Prefooter.e88241d2.js"
+      "_Frontend.6c32c219.js",
+      "_ArrowLongRightIcon.5aef7a7f.js",
+      "_Prefooter.2da70a44.js"
     ]
   },
-  "_ArrowLongRightIcon.f72c9444.js": {
-    "file": "assets/ArrowLongRightIcon.f72c9444.js",
+  "_ArrowLongRightIcon.5aef7a7f.js": {
+    "file": "assets/ArrowLongRightIcon.5aef7a7f.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projects.jsx": {
-    "file": "assets/Projects.cb3175d7.js",
+    "file": "assets/Projects.e70876e3.js",
     "src": "resources/js/Pages/Projects.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.443a8648.js"
+      "_Frontend.6c32c219.js"
     ]
   },
   "resources/js/Pages/Terms.jsx": {
-    "file": "assets/Terms.a64f3d3e.js",
+    "file": "assets/Terms.91b79fa6.js",
     "src": "resources/js/Pages/Terms.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.443a8648.js",
+      "_Frontend.6c32c219.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome.fe8bcf10.js",
+    "file": "assets/Welcome.c25dfb2f.js",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_ArrowLongRightIcon.f72c9444.js",
-      "_Frontend.443a8648.js",
-      "_HtmlParser.72a7ae0f.js",
-      "_Prefooter.e88241d2.js"
+      "_ArrowLongRightIcon.5aef7a7f.js",
+      "_Frontend.6c32c219.js",
+      "_HtmlParser.379fde86.js",
+      "_Prefooter.2da70a44.js"
     ],
     "assets": [
       "assets/clock.4f7aa5a0.svg",
