@@ -25,15 +25,15 @@ export default function Welcome() {
                 </div>
                 <div>
                     <p className="font-bold mb-5 ">Our Satified Customer.</p>
-                    <p className="font-bold text-8xl text-blue-600">100+</p>
+                    <p className="font-bold text-8xl text-blue-800">100+</p>
                 </div>
                 <div>
                     <p className="font-bold mb-5">Buildings Built.</p>
-                    <p className="font-bold text-8xl text-blue-600">50+</p>
+                    <p className="font-bold text-8xl text-blue-800">50+</p>
                 </div>
                 <div>
                     <p className="font-bold mb-5">Years of Operation.</p>
-                    <p className="font-bold text-8xl text-blue-600">20+</p>
+                    <p className="font-bold text-8xl text-blue-800">20+</p>
                 </div>
             </div>
                         <Keypoints />
