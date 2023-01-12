@@ -69,7 +69,7 @@ function ProjectDetail() {
       </Tab.Panels>
     </Tab.Group>
         </div>
-        <div className="p-4 bg-blue-50 text-slate-800 rounded-sm">
+        <div className="p-4 text-slate-800 shadow-sm shadow-indigo-500/50 rounded-md border-t-8 border-t-indigo-500 bg-gradient-to-t from-indigo-50 to-purple-50">
           <div className="flex flex-col">
             <div className="flex">
               <h1 className="text-2xl font-bold text-blue-800">Project Specifications</h1>

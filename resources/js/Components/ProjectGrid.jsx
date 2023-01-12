@@ -130,11 +130,6 @@ export default function ProjectGrid(props) {
                                         {item.description.substring(0, 150) +
                                             "..."}
                                     </p>
-                                    {/* <div className="flex flex-row mt-5 items-center justify-start">
-            <img className="rounded-2xl mr-2">
-            <p className="font-bold text-sm mr-2">{{data.authorName}}</p>
-            <p className="text-gray-400 text-sm">On {{data.postDate}}</p>
-        </div> */}
                                 </div>
                             </div>
                         </Link>
