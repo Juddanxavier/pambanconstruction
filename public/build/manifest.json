@@ -7,25 +7,25 @@
     "file": "assets/interior.bb306485.png",
     "src": "resources/images/interior.png"
   },
-  "resources/images/rupee.svg": {
-    "file": "assets/rupee.87e9f11e.svg",
-    "src": "resources/images/rupee.svg"
-  },
-  "resources/images/clock.svg": {
-    "file": "assets/clock.4f7aa5a0.svg",
-    "src": "resources/images/clock.svg"
+  "resources/images/pambanlogo.png": {
+    "file": "assets/pambanlogo.aafb3821.png",
+    "src": "resources/images/pambanlogo.png"
   },
   "resources/images/pambanlogomark.png": {
     "file": "assets/pambanlogomark.e6a80b29.png",
     "src": "resources/images/pambanlogomark.png"
   },
-  "resources/images/pambanlogo.png": {
-    "file": "assets/pambanlogo.aafb3821.png",
-    "src": "resources/images/pambanlogo.png"
+  "resources/images/clock.svg": {
+    "file": "assets/clock.4f7aa5a0.svg",
+    "src": "resources/images/clock.svg"
   },
   "resources/images/safety.svg": {
     "file": "assets/safety.34115155.svg",
     "src": "resources/images/safety.svg"
+  },
+  "resources/images/rupee.svg": {
+    "file": "assets/rupee.87e9f11e.svg",
+    "src": "resources/images/rupee.svg"
   },
   "resources/images/medal.svg": {
     "file": "assets/medal.0a66ea69.svg",
@@ -36,7 +36,7 @@
     "src": "resources/images/modernbuilding.png"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app.ea185673.js",
+    "file": "assets/app.f78969c8.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
@@ -50,7 +50,7 @@
       "resources/js/Pages/Welcome.jsx"
     ],
     "css": [
-      "assets/app.35710a97.css"
+      "assets/app.95428ef5.css"
     ],
     "assets": [
       "assets/pinkbuilding.905336ff.jpg",
@@ -58,17 +58,17 @@
     ]
   },
   "resources/js/Pages/About.jsx": {
-    "file": "assets/About.583cf5c7.js",
+    "file": "assets/About.7a592156.js",
     "src": "resources/js/Pages/About.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.8318da3a.js",
-      "_Prefooter.ceee4cee.js"
+      "_Frontend.bcfb9e52.js",
+      "_Prefooter.81e6c89a.js"
     ]
   },
-  "_Frontend.8318da3a.js": {
-    "file": "assets/Frontend.8318da3a.js",
+  "_Frontend.bcfb9e52.js": {
+    "file": "assets/Frontend.bcfb9e52.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -77,92 +77,92 @@
       "assets/pambanlogomark.e6a80b29.png"
     ]
   },
-  "_Prefooter.ceee4cee.js": {
-    "file": "assets/Prefooter.ceee4cee.js",
+  "_Prefooter.81e6c89a.js": {
+    "file": "assets/Prefooter.81e6c89a.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Blog.jsx": {
-    "file": "assets/Blog.4c236eb0.js",
+    "file": "assets/Blog.756a8ba8.js",
     "src": "resources/js/Pages/Blog.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.8318da3a.js",
+      "_Frontend.bcfb9e52.js",
       "resources/js/app.jsx",
-      "_HtmlParser.c3731286.js"
+      "_HtmlParser.80d135a6.js"
     ]
   },
-  "_HtmlParser.c3731286.js": {
-    "file": "assets/HtmlParser.c3731286.js",
+  "_HtmlParser.80d135a6.js": {
+    "file": "assets/HtmlParser.80d135a6.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Bloglist.jsx": {
-    "file": "assets/Bloglist.1fb033b4.js",
+    "file": "assets/Bloglist.2c12029c.js",
     "src": "resources/js/Pages/Bloglist.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.8318da3a.js",
+      "_Frontend.bcfb9e52.js",
       "resources/js/app.jsx",
-      "_HtmlParser.c3731286.js"
+      "_HtmlParser.80d135a6.js"
     ]
   },
   "resources/js/Pages/Privacy.jsx": {
-    "file": "assets/Privacy.9838bb1f.js",
+    "file": "assets/Privacy.64d6ed97.js",
     "src": "resources/js/Pages/Privacy.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.8318da3a.js",
+      "_Frontend.bcfb9e52.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projectdetail.jsx": {
-    "file": "assets/Projectdetail.6b4dbe26.js",
+    "file": "assets/Projectdetail.d7aec200.js",
     "src": "resources/js/Pages/Projectdetail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.8318da3a.js",
-      "_ArrowLongRightIcon.9c29861f.js",
-      "_Prefooter.ceee4cee.js"
+      "_Frontend.bcfb9e52.js",
+      "_ArrowLongRightIcon.99ac1581.js",
+      "_Prefooter.81e6c89a.js"
     ]
   },
-  "_ArrowLongRightIcon.9c29861f.js": {
-    "file": "assets/ArrowLongRightIcon.9c29861f.js",
+  "_ArrowLongRightIcon.99ac1581.js": {
+    "file": "assets/ArrowLongRightIcon.99ac1581.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projects.jsx": {
-    "file": "assets/Projects.8e442019.js",
+    "file": "assets/Projects.1ce5290c.js",
     "src": "resources/js/Pages/Projects.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.8318da3a.js"
+      "_Frontend.bcfb9e52.js"
     ]
   },
   "resources/js/Pages/Terms.jsx": {
-    "file": "assets/Terms.429ab50e.js",
+    "file": "assets/Terms.e7a7efcf.js",
     "src": "resources/js/Pages/Terms.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.8318da3a.js",
+      "_Frontend.bcfb9e52.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome.d0521c0c.js",
+    "file": "assets/Welcome.bb1e636e.js",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_ArrowLongRightIcon.9c29861f.js",
-      "_Frontend.8318da3a.js",
-      "_HtmlParser.c3731286.js",
-      "_Prefooter.ceee4cee.js"
+      "_ArrowLongRightIcon.99ac1581.js",
+      "_Frontend.bcfb9e52.js",
+      "_HtmlParser.80d135a6.js",
+      "_Prefooter.81e6c89a.js"
     ],
     "assets": [
       "assets/clock.4f7aa5a0.svg",
@@ -173,11 +173,11 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.35710a97.css",
+    "file": "assets/app.95428ef5.css",
     "src": "resources/js/app.css"
   },
   "resources/css/filament.css": {
-    "file": "assets/filament.54c742dd.css",
+    "file": "assets/filament.bfbbb41d.css",
     "src": "resources/css/filament.css",
     "isEntry": true
   },

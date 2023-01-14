@@ -19,16 +19,16 @@ function EmiCalculator() {
     }
 
     return (
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
             {/* <h1 className="text-2xl text-slate-800 font-bold mb-4">EMI Calculator</h1> */}
-            <form className="w-full max-w-xl">
+            <form className="">
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="px-3 mb-6 md:mb-0">
                         <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="loan-amount">
                             Loan Amount
                         </label>
                         <input
-                            className="bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            className="bg-gray-100 w-96 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                             placeholder="Enter Loan Amount"
                             id="loan-amount"
                             type="number"
@@ -43,7 +43,7 @@ function EmiCalculator() {
                             Interest Rate
                         </label>
                         <input
-                            className="bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            className="bg-gray-100 w-96 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                             id="interest-rate"
                             placeholder="Enter Interest Rate"
                             type="number"
@@ -58,7 +58,7 @@ function EmiCalculator() {
                             Loan Tenure in Months
                         </label>
                         <input
-                            className="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            className="appearance-none block w-96 bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                             id="interest-rate"
                             placeholder="Enter Tenure (in Months)"
                             type="number"
