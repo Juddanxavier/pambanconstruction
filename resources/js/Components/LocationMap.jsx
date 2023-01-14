@@ -6,11 +6,10 @@ export default function LocationMap(props) {
   console.log(props.center.lat);
   const googleKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
   const Marker = ({ text }) => (
-    <div className="flex flex-row
-        ">
-      <div><MapPinIcon className="h-8 w-8 text-red-500" /></div>
-      <div className="bg-white rounded-lg shadow-lg p-3 flex items-center">
-        <span className="text-sm">{text}</span>
+    <div className="flex w-96">
+      <div><MapPinIcon className="h-8 w-8 text-red-600" /></div>
+      <div className="bg-white w-auto rounded-lg shadow-lg p-3">
+        <span className="text-sm w-auto">{text}</span>
       </div>
     </div>
   );
@@ -25,7 +24,7 @@ export default function LocationMap(props) {
         hover={false}
 
       >
-        <Marker className="text-red-500" lat={props.center.lat} lng={props.center.lng} text={props.title} />
+        <Marker className="text-red-500 w-96" lat={props.center.lat} lng={props.center.lng} text={props.title} />
       </GoogleMapReact>
     </div>
   )

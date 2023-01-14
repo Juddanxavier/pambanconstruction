@@ -26,7 +26,7 @@ class DownloadButton extends React.Component {
 
     render() {
         return (
-            <button className="bg-transparent border-2 border-gray-300 text-blue-800 m-2 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-slate-800 hover:text-white"
+            <button className="bg-transparent border-2 border-gray-300 text-blue-800 m-2 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-blue-600 hover:text-white"
                 type="submit" onClick={this.handleClick}>
                 Download {this.props.name}
             </button>
