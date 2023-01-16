@@ -38,6 +38,9 @@ Route::get('/terms', function() {
 Route::get('/privacy', function() {
   return Inertia::render('Privacy');
 })->name('pages.privacy');
+Route::get('/contact', function() {
+  return Inertia::render('Contact');
+})->name('pages.contact');
 // Route::inertia('/terms', 'Tc');
 require __DIR__.'/auth.php';
 
