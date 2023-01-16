@@ -5,7 +5,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 const ProjectWidget = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [projects, setProjects] = useState([]);
-    const pathUrl = 'https://pambanconstructions.com/storage'
+    const pathUrl = 'https://pambanconstructions.com/storage/'
 console.log(pathUrl)
      const getData = async () => {
     const xhr = new XMLHttpRequest()
@@ -31,7 +31,7 @@ console.log(pathUrl)
                         <Link
                             key={project.id}
                             className="mt-3 block "
-                            href={`/project/${project.slug}`}
+                            href={`project/${project.slug}`}
                         >
                             <div className="hover:bg-gray-100 dark:border-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 bg-white border rounded-md shadow-sm  max-w-xs md:max-w-none overflow-hidden">
                                 <img
