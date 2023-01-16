@@ -11,32 +11,32 @@
     "file": "assets/pambanlogo.aafb3821.png",
     "src": "resources/images/pambanlogo.png"
   },
-  "resources/images/pambanlogomark.png": {
-    "file": "assets/pambanlogomark.e6a80b29.png",
-    "src": "resources/images/pambanlogomark.png"
+  "resources/images/clock.svg": {
+    "file": "assets/clock.4f7aa5a0.svg",
+    "src": "resources/images/clock.svg"
   },
   "resources/images/rupee.svg": {
     "file": "assets/rupee.87e9f11e.svg",
     "src": "resources/images/rupee.svg"
   },
-  "resources/images/safety.svg": {
-    "file": "assets/safety.34115155.svg",
-    "src": "resources/images/safety.svg"
-  },
-  "resources/images/clock.svg": {
-    "file": "assets/clock.4f7aa5a0.svg",
-    "src": "resources/images/clock.svg"
+  "resources/images/pambanlogomark.png": {
+    "file": "assets/pambanlogomark.e6a80b29.png",
+    "src": "resources/images/pambanlogomark.png"
   },
   "resources/images/medal.svg": {
     "file": "assets/medal.0a66ea69.svg",
     "src": "resources/images/medal.svg"
+  },
+  "resources/images/safety.svg": {
+    "file": "assets/safety.34115155.svg",
+    "src": "resources/images/safety.svg"
   },
   "resources/images/modernbuilding.png": {
     "file": "assets/modernbuilding.b8fb38c7.png",
     "src": "resources/images/modernbuilding.png"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app.b69101bd.js",
+    "file": "assets/app.1f0b1c9e.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
@@ -59,17 +59,17 @@
     ]
   },
   "resources/js/Pages/About.jsx": {
-    "file": "assets/About.22607e9b.js",
+    "file": "assets/About.7091bd22.js",
     "src": "resources/js/Pages/About.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.4a28f341.js",
-      "_Prefooter.be86d613.js"
+      "_Frontend.03dc552c.js",
+      "_Prefooter.8d6f7b22.js"
     ]
   },
-  "_Frontend.4a28f341.js": {
-    "file": "assets/Frontend.4a28f341.js",
+  "_Frontend.03dc552c.js": {
+    "file": "assets/Frontend.03dc552c.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -78,40 +78,40 @@
       "assets/pambanlogomark.e6a80b29.png"
     ]
   },
-  "_Prefooter.be86d613.js": {
-    "file": "assets/Prefooter.be86d613.js",
+  "_Prefooter.8d6f7b22.js": {
+    "file": "assets/Prefooter.8d6f7b22.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Blog.jsx": {
-    "file": "assets/Blog.8d11e83a.js",
+    "file": "assets/Blog.7aecee4c.js",
     "src": "resources/js/Pages/Blog.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.4a28f341.js",
+      "_Frontend.03dc552c.js",
       "resources/js/app.jsx",
-      "_HtmlParser.89465cde.js"
+      "_HtmlParser.9926c7d3.js"
     ]
   },
-  "_HtmlParser.89465cde.js": {
-    "file": "assets/HtmlParser.89465cde.js",
+  "_HtmlParser.9926c7d3.js": {
+    "file": "assets/HtmlParser.9926c7d3.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Bloglist.jsx": {
-    "file": "assets/Bloglist.6979b2eb.js",
+    "file": "assets/Bloglist.55aa68b4.js",
     "src": "resources/js/Pages/Bloglist.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.4a28f341.js",
+      "_Frontend.03dc552c.js",
       "resources/js/app.jsx",
-      "_HtmlParser.89465cde.js"
+      "_HtmlParser.9926c7d3.js"
     ]
   },
   "resources/js/Pages/Contact.jsx": {
-    "file": "assets/Contact.12860b70.js",
+    "file": "assets/Contact.9a3fc28b.js",
     "src": "resources/js/Pages/Contact.jsx",
     "isDynamicEntry": true,
     "imports": [
@@ -119,59 +119,59 @@
     ]
   },
   "resources/js/Pages/Privacy.jsx": {
-    "file": "assets/Privacy.2daae03f.js",
+    "file": "assets/Privacy.f395ea1b.js",
     "src": "resources/js/Pages/Privacy.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.4a28f341.js",
+      "_Frontend.03dc552c.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projectdetail.jsx": {
-    "file": "assets/Projectdetail.820d47af.js",
+    "file": "assets/Projectdetail.36dde76d.js",
     "src": "resources/js/Pages/Projectdetail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.4a28f341.js",
-      "_ArrowLongRightIcon.b6e866ed.js",
-      "_Prefooter.be86d613.js"
+      "_Frontend.03dc552c.js",
+      "_ArrowLongRightIcon.ddddcda8.js",
+      "_Prefooter.8d6f7b22.js"
     ]
   },
-  "_ArrowLongRightIcon.b6e866ed.js": {
-    "file": "assets/ArrowLongRightIcon.b6e866ed.js",
+  "_ArrowLongRightIcon.ddddcda8.js": {
+    "file": "assets/ArrowLongRightIcon.ddddcda8.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projects.jsx": {
-    "file": "assets/Projects.236fab8d.js",
+    "file": "assets/Projects.5cd2420e.js",
     "src": "resources/js/Pages/Projects.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.4a28f341.js"
+      "_Frontend.03dc552c.js"
     ]
   },
   "resources/js/Pages/Terms.jsx": {
-    "file": "assets/Terms.cfa5b0d6.js",
+    "file": "assets/Terms.d4a2b3a4.js",
     "src": "resources/js/Pages/Terms.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.4a28f341.js",
+      "_Frontend.03dc552c.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome.624a7df0.js",
+    "file": "assets/Welcome.8a532e66.js",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_ArrowLongRightIcon.b6e866ed.js",
-      "_Frontend.4a28f341.js",
-      "_HtmlParser.89465cde.js",
-      "_Prefooter.be86d613.js"
+      "_ArrowLongRightIcon.ddddcda8.js",
+      "_Frontend.03dc552c.js",
+      "_HtmlParser.9926c7d3.js",
+      "_Prefooter.8d6f7b22.js"
     ],
     "assets": [
       "assets/clock.4f7aa5a0.svg",
