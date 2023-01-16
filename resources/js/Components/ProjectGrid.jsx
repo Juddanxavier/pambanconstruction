@@ -2,7 +2,7 @@ import { Link } from "@inertiajs/inertia-react";
 import React from "react";
 
 export default function ProjectGrid(props) {
-    const pathUrl = 'https://pambanconstructions.com/'
+    const pathUrl = 'https://pambanconstructions.com/storage/'
     const search = (s) => {
         props.setFilter({
             ...props.filter,

@@ -5,7 +5,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 const ProjectWidget = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [projects, setProjects] = useState([]);
-    const pathUrl = 'https://pambanconstructions.com/'
+    const pathUrl = 'https://pambanconstructions.com/storage'
 console.log(pathUrl)
      const getData = async () => {
     const xhr = new XMLHttpRequest()
