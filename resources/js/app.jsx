@@ -7,6 +7,7 @@ import { createInertiaApp } from '@inertiajs/inertia-react';
 import { InertiaProgress } from '@inertiajs/progress';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import 'react-18-image-lightbox/style.css';
+import CursorProvider from './Components/CursorContext'
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
@@ -16,7 +17,11 @@ createInertiaApp({
     setup({ el, App, props }) {
         const root = createRoot(el);
 
-        root.render(<App {...props} />);
+        root.render(
+            <CursorProvider>
+                <App {...props} />
+                </CursorProvider>
+        );
     },
 });
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\BlogController;
+use APP\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -20,6 +21,8 @@ use Inertia\Inertia;
 
 Route::get('project/{slug}', [ProjectController::class, 'detail']);
 Route::get('blog/{slug}', [BlogController::class, 'detail']);
+Route::post('/contact', [ContactController::class, 'contactPost']);
+
 Route::get('/about', function() {
     return Inertia::render('About');
 })->name('pages.about');

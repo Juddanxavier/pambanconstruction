@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon,  XMarkIcon } from '@heroicons/react/24/outline'
 import {navLinks} from '../../constants/index'
 import {logo, logoMark} from '../../images/index.js'
 import { Link } from '@inertiajs/inertia-react'
+import { fade, header, stagger } from '@/FramerMotion/Variants'
+import { motion} from "framer-motion"
+import { CursorContext } from '../Components/CursorContext'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+  const {mouseEnterHandler, mouseLeaveHandler} = useContext(CursorContext)
   return (
-    <main>
+    <motion.main initial='initial' animate='animate' variants={stagger} >
     <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
@@ -29,7 +33,7 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center md:mt-5 md:justify-between sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
+                  <motion.div variants={header} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-12 w-auto lg:hidden"
                     src={logoMark}
@@ -40,8 +44,8 @@ export default function Navbar() {
                     src={logo}
                     alt="Pamban Constructions"
                   />
-                </div>
-                <div className="hidden sm:ml-6 sm:block">
+                </motion.div>
+                <motion.div variants={fade} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navLinks.map((item) => (
                       <Link
@@ -59,7 +63,7 @@ export default function Navbar() {
                     <button type="button" className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-sm text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2">
 Lets Talk</button>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -85,6 +89,6 @@ Lets Talk</button>
         </>
       )}
       </Disclosure>
-      </main>
+      </motion.main>
   )
 }

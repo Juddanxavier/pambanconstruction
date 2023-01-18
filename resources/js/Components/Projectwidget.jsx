@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "@inertiajs/inertia-react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
-
+import { header } from "@/FramerMotion/Variants";
+import { motion as m } from "framer-motion"
 const ProjectWidget = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [projects, setProjects] = useState([]);
@@ -22,8 +23,8 @@ const ProjectWidget = () => {
     return (
         <div>
                 <div className="flex p-10 md:m-10 text-slate-800 justify-between">
-                    <h1 className="text-left font-bold text-2xl">Featured Projects</h1>
-                <Link className="flex flex-row text-left text-lg text-blue-500 hover:text-blue-800" href="/projects">View All Projects <ArrowLongRightIcon className="w-6 pl-2"/></Link>
+                    <m.h1 variants={header} initial="initial" whileInView="animate" viewport={{once: true, amount:0.25}} className="text-left font-bold text-2xl">Featured Projects</m.h1>
+                <m.Link variants={header} initial="initial" whileInView="animate" viewport={{once: true, amount:0.25}} className="flex flex-row text-left text-lg text-blue-500 hover:text-blue-800" href="/projects">View All Projects <ArrowLongRightIcon className="w-6 pl-2"/></m.Link>
                 </div>
                 <div className="grid grid-col justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-12 md:mx-20 md:mb-10">
                     {projects.map((project) => (
