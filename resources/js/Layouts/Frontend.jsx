@@ -9,7 +9,7 @@ export default function Frontendlayout({ children }) {
     return (
         <main>
             <Navbar />
-            <m.div variants={cursorVariants} animate={cursorBG} className="w-[32px] h-[32px] bg-white fixed top-0 left-0 pointer-events-none rounded-full z-50"></m.div>
+            <m.div variants={cursorVariants} animate={cursorBG} className="w-[32px] h-[32px] bg-white animate-pulse fixed top-0 left-0 pointer-events-none rounded-full z-50"></m.div>
             <article>{children}</article>
             <Footer />
         </main>
