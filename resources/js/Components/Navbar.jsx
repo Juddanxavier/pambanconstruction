@@ -4,18 +4,16 @@ import { Bars3Icon,  XMarkIcon } from '@heroicons/react/24/outline'
 import {navLinks} from '../../constants/index'
 import {logo, logoMark} from '../../images/index.js'
 import { Link } from '@inertiajs/inertia-react'
-import { fade, header, stagger } from '@/FramerMotion/Variants'
-import { motion} from "framer-motion"
-import { CursorContext } from '../Components/CursorContext'
+import { motion as m} from "framer-motion"
+import { fadeIn, logoAnimation, staggerContainer } from '@/FramerMotion/Variants'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
-  const {mouseEnterHandler, mouseLeaveHandler} = useContext(CursorContext)
   return (
-    <motion.main initial='initial' animate='animate' variants={stagger} >
+    <m.main variants={staggerContainer} initial="hidden" animate="animate">
     <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
@@ -33,7 +31,7 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center md:mt-5 md:justify-between sm:items-stretch sm:justify-start">
-                  <motion.div variants={header} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="flex flex-shrink-0 items-center">
+                  <m.div variants={logoAnimation} className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-12 w-auto lg:hidden"
                     src={logoMark}
@@ -44,9 +42,9 @@ export default function Navbar() {
                     src={logo}
                     alt="Pamban Constructions"
                   />
-                </motion.div>
-                <motion.div variants={fade} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                </m.div>
+                <m.div variants={fadeIn} className="hidden sm:ml-6 sm:block">
+                  <div className="flex space-x-4"> 
                     {navLinks.map((item) => (
                       <Link
                         key={item.id}
@@ -63,7 +61,7 @@ export default function Navbar() {
                     <button type="button" className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-sm text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2">
 Lets Talk</button>
                   </div>
-                </motion.div>
+                </m.div>
               </div>
             </div>
           </div>
@@ -89,6 +87,6 @@ Lets Talk</button>
         </>
       )}
       </Disclosure>
-      </motion.main>
+      </m.main>
   )
 }

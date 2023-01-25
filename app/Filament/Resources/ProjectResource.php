@@ -33,6 +33,7 @@ use Filament\Tables\Columns\SelectColumn;
 class ProjectResource extends Resource
 {
     protected static ?string $model = Project::class;
+    protected static ?string $navigationGroup = 'Projects & Packages';
 
     protected static function getNavigationBadge(): ?string
         {

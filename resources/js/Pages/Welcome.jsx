@@ -10,9 +10,9 @@ import { ArrowTrendingUpIcon } from "@heroicons/react/24/outline";
 import Prefooter from "@/Components/Prefooter";
 import Keypoints from "@/Components/Keypoints";
 
+
 export default function Welcome() {
     const data = usePage().props
-    console.log(data)
     return (
         <Frontendlayout>
             <Head title="Home - Pamban Contructions" />
@@ -40,6 +40,6 @@ export default function Welcome() {
             <Blogwidget />
             <Prefooter />
             {/* <Team /> */}
-        </Frontendlayout>
+            </Frontendlayout>
     );
 }

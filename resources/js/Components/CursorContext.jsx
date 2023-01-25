@@ -1,5 +1,4 @@
 import React, { createContext, useEffect, useState } from 'react'
-import { transparent } from 'tailwindcss/colors'
 
 export const CursorContext = createContext()
 export default function CursorProvider({ children }) {
@@ -24,7 +23,7 @@ export default function CursorProvider({ children }) {
         default: {
             x: cursorPos.x - 16,
             y: cursorPos.y - 16,
-            backgroundColor: 'transparent',
+            backgroundColor: 'rgba(76, 175, 80, 0)',
             borderWidth: '2px',
             borderColor: '#0000FF'
         },

@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ConstructionSpecificationResource\Pages;
 use App\Models\ConstructionSpecification;
+use App\Models\Category;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Resources\Form;
@@ -17,6 +18,7 @@ class ConstructionSpecificationResource extends Resource
 {
 
     protected static ?string $model = ConstructionSpecification::class;
+    protected static ?string $navigationGroup = 'Construction Specs';
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-check';
 
@@ -30,17 +32,20 @@ class ConstructionSpecificationResource extends Resource
             ])
                 ->schema([
                     Select::make('category')
-                    ->options([
-                        'Structure' => 'Structure',
-                        'Floor Finishes' => 'Floor Finishes',
-                        'Wall Finishes' => 'Wall Finishes',
-                        'Kitchen' => 'Kitchen',
-                        'Sanitary & Plumbing' => 'Sanitary & Plumbing',
-                        'Main Doors' => 'Main Doors',
-                        'Windows' => 'Windows',
-                        'Electrical Supply' => 'Electrical Supply',
-                        'Lifts' => 'Lifts'
-                    ]),
+                    ->options(Category::all()->pluck('category', 'category'))
+                    ->searchable()
+                    ->required(),
+                    // ->options([
+                    //     'Structure' => 'Structure',
+                    //     'Floor Finishes' => 'Floor Finishes',
+                    //     'Wall Finishes' => 'Wall Finishes',
+                    //     'Kitchen' => 'Kitchen',
+                    //     'Sanitary & Plumbing' => 'Sanitary & Plumbing',
+                    //     'Main Doors' => 'Main Doors',
+                    //     'Windows' => 'Windows',
+                    //     'Electrical Supply' => 'Electrical Supply',
+                    //     'Lifts' => 'Lifts'
+                    // ]),
                     Textarea::make('specifications')
                 ])
             ]);
