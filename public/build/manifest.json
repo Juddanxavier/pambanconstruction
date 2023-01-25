@@ -1,11 +1,15 @@
 {
+  "resources/images/pinkbuilding.jpg": {
+    "file": "assets/pinkbuilding.905336ff.jpg",
+    "src": "resources/images/pinkbuilding.jpg"
+  },
   "resources/images/interior.png": {
     "file": "assets/interior.bb306485.png",
     "src": "resources/images/interior.png"
   },
-  "resources/images/pinkbuilding.jpg": {
-    "file": "assets/pinkbuilding.905336ff.jpg",
-    "src": "resources/images/pinkbuilding.jpg"
+  "resources/images/rupee.svg": {
+    "file": "assets/rupee.87e9f11e.svg",
+    "src": "resources/images/rupee.svg"
   },
   "resources/images/pambanlogo.png": {
     "file": "assets/pambanlogo.aafb3821.png",
@@ -15,14 +19,6 @@
     "file": "assets/pambanlogomark.e6a80b29.png",
     "src": "resources/images/pambanlogomark.png"
   },
-  "resources/images/rupee.svg": {
-    "file": "assets/rupee.87e9f11e.svg",
-    "src": "resources/images/rupee.svg"
-  },
-  "resources/images/medal.svg": {
-    "file": "assets/medal.0a66ea69.svg",
-    "src": "resources/images/medal.svg"
-  },
   "resources/images/clock.svg": {
     "file": "assets/clock.4f7aa5a0.svg",
     "src": "resources/images/clock.svg"
@@ -31,12 +27,16 @@
     "file": "assets/safety.34115155.svg",
     "src": "resources/images/safety.svg"
   },
+  "resources/images/medal.svg": {
+    "file": "assets/medal.0a66ea69.svg",
+    "src": "resources/images/medal.svg"
+  },
   "resources/images/modernbuilding.png": {
     "file": "assets/modernbuilding.b8fb38c7.png",
     "src": "resources/images/modernbuilding.png"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app.d583d7b7.js",
+    "file": "assets/app.fdca52ca.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
@@ -44,6 +44,7 @@
       "resources/js/Pages/Blog.jsx",
       "resources/js/Pages/Bloglist.jsx",
       "resources/js/Pages/Contact.jsx",
+      "resources/js/Pages/Packages.jsx",
       "resources/js/Pages/Privacy.jsx",
       "resources/js/Pages/Projectdetail.jsx",
       "resources/js/Pages/Projects.jsx",
@@ -51,7 +52,7 @@
       "resources/js/Pages/Welcome.jsx"
     ],
     "css": [
-      "assets/app.233174ad.css"
+      "assets/app.3757a936.css"
     ],
     "assets": [
       "assets/pinkbuilding.905336ff.jpg",
@@ -59,17 +60,17 @@
     ]
   },
   "resources/js/Pages/About.jsx": {
-    "file": "assets/About.ebd9fbb2.js",
+    "file": "assets/About.fc9d5e0f.js",
     "src": "resources/js/Pages/About.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.d9133f2f.js",
-      "_Prefooter.89d85e34.js"
+      "_Frontend.859b7c16.js",
+      "_Prefooter.e073e1e7.js"
     ]
   },
-  "_Frontend.d9133f2f.js": {
-    "file": "assets/Frontend.d9133f2f.js",
+  "_Frontend.859b7c16.js": {
+    "file": "assets/Frontend.859b7c16.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -78,101 +79,118 @@
       "assets/pambanlogomark.e6a80b29.png"
     ]
   },
-  "_Prefooter.89d85e34.js": {
-    "file": "assets/Prefooter.89d85e34.js",
+  "_Prefooter.e073e1e7.js": {
+    "file": "assets/Prefooter.e073e1e7.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Blog.jsx": {
-    "file": "assets/Blog.3a91ea92.js",
+    "file": "assets/Blog.1608d78f.js",
     "src": "resources/js/Pages/Blog.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.d9133f2f.js",
+      "_Frontend.859b7c16.js",
       "resources/js/app.jsx",
-      "_HtmlParser.a09659d7.js"
+      "_HtmlParser.e528e465.js"
     ]
   },
-  "_HtmlParser.a09659d7.js": {
-    "file": "assets/HtmlParser.a09659d7.js",
+  "_HtmlParser.e528e465.js": {
+    "file": "assets/HtmlParser.e528e465.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Bloglist.jsx": {
-    "file": "assets/Bloglist.2d8fdef6.js",
+    "file": "assets/Bloglist.1e2d5545.js",
     "src": "resources/js/Pages/Bloglist.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.d9133f2f.js",
+      "_Frontend.859b7c16.js",
       "resources/js/app.jsx",
-      "_HtmlParser.a09659d7.js"
+      "_HtmlParser.e528e465.js"
     ]
   },
   "resources/js/Pages/Contact.jsx": {
-    "file": "assets/Contact.62c78109.js",
+    "file": "assets/Contact.977d678d.js",
     "src": "resources/js/Pages/Contact.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.d9133f2f.js",
+      "_Frontend.859b7c16.js",
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Packages.jsx": {
+    "file": "assets/Packages.2b03cade.js",
+    "src": "resources/js/Pages/Packages.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_AccordionUI.55b1a410.js",
+      "_Frontend.859b7c16.js",
+      "resources/js/app.jsx"
+    ]
+  },
+  "_AccordionUI.55b1a410.js": {
+    "file": "assets/AccordionUI.55b1a410.js",
+    "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Privacy.jsx": {
-    "file": "assets/Privacy.b5ba0a8c.js",
+    "file": "assets/Privacy.23a75478.js",
     "src": "resources/js/Pages/Privacy.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.d9133f2f.js",
+      "_Frontend.859b7c16.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projectdetail.jsx": {
-    "file": "assets/Projectdetail.89344a91.js",
+    "file": "assets/Projectdetail.57c67dcf.js",
     "src": "resources/js/Pages/Projectdetail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.d9133f2f.js",
-      "_ArrowLongRightIcon.dad66a37.js",
-      "_Prefooter.89d85e34.js"
+      "_Frontend.859b7c16.js",
+      "_ArrowLongRightIcon.3fffca32.js",
+      "_Prefooter.e073e1e7.js",
+      "_AccordionUI.55b1a410.js"
     ]
   },
-  "_ArrowLongRightIcon.dad66a37.js": {
-    "file": "assets/ArrowLongRightIcon.dad66a37.js",
+  "_ArrowLongRightIcon.3fffca32.js": {
+    "file": "assets/ArrowLongRightIcon.3fffca32.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projects.jsx": {
-    "file": "assets/Projects.8acd5702.js",
+    "file": "assets/Projects.b75804fa.js",
     "src": "resources/js/Pages/Projects.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.d9133f2f.js"
+      "_Frontend.859b7c16.js"
     ]
   },
   "resources/js/Pages/Terms.jsx": {
-    "file": "assets/Terms.a25dfdf2.js",
+    "file": "assets/Terms.6a7a995a.js",
     "src": "resources/js/Pages/Terms.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.d9133f2f.js",
+      "_Frontend.859b7c16.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome.16c5defd.js",
+    "file": "assets/Welcome.33fee74d.js",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.d9133f2f.js",
-      "_ArrowLongRightIcon.dad66a37.js",
-      "_HtmlParser.a09659d7.js",
-      "_Prefooter.89d85e34.js"
+      "_Frontend.859b7c16.js",
+      "_ArrowLongRightIcon.3fffca32.js",
+      "_HtmlParser.e528e465.js",
+      "_Prefooter.e073e1e7.js"
     ],
     "assets": [
       "assets/clock.4f7aa5a0.svg",
@@ -183,11 +201,11 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.233174ad.css",
+    "file": "assets/app.3757a936.css",
     "src": "resources/js/app.css"
   },
   "resources/css/filament.css": {
-    "file": "assets/filament.38c5f5ec.css",
+    "file": "assets/filament.63ae9c7e.css",
     "src": "resources/css/filament.css",
     "isEntry": true
   },
