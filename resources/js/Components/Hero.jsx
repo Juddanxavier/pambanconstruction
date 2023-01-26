@@ -37,7 +37,7 @@ function Hero() {
       </m.div>
     </m.div>
 
-    <div className="text-white py-10 bg-slate-900 w-full px-10 md:px-32">
+    <div className="text-white py-10 bg-indigo-900 w-full px-10 md:px-32">
         <div className="container">
         <div className="md:w-3/5">
         <m.p initial={{

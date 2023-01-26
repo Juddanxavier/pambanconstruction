@@ -12,7 +12,7 @@ function About() {
         <div className="flex flex-col">
         <h1 className="font-bold text-slate-800">About us</h1>
           <div className="grid lg:grid-cols-5 grid-cols-1 my-5">
-            <div className="col-span-3 md:text-6xl text-3xl text-blue-800 font-bold">Exceeding Expectations with Every Project</div>
+            <div className="col-span-3 md:text-6xl text-3xl text-indigo-900 font-bold">Exceeding Expectations with Every Project</div>
             <div className="capitialize mt-3 text-slate-800 col-span-2 text-xl sm:text-center">Learn more about the company, the team behind and how we do things right.</div>
         </div>
         </div>

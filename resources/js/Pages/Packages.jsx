@@ -32,7 +32,7 @@ export default function Packages() {
           <Head title={"Packages - Pamban Construction"} />
             <div className="grid mx-10 md:mx-20">
                 <div className="mx-auto mt-20 mb-5">
-                    <h1 className="capitalize text-4xl font-bold">Pricing plans</h1>
+                    <h1 className="capitalize text-4xl font-bold text-slate-800">Pricing plans</h1>
                 </div>
                 <div className="mx-auto md:mx-20 my-2">
                     <h1 className="capitalize text-center text-gray-500">
