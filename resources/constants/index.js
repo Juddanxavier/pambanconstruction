@@ -25,11 +25,6 @@ export const navLinks = [
         id: "/blog",
         title: "Blogs & News",
         current: false
-    },
-    {
-        id: "/contact",
-        title: "Contact",
-        current: false
     }
 ]
 
