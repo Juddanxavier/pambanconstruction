@@ -43,13 +43,11 @@ function Hero() {
                     loop ></ReactTyped></span></h1>
               <div className="grid grid-col-1 md:grid-cols-3 md:mt-20">
                 {projects.map((item, index) => (
-                  <Link key={index} href={`project/${item.slug}`} className="w-48 my-5 p-1">
+                  <Link key={index} href={`project/${item.slug}`} className="item-center md:w-48 w-80 my-5 p-1">
                     <m.div variants={letter} className="flex flex-col">
                       <div className="bg-white rounded-sm shadow-md">
             <img src={ pathUrl + item.gallery[0]} alt={item.title} className="w-full h-full object-cover  rounded-t-sm" />
-            <div className="p-4">
-              <h2 className="text-slate-900 text-xs capitalize">{item.title}</h2>
-            </div>
+              <h2 className="text-slate-900 text-xs capitalize p-2">{item.title}</h2>
           </div>
                     </m.div>
                             </Link>
