@@ -53,7 +53,6 @@ function Hero() {
           </div>
                     </m.div>
                             </Link>
-
                 ))}
               </div>
         </div>
