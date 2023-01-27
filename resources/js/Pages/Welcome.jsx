@@ -4,9 +4,7 @@ import Hero from "@/Components/Hero";
 import ProjectWidget from "@/Components/Projectwidget";
 import Hometile from "@/Components/Hometile";
 import Frontendlayout from "../Layouts/Frontend";
-import Team from "@/Components/Team";
 import Blogwidget from "@/Components/Blogwidget";
-import { ArrowTrendingUpIcon } from "@heroicons/react/24/outline";
 import Prefooter from "@/Components/Prefooter";
 import Keypoints from "@/Components/Keypoints";
 
@@ -25,15 +23,15 @@ export default function Welcome() {
                 </div>
                 <div>
                     <p className="font-bold mb-5 ">Our Satified Customer.</p>
-                    <p className="font-bold text-8xl text-blue-800">100+</p>
+                    <p className="font-bold text-8xl text-indigo-900">100+</p>
                 </div>
                 <div>
                     <p className="font-bold mb-5">Buildings Built.</p>
-                    <p className="font-bold text-8xl text-blue-800">50+</p>
+                    <p className="font-bold text-8xl text-indigo-900">50+</p>
                 </div>
                 <div>
                     <p className="font-bold mb-5">Years of Operation.</p>
-                    <p className="font-bold text-8xl text-blue-800">20+</p>
+                    <p className="font-bold text-8xl text-indigo-900">20+</p>
                 </div>
             </div>
                         <Keypoints />

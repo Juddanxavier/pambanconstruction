@@ -25,7 +25,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/projectsAPI', [ProjectController::class, 'ProjectsAPI']);
 
-
+Route::get('/projectsHero', [ProjectController::class, 'hero']);
 Route::get('/projectfeatured', [ProjectController::class, 'index']);
 Route::get('blogwidget', [BlogController::class, 'widgetGet']);
 Route::get('/blogAll', [BlogController::class, 'Bloglist']);

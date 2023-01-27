@@ -1,37 +1,67 @@
-import React, { useContext } from 'react'
-import { Modernbuilding } from '../../images/index'
+import React, { useContext, useEffect, useState } from 'react'
+import { Modernbuilding, Pinkbuilding } from '../../images/index'
 import { motion as m } from 'framer-motion'
 import { fadeIn, homeImg, letter, staggerContainer } from '@/FramerMotion/Variants'
 import { CursorContext } from './CursorContext'
+import ReactTyped from 'react-typed';
+import { Link } from '@inertiajs/inertia-react'
+
 
 function Hero() {
-  const {mouseEnterHandler, mouseLeaveHandler} = useContext(CursorContext)
+  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext)
+  const [projects, setProjects] = useState([]);
+    const pathUrl = 'https://pambanconstructions.com/storage/'
+     const getData = async () => {
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', 'api/projectsHero')
+    xhr.setRequestHeader('Content-Type', 'application/xml')
+    xhr.responseType = 'json'
+    xhr.onload = () => {
+      setProjects(xhr.response)
+      console.log(xhr.response)
+    }
+    xhr.send()
+    }
+    useEffect(() => {
+        getData();
+    }, []);
+  
+  
   return (
     <m.main variants={staggerContainer} initial="hidden" animate="animate">
     <m.div variants={letter} className="flex flex-wrap h-auto">
-      <div className="md:w-1/2 h-auto justify-center">
-        <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}  className="mx-16 md:mx-32 mt-16 md:mt-48">
-        <h1 className="mx-auto text-3xl md:text-6xl font-bold text-slate-800 sm:justify-center uppercase cursor-pointer">Transforming spaces, shaping communities</h1>
-        <div className="flex my-24 font-light text-gray-500">
-            <div className="pr-4">
-              <span className="uppercase">Apartments</span>
-              <p className="text-1xl text-blue-800 font-bold pt-2">Residential homes</p>
-            </div>
-            <div className="pr-4">
-              <span className="uppercase">Office</span>
-              <p className="text-1xl text-blue-800 font-bold pt-2">Joint Venture</p>
-            </div>
-            <div className="pr-4">
-              <span className="uppercase">Renovation</span>
-              <p className="text-1xl text-blue-800 font-bold pt-2">Commerical Building</p>
+      <div className="md:w-3/5  h-auto justify-center relative">
+        <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}  className="mx-20 mt-16 md:mt-48">
+        <h1 className="mx-auto text-3xl md:text-6xl font-bold text-slate-800 sm:justify-center capitalize cursor-pointer tracking-wide
+">Transforming spaces, shaping  <span className="text-indigo-900"><ReactTyped
+                strings={[
+                    'Communities.',
+                    'Homes.',
+                    'Apartments.']}
+                    typeSpeed={40}
+                    backSpeed={50}
+                    loop ></ReactTyped></span></h1>
+              <div className="grid grid-col-1 md:grid-cols-3 md:mt-20">
+                {projects.map((item, index) => (
+                  <Link key={index} href={`project/${item.slug}`} className="w-48 my-5 p-1">
+                    <m.div variants={letter} className="flex flex-col">
+                      <div className="bg-white rounded-sm shadow-md">
+            <img src={ pathUrl + item.gallery[0]} alt={item.title} className="w-full h-full object-cover  rounded-t-sm" />
+            <div className="p-4">
+              <h2 className="text-slate-900 text-xs capitalize">{item.title}</h2>
             </div>
           </div>
+                    </m.div>
+                            </Link>
+
+                ))}
+              </div>
         </div>
       </div>
-      <m.div variants={homeImg} className="flex md:w-1/2 items-end -pb-15">
+      <m.div variants={homeImg} className="flex md:w-2/5 h-screen items-center pt-5">
           <img
           src={Modernbuilding}
-          className="h-70 w-full"
+          className="object-cover h-5/6 md:w-11/12 z-9 my-10 md:rounded-3xl"
           alt="modern building"
         />
       </m.div>

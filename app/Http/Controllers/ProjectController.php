@@ -20,6 +20,14 @@ class ProjectController extends Controller
             'address',
             'status',)->limit(6)->get();
     }
+    public function hero() {
+        return Project::where('is_featured', true)->select(
+            'id',
+            'title',
+            'slug',
+            'gallery',
+        )->take(3)->get();
+    }
     public function ProjectsAPI(Request $request) {
         $query = Project::query()->select(
             'id',
