@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\BlogController;
-use APP\Http\Controllers\ContactController;
-use APP\Http\Controllers\PackagesController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PackagesController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -22,9 +22,8 @@ use Inertia\Inertia;
 
 Route::get('project/{slug}', [ProjectController::class, 'detail']);
 Route::get('blog/{slug}', [BlogController::class, 'detail']);
-Route::post('/contact', [ContactController::class, 'contactPost']);
-Route::get('/packages', 'App\Http\Controllers\PackagesController@index');
-
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/packages', [PackagesController::class, 'index']);
 
 Route::get('/about', function() {
     return Inertia::render('About');
@@ -44,9 +43,9 @@ Route::get('/terms', function() {
 Route::get('/privacy', function() {
   return Inertia::render('Privacy');
 })->name('pages.privacy');
-Route::get('/contact', function() {
-  return Inertia::render('Contact');
-})->name('pages.contact');
+// Route::get('/contact', function() {
+//   return Inertia::render('Contact');
+// })->name('pages.contact');
 // Route::inertia('/terms', 'Tc');
 require __DIR__.'/auth.php';
 

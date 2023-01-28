@@ -2,13 +2,11 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Modernbuilding, Pinkbuilding } from '../../images/index'
 import { motion as m } from 'framer-motion'
 import { fadeIn, homeImg, letter, staggerContainer } from '@/FramerMotion/Variants'
-import { CursorContext } from './CursorContext'
 import ReactTyped from 'react-typed';
 import { Link } from '@inertiajs/inertia-react'
 
 
 function Hero() {
-  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext)
   const [projects, setProjects] = useState([]);
     const pathUrl = 'https://pambanconstructions.com/storage/'
      const getData = async () => {
@@ -31,7 +29,7 @@ function Hero() {
     <m.main variants={staggerContainer} initial="hidden" animate="animate">
     <m.div variants={letter} className="flex flex-wrap h-auto">
       <div className="md:w-3/5  h-auto justify-center relative">
-        <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}  className="mx-20 mt-16 md:mt-48">
+        <div className="mx-20 mt-16 md:mt-48">
         <h1 className="mx-auto text-3xl md:text-6xl font-bold text-slate-800 sm:justify-center capitalize cursor-pointer tracking-wide
 ">Transforming spaces, shaping  <span className="text-indigo-900"><ReactTyped
                 strings={[

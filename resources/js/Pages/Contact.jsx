@@ -6,10 +6,12 @@ export default function Contact() {
   const form = useForm({
     name: "",
     email: "",
-    comment: ""
+    message: ""
   })
-  const submit = () => {
-     form.post(route("pages.contact"))
+  const submit = (e) => {
+    console.log('working')
+    // e.preventDefault()
+    //  form.post(route("contact"))
   }
   return (
       <Frontendlayout>

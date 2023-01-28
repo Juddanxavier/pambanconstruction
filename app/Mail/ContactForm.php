@@ -12,15 +12,15 @@ use Illuminate\Queue\SerializesModels;
 class ContactForm extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $mailData;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($mailData)
     {
-        //
+        $this->mailData - $mailData;
     }
 
     /**
@@ -42,11 +42,11 @@ class ContactForm extends Mailable
      */
     public function content()
     {
-        return new Content(
-            view: 'view.name',
-        );
+       //
     }
-
+    public function build() {
+        return $this->subject("Mail from Contact page")->replyTo($this->email)->view('emails.contact');
+    }
     /**
      * Get the attachments for the message.
      *
