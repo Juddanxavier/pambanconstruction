@@ -9,7 +9,7 @@ export default function Contact() {
     message: ""
   })
   const submit = (e) => {
-    console.log('working')
+    console.log('working!')
     // e.preventDefault()
     //  form.post(route("contact"))
   }
