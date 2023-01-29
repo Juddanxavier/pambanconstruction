@@ -1,5 +1,6 @@
 import Frontendlayout from '@/Layouts/Frontend'
 import { ArrowTrendingUpIcon, MapPinIcon, DevicePhoneMobileIcon, AtSymbolIcon } from '@heroicons/react/24/solid'
+import { Inertia } from '@inertiajs/inertia'
 import { Head, useForm, usePage } from '@inertiajs/inertia-react'
 import React from 'react'
 import { People } from '../../images/index'
@@ -18,11 +19,8 @@ export default function Contact() {
   const submit = (event) => {
     event.preventDefault()
     console.log(data)
-    post(route('pages.sendmail'), {
+    Inertia.post(route('pages.sendmail'), {
       preserveScroll: true,
-      onSuccess: () => {
-        data.reset()
-      }
     }, data)
 
   }
