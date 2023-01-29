@@ -22,7 +22,7 @@ use Inertia\Inertia;
 
 Route::get('project/{slug}', [ProjectController::class, 'detail']);
 Route::get('blog/{slug}', [BlogController::class, 'detail']);
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/sendmail', [ContactController::class, 'index'])->name('sendmail');
 Route::get('/packages', [PackagesController::class, 'index']);
 
 Route::get('/about', function() {
@@ -43,9 +43,9 @@ Route::get('/terms', function() {
 Route::get('/privacy', function() {
   return Inertia::render('Privacy');
 })->name('pages.privacy');
-// Route::get('/contact', function() {
-//   return Inertia::render('Contact');
-// })->name('pages.contact');
+Route::get('/contact', function() {
+  return Inertia::render('Contact');
+})->name('pages.contact');
 // Route::inertia('/terms', 'Tc');
 require __DIR__.'/auth.php';
 

@@ -8,6 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Address;
 
 class ContactForm extends Mailable
 {
@@ -18,9 +19,9 @@ class ContactForm extends Mailable
      *
      * @return void
      */
-    public function __construct($mailData)
+    public function __construct(public string $name, public string $phone, public string $email, public string $messages)
     {
-        $this->mailData - $mailData;
+        //
     }
 
     /**
@@ -31,7 +32,8 @@ class ContactForm extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Contact Form',
+            from: new Address('sales@pambanconstructions.com', 'Pamban Constructions'),
+            subject: 'Email from Contact Form.',
         );
     }
 
@@ -42,10 +44,12 @@ class ContactForm extends Mailable
      */
     public function content()
     {
-       //
+       return new Content(
+        view: 'emails.contact',
+    );
     }
     public function build() {
-        return $this->subject("Mail from Contact page")->replyTo($this->email)->view('emails.contact');
+        return $this->subject('Email from Contact Form.')->replyTo($this->email)->view('emails.contact');
     }
     /**
      * Get the attachments for the message.

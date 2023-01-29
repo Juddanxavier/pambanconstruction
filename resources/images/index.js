@@ -7,7 +7,7 @@ import Medal from './medal.svg';
 import Pinkbuilding from './Pinkbuilding.jpg'
 import Modernbuilding from './modernbuilding.png'
 import Interior from './interior.png'
-
+import People from './people.jpg'
 export {
     logo,
     logoMark,
@@ -17,5 +17,6 @@ export {
     Medal,
     Pinkbuilding,
     Modernbuilding,
-    Interior
+    Interior,
+    People
 };
