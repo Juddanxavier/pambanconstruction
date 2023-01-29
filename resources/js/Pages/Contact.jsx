@@ -19,7 +19,7 @@ console.log(errors)
   }
   return (
       <Frontendlayout>
-            <Head title="Contact Us" />
+      <Head title="Contact Us" />
       <div className="grid md:grid-cols-2 gap-5 mt-5 p-10 md:p-20">
         <div className="">
           <p className="capitalize font-black md:text-7xl text-4xl text-slate-800">talk to our experts</p>
