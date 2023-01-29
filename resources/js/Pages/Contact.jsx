@@ -7,7 +7,7 @@ import { People } from '../../images/index'
 
 export default function Contact({ errors }) {
 console.log(errors)
-  const { data, setData} = useForm({
+  const { data, setData, get} = useForm({
     name: "",
     phone: "",
     email: "",
@@ -15,7 +15,7 @@ console.log(errors)
   })
   const submit = (e) => {
     e.preventDefault()
-    Inertia.get('/sendmail', data)
+    get('/sendmail', data)
   }
   return (
       <Frontendlayout>
