@@ -1,14 +1,12 @@
 import Frontendlayout from '@/Layouts/Frontend'
 import { ArrowTrendingUpIcon, MapPinIcon, DevicePhoneMobileIcon, AtSymbolIcon } from '@heroicons/react/24/solid'
-import { Inertia } from '@inertiajs/inertia'
-import { Head, useForm, usePage } from '@inertiajs/inertia-react'
+import { Head, useForm } from '@inertiajs/inertia-react'
 import React from 'react'
 import { People } from '../../images/index'
 
-export default function Contact() {
-  const prop = usePage().props
+export default function Contact({errors}) {
   console.log(prop)
-  const { data, setData, post, errors} = useForm({
+  const { data, setData, post, processing } = useForm({
     name: "",
     phone: "",
     email: "",
@@ -80,7 +78,7 @@ export default function Contact() {
               <textarea name="messages" id="comment" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment" value={data.messages} onChange={(e) => setData('messages', e.target.value)}></textarea>
               {errors.messages && <div className="text-red-600">{errors.messages}</div>}
 </div>
-<button onClick={submit} className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
+<button onClick={submit} disabled={processing} className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
 
           </form>
     </div>
