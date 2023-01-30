@@ -19,7 +19,7 @@ export default function Contact() {
   const submit = (event) => {
     event.preventDefault()
     console.log(data)
-    Inertia.post(route('pages.sendmail'), {
+    post(route('pages.sendmail'), {
       preserveScroll: true,
     }, data)
 
