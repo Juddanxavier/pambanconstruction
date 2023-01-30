@@ -19,9 +19,9 @@ function EmiCalculator() {
     }
 
     return (
-        <div className="mx-auto px-4">
+        <div className="my-5">
             {/* <h1 className="text-2xl text-slate-800 font-bold mb-4">EMI Calculator</h1> */}
-            <form className="">
+            <form>
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="px-3 mb-6 md:mb-0">
                         <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="loan-amount">

@@ -2,6 +2,8 @@ import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import { Link } from '@inertiajs/inertia-react'
 import React, { useEffect, useState } from 'react'
 import HtmlParser from 'react-html-parser';
+import { motion as m } from 'framer-motion';
+import { fadeUpProject, staggerContainer } from '@/FramerMotion/Variants';
 
 export default function Blogwidget() {
         const pathUrl = 'https://pambanconstructions.com/storage/'
@@ -23,14 +25,14 @@ export default function Blogwidget() {
     }, [])
     
     return (
-        <main>
+        <m.main variants={staggerContainer} initial="hidden" whileInView="animate" viewport={{once: true}}>
       <div className="flex px-10 md:mx-10 text-slate-800 justify-center">
                     <h1 className="text-left font-bold text-2xl">Blogs and News</h1>
                 </div>
           <div className="my-20 flex flex-col gap-[30px]"> 
           {blog.map((item) => (
             
-              <div key={item.id} className="flex justify-center md:flex-row flex-col gap-1">
+              <m.div key={item.id} variants={fadeUpProject} initial="hidden" whileInView="animate" viewport={{once: true}} className="flex justify-center md:flex-row flex-col gap-1">
           <Link href={`blog/${item.slug}`}>
               <div className="m-4 md:w-full md:flex md:items-center">
                 
@@ -44,9 +46,9 @@ export default function Blogwidget() {
                   
               </div>
             </Link>
-        </div>
+        </m.div>
           ))}
         </div>
-    </main>
+    </m.main>
   )
 }

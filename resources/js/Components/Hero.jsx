@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Modernbuilding, Pinkbuilding } from '../../images/index'
 import { motion as m } from 'framer-motion'
-import { fadeIn, homeImg, letter, staggerContainer } from '@/FramerMotion/Variants'
+import { fadeIn, fadeUpProject, homeImg, letter, staggerContainer } from '@/FramerMotion/Variants'
 import ReactTyped from 'react-typed';
 import { Link } from '@inertiajs/inertia-react'
 
@@ -42,7 +42,7 @@ function Hero() {
               <div className="grid grid-col-1 md:grid-cols-3 md:mt-20">
                 {projects.map((item, index) => (
                   <Link key={index} href={`project/${item.slug}`} className="item-center md:w-48 w-80 my-5 p-1">
-                    <m.div variants={letter} className="flex flex-col">
+                    <m.div variants={homeImg} className="flex flex-col">
                       <div className="bg-white rounded-sm shadow-md">
             <img src={ pathUrl + item.gallery[0]} alt={item.title} className="w-full h-full object-cover  rounded-t-sm" />
               <h2 className="text-slate-900 text-xs capitalize p-2">{item.title}</h2>
@@ -73,7 +73,7 @@ function Hero() {
       y: 0,
         transition: {
             duration: 0.5,
-            delay: 1
+            delay: 0.5
         }
     }} viewport={{once: true}} className="text-3xl font-lg">
             We offer an incredible array of new houses any customized floor plan or home remodeling anything you can imagine.

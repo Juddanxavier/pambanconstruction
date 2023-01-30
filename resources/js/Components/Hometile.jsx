@@ -5,8 +5,8 @@ import { Clock, Rupee, Safety, Medal } from "../../images/index.js";
 
 function Hometile() {
     return (
-        <m.div variants={staggerContainer} initial="hidden" whileInView  ="animate" className="container grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:p-20 mx-auto">
-            <m.div variants={fadeUp} initial="hidden" whileInView="animate" className="relative overflow-hidden h-96 rounded-3xl bg-red-100 flex flex-col justify-center px-10 cursor-pointer ">
+        <m.div variants={staggerContainer} initial="hidden" whileInView="animate" viewport={{ once: true }} className="container grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:p-20 mx-auto">
+            <m.div variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="relative overflow-hidden h-96 rounded-3xl bg-red-100 flex flex-col justify-center px-10 cursor-pointer ">
                 <img
                     className="absolute -bottom-36 -right-36 hover:-translate-y-4 hover:-translate-x-4 duration-700 opacity-50"
                     src={Rupee}
@@ -22,7 +22,7 @@ function Hometile() {
                     </p>
                 </div>
             </m.div>
-            <m.div variants={fadeUp} initial="hidden" whileInView="animate" className="relative overflow-hidden h-96 rounded-3xl bg-green-100 lg:col-span-2 flex flex-col justify-center px-10 cursor-pointer ">
+            <m.div variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="relative overflow-hidden h-96 rounded-3xl bg-green-100 lg:col-span-2 flex flex-col justify-center px-10 cursor-pointer ">
                 <img
                     className="h-96 w-96 absolute -right-36 hover:-translate-x-4 duration-700 opacity-20"
                     src={Safety}
@@ -38,7 +38,7 @@ function Hometile() {
                     </p>
                 </div>
             </m.div>
-            <m.div variants={fadeUp} initial="hidden" whileInView="animate" className="relative overflow-hidden h-96 rounded-3xl bg-blue-100 lg:col-span-2 flex flex-col justify-center px-10 cursor-pointer ">
+            <m.div variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="relative overflow-hidden h-96 rounded-3xl bg-blue-100 lg:col-span-2 flex flex-col justify-center px-10 cursor-pointer ">
                 <img
                     className="h-96 w-96 absolute -right-36 hover:-translate-x-4 duration-700 opacity-20"
                     src={Medal}
@@ -54,7 +54,7 @@ function Hometile() {
                     </p>
                 </div>
             </m.div>
-            <m.div variants={fadeUp} initial="hidden" whileInView="animate" className="relative overflow-hidden h-96 rounded-3xl bg-fuchsia-100 flex flex-col  justify-center px-10 cursor-pointer ">
+            <m.div variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="relative overflow-hidden h-96 rounded-3xl bg-fuchsia-100 flex flex-col  justify-center px-10 cursor-pointer ">
                 <img
                     className="absolute -bottom-36 -right-36 hover:-translate-y-4 hover:-translate-x-4 duration-700 opacity-20"
                     src={Clock}
