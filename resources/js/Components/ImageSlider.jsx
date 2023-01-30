@@ -42,7 +42,7 @@ const ImageSlider = ({ slides }) => {
     <div style={sliderStyle}>
 
       <div className='h-100 w-full'>
-        <img className="object-cover h-[32rem] w-auto " src={pathUrl + `storage/${slides[currentIndex]}`} alt="" />
+        <img className="object-cover h-auto w-auto " src={pathUrl + `storage/${slides[currentIndex]}`} alt="" />
       </div>
       <div className="flex flex-row-reverse mr-6">
         <div className="my-5 mr-12" style={leftArrow} onClick={goToPrevious}>      <ArrowLongLeftIcon className="h-8 w-8 text-slate-500" />
