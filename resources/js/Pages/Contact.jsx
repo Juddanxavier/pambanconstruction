@@ -5,7 +5,6 @@ import React from 'react'
 import { People } from '../../images/index'
 
 export default function Contact({errors}) {
-  console.log(prop)
   const { data, setData, post, processing } = useForm({
     name: "",
     phone: "",
