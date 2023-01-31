@@ -1,5 +1,5 @@
 import { Head, Link, usePage } from '@inertiajs/inertia-react'
-import React, { Fragment } from 'react'
+import React from 'react'
 import Frontendlayout from '../Layouts/Frontend'
 import ImageSlider from '../Components/ImageSlider'
 import EmiCalculator from '@/Components/EmiCalculator'
@@ -16,12 +16,12 @@ function ProjectDetail() {
     // height: "100%",
     margin: "0 auto"
   };
-  var [lat, lon] = []
-  if (Object.values(data.location).some(isNaN)) {
-    [lat, lon] = [0, 0]  
-  } else {
-  [lat, lon] = data.location.split(',').map(s => s.trim())
-  }
+  // var [lat, lon] = []
+  // if (Object.values(data.location).some(isNaN)) {
+  //   [lat, lon] = [0, 0]  
+  // } else {
+  const [lat, lon] = data.location.split(', ')
+  // }
   const mapProps = {
     center: {
       lat: parseFloat(lat),
@@ -32,34 +32,40 @@ function ProjectDetail() {
   }
   const updates = data.updates
   return (
-
     <Frontendlayout>
       <Head title={`${data.title} - Pamban Construction`} />
       <div className="grid md:grid-cols-3 gap-5 mx-10 md:mx-20 my-20">
         <div className="col-span-2">
           <div className="flex flex-col">
-        <span className="text-3xl font-bold mb-5 capitalize text-slate-800">{ data.title }</span>
-        <p className="text-lg tracking-wide">{data.description }</p>
+            <span className="text-3xl font-bold mb-5 capitalize text-slate-800">{data.title}</span>
+            <div className="md:hidden flex flex-row">
+              <span className="mr-1">Status / <strong>{data.status} |</strong> </span>
+<span className="mr-1">Area / <strong>{data.area} Sq.ft |</strong> </span>
+<span className="mr-1">UDS / <strong>{data.uds} Sq.ft</strong> </span>
+            </div>
+        <p className="text-lg tracking-wide my-2">{data.description }</p>
       </div>
-          <div className="justify-center w-auto h-400">
+          <div className="justify-center">
             <ImageSlider slides={data.gallery}/>
           </div>
 <div className="">
-        <div className="col-span-2 p-5">
+        <div className="col-span-2 py-5">
           <ProjectTabs  mapProps={mapProps} updates={updates}/>
         </div>
       </div>
         </div>
         <div>
-          <p className="text-white font-bold text-lg bg-indigo-600 p-3 rounded-sm">Specfications</p>
-          <div className="flex flex-col mb-5">
+          <p className="hidden md:block text-white font-bold text-lg bg-indigo-600 p-3 rounded-sm">Specfications</p>
+          <div className="flex flex-row mb-5 hidden md:inline-grid">
               <span className="text-xl mt-2">Status / <strong>{data.status}</strong></span>
               <span className="text-xl mt-2">Area / <strong>{data.area} Sq.ft</strong></span>
               <span className="text-xl mt-2">UDS / <strong>{data.uds} Sq.ft</strong></span>
           </div>
           <p className="text-white font-bold text-lg bg-indigo-600 p-3 rounded-sm">Download Brochures</p>
           <div className="flex flex-col mb-5">
-                      <DownloadButton />
+            {data.files.map((item, index) => (
+              <DownloadButton key={index} name={item.name} filePath={ item.file_path} />
+            ))}
           </div>
           <div className="flex flex-col mb-5">
             <p className="text-white font-bold text-lg bg-indigo-600 p-3 rounded-sm">EMI Calculator</p>
@@ -69,7 +75,7 @@ function ProjectDetail() {
 
         </div>
       </div>
-      <div className="flex mb-10 mx-10 gap-2">
+      <div className="flex mb-10 mx-10 md:mx-20 gap-2">
               <div className="capitalize text-lg font-bold">Share us on :  </div>
               <FacebookShareButton
                   quote={'Dummy'} hashtag="#Pamban Constructions" url={`https://www.pambanconstructions.com/blog/${data.slug}`}>

@@ -7,7 +7,6 @@ const ProjectTabs = (props) => {
   const mapProps = props.mapProps
   const updates = props.updates
   const [openTab, setOpenTab] = React.useState(1);
-  console.log(mapProps)
   return (
     <>
       <div className="flex flex-wrap">

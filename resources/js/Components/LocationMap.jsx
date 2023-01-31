@@ -3,7 +3,6 @@ import GoogleMapReact from 'google-map-react'
 import { MapPinIcon } from '@heroicons/react/24/solid'
 
 export default function LocationMap(props) {
-  console.log(props.center.lat);
   const googleKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
   const Marker = ({ text }) => (
     <div className="flex w-96">
@@ -13,7 +12,6 @@ export default function LocationMap(props) {
       </div>
     </div>
   );
-  console.log(googleKey)
   // const { lat, lon} = props
   return (
     <div className="my-6 h-96">

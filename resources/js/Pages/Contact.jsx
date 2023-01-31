@@ -3,6 +3,8 @@ import { ArrowTrendingUpIcon, MapPinIcon, DevicePhoneMobileIcon, AtSymbolIcon } 
 import { Head, useForm } from '@inertiajs/inertia-react'
 import React from 'react'
 import { People } from '../../images/index'
+import { motion as m } from 'framer-motion'
+import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
 
 export default function Contact({errors}) {
   const { data, setData, post, processing } = useForm({
@@ -11,31 +13,28 @@ export default function Contact({errors}) {
     email: "",
     messages: ""
   })
-  console.log(errors)
-
   const submit = (event) => {
     event.preventDefault()
     console.log(data)
     post(route('pages.sendmail'), {
       preserveScroll: true,
     }, data)
-
   }
   return (
       <Frontendlayout>
       <Head title="Contact Us" />
-      <div className="grid md:grid-cols-2 gap-5 mt-5 p-10 md:p-20">
-        <div className="">
-          <p className="capitalize font-black md:text-7xl text-4xl text-slate-800">talk to our experts</p>
-          <p className="text-md text-gray-500 my-5 font-medium">Have questions about pricing, plans or just talk to us? Fill out the form and out experts will be in touch directly.</p>
-          <div>
+      <m.div variants={staggerContainer} className="grid md:grid-cols-2 gap-5 mt-5 p-10 md:p-20">
+        <div>
+          <m.p variants={fadeLeft} initial="hidden" whileInView="animate" viewport={{ once: true }} className="capitalize font-black md:text-7xl text-4xl text-slate-800">talk to our experts</m.p>
+          <m.p variants={fadeLeft} initial="hidden" whileInView="animate" viewport={{ once: true }} className="text-md text-gray-500 my-5 font-medium">Have questions about pricing, plans or just talk to us? Fill out the form and out experts will be in touch directly.</m.p>
+          <m.div variants={fadeLeft} initial="hidden" whileInView="animate" viewport={{ once: true }}>
             <img className="rounded-md w-full h-64 object-cover" src={People} alt="People" />
-          </div>
+          </m.div>
           <div>
-            <p className="my-5 text-lg font-bold text-slate-800">Our Office</p>
-            <p className="text-md text-gray-500 my-5 font-medium">Get in Touch with Our Expert Team at Our Convenient Office. Our knowledgeable staff is available to help with any questions or needs. Visit us during business hours for exceptional customer service. We're here to assist you</p>
+            <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="my-5 text-lg font-bold text-slate-800">Our Office</m.p>
+            <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="text-md text-gray-500 my-5 font-medium">Get in Touch with Our Expert Team at Our Convenient Office. Our knowledgeable staff is available to help with any questions or needs. Visit us during business hours for exceptional customer service. We're here to assist you</m.p>
           </div>
-          <div className="grid md:grid-cols-2">
+          <m.div variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="grid md:grid-cols-2">
             <div>
               <p className="flex font-bold text-md text-indigo-600"><MapPinIcon className="w-6 mr-2" /> Address</p>
               <p className="my-5 text-md text-gray-500 my-5 font-medium">102/104, Othavadai Street (adjustant to Subburayan Main Street)
@@ -49,9 +48,9 @@ export default function Contact({errors}) {
               <p className="flex font-bold text-md text-indigo-600"><AtSymbolIcon className="w-6 mr-2" /> Email</p>
 <p className="my-2 text-md text-gray-500 my-5 font-medium">sales@pambanconstructions.com</p>
             </div>
-          </div>
+          </m.div>
         </div>
-        <div className="p-10 md:rounded-md md:shadow-xl bg-white">
+        <m.div variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }}className="p-10 md:rounded-md md:shadow-xl bg-white">
           <p className="my-5 text-lg font-bold text-slate-800">Connect with Our Team Effortlessly</p>
           <p className="text-md text-gray-500 my-5 font-medium">Fill Out Our Contact Form for Quick Assistance. Simply provide your information and message, and one of our representatives will get back to you promptly. We're here to help!</p>
           <form>
@@ -78,10 +77,9 @@ export default function Contact({errors}) {
               {errors.messages && <div className="text-red-600">{errors.messages}</div>}
 </div>
 <button onClick={submit} disabled={processing} className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
-
           </form>
-    </div>
-          </div>
+    </m.div>
+          </m.div>
       </Frontendlayout>
   )
 }
