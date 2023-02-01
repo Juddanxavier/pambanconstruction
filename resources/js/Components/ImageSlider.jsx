@@ -41,7 +41,7 @@ const ImageSlider = ({ slides }) => {
   return (
     <div style={sliderStyle}>
 
-      <div className='h-100 w-full'>
+      <div className='h-4/5 w-full'>
         <img className="object-cover h-auto w-auto " src={pathUrl + `storage/${slides[currentIndex]}`} alt="" />
       </div>
       <div className="flex flex-row-reverse mr-6">
