@@ -24,17 +24,8 @@ function DownloadButton(props) {
             });
     }
 
-    return (
-            
-            
+    return (           
         <>
-      {/* <button
-        className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-        type="button"
-        onClick={() => setShowModal(true)}
-      >
-        Open regular modal
-            </button> */}
             <button className="bg-transparent border-2 border-gray-300 text-blue-800 my-2 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-blue-600 hover:text-white"
                 type="button" onClick={() => setShowModal(true)}>
                 Download {files.name}

@@ -4,7 +4,8 @@ import { Head, usePage } from '@inertiajs/inertia-react'
 import format from 'date-fns/format';
 import React, { useState } from 'react'
 import HtmlParser from 'react-html-parser';
-import { EmailIcon, EmailShareButton, FacebookIcon, FacebookMessengerIcon, FacebookMessengerShareButton, FacebookShareButton, FacebookShareCount, InstapaperIcon, InstapaperShareButton, LinkedinIcon, LinkedinShareButton, TelegramIcon, TelegramShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from 'react-share';
+import { EmailIcon, EmailShareButton, FacebookIcon, FacebookMessengerIcon, FacebookMessengerShareButton, FacebookShareButton, LinkedinIcon, LinkedinShareButton, TelegramIcon, TelegramShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from 'react-share';
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function Blog() {
     const pathUrl = 'https://pambanconstructions.com/'
@@ -22,7 +23,7 @@ export default function Blog() {
           </div>
 
           <div className="md:mx-20 h-96">
-              <img className="object-cover w-full h-full md:rounded-lg" src={pathUrl + `storage/${data.blog.image}`} alt={data.blog.image} />
+              <LazyLoadImage effect="blur" className="object-cover w-full h-full md:rounded-lg" src={pathUrl + `storage/${data.blog.image}`} alt={data.blog.image} />
           </div>
           <div className="flex grid m-10 md:m-20 justify-center">
               <div className="max-w-5xl text-xl antialiased tracking-wide text-justify">{HtmlParser(data.blog.content)}</div>

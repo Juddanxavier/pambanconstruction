@@ -1,11 +1,12 @@
-import React, { useContext } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import React from 'react'
+import { Disclosure } from '@headlessui/react'
 import { Bars3Icon,  XMarkIcon } from '@heroicons/react/24/outline'
 import {navLinks} from '../../constants/index'
 import {logo, logoMark} from '../../images/index.js'
 import { Link } from '@inertiajs/inertia-react'
 import { motion as m} from "framer-motion"
 import { fadeIn, logoAnimation, staggerContainer } from '@/FramerMotion/Variants'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -32,12 +33,12 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center md:mt-5 md:justify-between sm:items-stretch sm:justify-start">
                   <m.div variants={logoAnimation} className="flex flex-shrink-0 items-center">
-                  <img
+                  <LazyLoadImage effect="blur"
                     className="block h-12 w-auto lg:hidden"
                     src={logoMark}
                     alt="Pamban Constructions"
                   />
-                  <img
+                  <LazyLoadImage effect="blur"
                     className="hidden h-16 w-auto lg:block"
                     src={logo}
                     alt="Pamban Constructions"

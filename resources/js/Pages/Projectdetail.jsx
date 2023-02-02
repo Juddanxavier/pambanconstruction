@@ -43,13 +43,13 @@ function ProjectDetail() {
 <span className="mr-1">Area / <strong>{data.area} Sq.ft |</strong> </span>
 <span className="mr-1">UDS / <strong>{data.uds} Sq.ft</strong> </span>
             </div>
-        <p className="text-lg tracking-wide my-2">{data.description }</p>
+        <p className="text-lg tracking-wide my-5">{data.description }</p>
       </div>
-          <div className="justify-center">
+          <div className="justify-center my-2">
             <ImageSlider slides={data.gallery}/>
           </div>
 <div className="">
-        <div className="col-span-2 py-5">
+        <div className="col-span-2 mt-5 py-5">
           <ProjectTabs  mapProps={mapProps} updates={updates}/>
         </div>
       </div>

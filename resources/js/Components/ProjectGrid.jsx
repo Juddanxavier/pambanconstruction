@@ -1,5 +1,6 @@
 import { Link } from "@inertiajs/inertia-react";
 import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function ProjectGrid(props) {
     const pathUrl = 'https://pambanconstructions.com/storage/'
@@ -112,7 +113,7 @@ export default function ProjectGrid(props) {
                     {props.projects.map((item, index) => (
                         <Link key={index} href={`project/${item.slug}`}>
                             <div className="rounded-sm shadow-md">
-                                <img
+                                <LazyLoadImage effect="blur"
                                     className="rounded-t-sm  w-full h-64 object-cover"
                                     src={pathUrl + item.gallery[0]}
                                     alt={item.gallery[0]}

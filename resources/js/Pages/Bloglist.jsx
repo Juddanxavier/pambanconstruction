@@ -2,6 +2,7 @@ import Frontendlayout from '@/Layouts/Frontend';
 import { Head, Link } from '@inertiajs/inertia-react';
 import React, { useEffect, useState } from 'react'
 import HtmlParser from 'react-html-parser';
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function Blogdetail() {
   const [blogs, setBlogs] = useState([]);
@@ -83,7 +84,7 @@ useEffect(() => {
     <Frontendlayout>
       <Head title="Blogs & News" />
       <div className="interior grid grid-cols-1 justify-center item-center h-96 mt-5 py-10 md:px-20">
-                {/* <img src={Pinkbuilding} alt="pink Building"  /> */}
+                {/* <LazyLoadImage effect="blur" src={Pinkbuilding} alt="pink Building"  /> */}
                 <div className="flex flex-col md:items-center items-center justify-center col-span-1">
                     <div>
                         <h1 className="text-white text-6xl text-shadow capitalize font-black">
@@ -99,7 +100,7 @@ useEffect(() => {
       <div className="grid gap-12 lg:grid-cols-2 m-20">          
           {blogs.map((item) => (
               <div key={item.id } className="rounded-sm group sm:flex space-x-6 bg-white bg-opacity-50 shadow-md">
-          <img src={pathUrl + `storage/${item.image}`} alt={item.image} loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-sm transition duration-500 group-hover:rounded-sm" />
+          <LazyLoadImage effect="blur" src={pathUrl + `storage/${item.image}`} alt={item.image} loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-sm transition duration-500 group-hover:rounded-sm" />
           <div className="sm:w-7/12 pl-0 p-5">
             <div className="space-y-2">
               <div className="space-y-4">

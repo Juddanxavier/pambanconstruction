@@ -1,5 +1,6 @@
 import React from 'react'
 import {team} from '../../constants/index'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function Team() {
   return (
@@ -12,7 +13,7 @@ export default function Team() {
             return (
               <div key={member.id} className="flex flex-row my-5 bg-stone-100 cursor-pointer hover:bg-stone-200 rounded-xl p-4">
                 <div>
-                <img src={member.profilePicture} className="rounded-xl" />
+                <LazyLoadImage effect="blur" src={member.profilePicture} className="rounded-xl" />
                 </div>
                 <div className="grid content-between p-6">
                 <div>

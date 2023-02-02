@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Lightbox from 'react-18-image-lightbox'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+
 const ProjectUpdates = ({ updates }) => {
     const date = updates.map(date => {
         return date.update_month
@@ -26,7 +28,7 @@ const ProjectUpdates = ({ updates }) => {
                     <div key={gallery.update_month} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:py-8">
                         {gallery.update_gallery.map((image, index) => (
                             <div key={index} className="overflow-hidden	relative col-span-1 h-96 w-96 sm:h-64 sm:w-64">
-                                <img className="rounded-sm object-cover h-full w-full transition duration-500 ease-in-out transform hover:scale-125 cursor-pointer" src={ pathUrl + `storage/${image}`}
+                                <LazyLoadImage effect="blur" className="rounded-sm object-cover h-full w-full transition duration-500 ease-in-out transform hover:scale-125 cursor-pointer" src={ pathUrl + `storage/${image}`}
                                     onClick={() => setIsOpen(true)} alt={image} />
                                 {isOpen && (
                                     <Lightbox

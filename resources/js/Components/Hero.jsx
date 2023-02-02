@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { Modernbuilding, Pinkbuilding } from '../../images/index'
+import React, { useEffect, useState } from 'react'
+import { Modernbuilding } from '../../images/index'
 import { motion as m } from 'framer-motion'
-import { fadeIn, fadeUpProject, homeImg, letter, staggerContainer } from '@/FramerMotion/Variants'
+import { homeImg, letter, staggerContainer } from '@/FramerMotion/Variants'
 import ReactTyped from 'react-typed';
 import { Link } from '@inertiajs/inertia-react'
-
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 function Hero() {
   const [projects, setProjects] = useState([]);
@@ -44,7 +44,7 @@ function Hero() {
                   <Link key={index} href={`project/${item.slug}`} className="item-center md:w-48 w-80 my-5 p-1">
                     <m.div variants={homeImg} className="flex flex-col">
                       <div className="bg-white rounded-sm shadow-md">
-            <img src={ pathUrl + item.gallery[0]} alt={item.title} className="w-full h-full object-cover  rounded-t-sm" />
+            <LazyLoadImage src={ pathUrl + item.gallery[0]} effect="blur" alt={item.title} className="w-full h-full object-cover  rounded-t-sm" />
               <h2 className="text-slate-900 text-xs capitalize p-2">{item.title}</h2>
           </div>
                     </m.div>
@@ -54,7 +54,7 @@ function Hero() {
         </div>
       </div>
       <m.div variants={homeImg} className="flex md:w-2/5 h-screen items-center pt-5">
-          <img
+          <LazyLoadImage
           src={Modernbuilding}
           className="object-cover h-5/6 md:w-11/12 z-9 my-10 md:rounded-3xl"
           alt="modern building"

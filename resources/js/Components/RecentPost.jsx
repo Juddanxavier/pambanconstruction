@@ -1,5 +1,6 @@
 import { Link, usePage } from '@inertiajs/inertia-react';
 import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function RecentPost(projects) {
     const pathUrl = 'http://pambanconstructions.com/'
@@ -10,7 +11,7 @@ export default function RecentPost(projects) {
                     {projects.map((item, index) => (
                         <Link key={index} href={item.slug}>
                             <div className="rounded-sm shadow-md">
-                                <img
+                                <LazyLoadImage effect="blur"
                                     className="rounded-t-sm  w-full h-64 object-cover"
                                     src={pathUrl + `storage/${item.gallery[0]}` }
                                     alt={item.gallery[0]}
@@ -25,14 +26,9 @@ export default function RecentPost(projects) {
                                         {item.title}
                                     </h2>
                                     <p className="text-base text-gray-600 mt-1">
-                                        {item.description.substring(0, 150) +
+                                        {item.description.substring(0, 50) +
                                             "..."}
                                     </p>
-                                    {/* <div className="flex flex-row mt-5 items-center justify-start">
-            <img className="rounded-2xl mr-2">
-            <p className="font-bold text-sm mr-2">{{data.authorName}}</p>
-            <p className="text-gray-400 text-sm">On {{data.postDate}}</p>
-        </div> */}
                                 </div>
                             </div>
                         </Link>

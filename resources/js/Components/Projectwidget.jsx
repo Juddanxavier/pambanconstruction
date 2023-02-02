@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "@inertiajs/inertia-react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { motion as m } from "framer-motion"
-import { fadeUp, fadeUpProject } from "@/FramerMotion/Variants";
+import { fadeUp } from "@/FramerMotion/Variants";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const variants = {
     hidden: {
@@ -16,11 +17,6 @@ const variants = {
             delay: 0.1 * Math.floor(index / 3),
             duration: 0.7,
         }
-        // transition: {
-        //     duration: 0.5,
-        //     delayChildren: 0.2,
-        //     staggerChildren: 0.1
-        // }
     })
 }
 const ProjectWidget = () => {
@@ -54,7 +50,7 @@ const ProjectWidget = () => {
                         >
                             <m.div variants={variants} initial="hidden" whileInView="visible" viewport={{once:true}} custom={index} 
                                 className="hover:bg-gray-100 dark:border-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 bg-white border rounded-md shadow-sm  max-w-xs md:max-w-none overflow-hidden">
-                                <img
+                                <LazyLoadImage effect="blur"
                                     key={project.id}
                                     src={ pathUrl + project.gallery[0]}
                                     alt={project.title}

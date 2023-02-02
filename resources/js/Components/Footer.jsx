@@ -1,6 +1,8 @@
 import { Link } from '@inertiajs/inertia-react'
 import React from 'react'
-import {logo} from '../../images/index'
+import { logo } from '../../images/index'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+
 function Footer() {
   return (
     <div>
@@ -9,8 +11,7 @@ function Footer() {
     <div className="md:flex pt-10 pb-20 md:justify-between">
         <div className="mb-6 md:mb-0">
             <Link href="https://pambanconstructions.com/" className="flex items-center">
-                <img src={logo} className="mr-3 h-16 brightness-200 hover:grayscale-0" alt="Pamban constructions Logo" />
-                {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
+                <LazyLoadImage src={logo} effect="blur" className="mr-3 h-16 brightness-200 hover:grayscale-0" alt="Pamban constructions Logo" />
             </Link>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

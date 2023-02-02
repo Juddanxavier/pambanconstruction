@@ -6,7 +6,7 @@ import { People } from '../../images/index'
 import { motion as m } from 'framer-motion'
 import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
 
-export default function Contact({errors}) {
+export default function Contact({ errors }) {
   const { data, setData, post, processing } = useForm({
     name: "",
     phone: "",
