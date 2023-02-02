@@ -10,7 +10,7 @@ use App\Http\Requests\ContactRequest;
 class ContactController extends Controller
 {
     public function index(ContactRequest $request) {
-    Mail::to("juddan@live.in")->send(new ContactForm(
+    Mail::to("sales@pambanconstructions.com")->send(new ContactForm(
         $request->name,
         $request->phone,
         $request->email,

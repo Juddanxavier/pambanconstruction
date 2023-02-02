@@ -55,6 +55,7 @@ function Hero() {
       </div>
       <m.div variants={homeImg} className="flex md:w-2/5 h-screen items-center pt-5">
           <LazyLoadImage
+          effect="blur"
           src={Modernbuilding}
           className="object-cover h-5/6 md:w-11/12 z-9 my-10 md:rounded-3xl"
           alt="modern building"
