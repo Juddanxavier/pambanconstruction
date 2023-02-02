@@ -22,8 +22,8 @@ export default function Blog() {
               </div>
           </div>
 
-          <div className="md:mx-20 h-96">
-              <LazyLoadImage effect="blur" className="object-cover w-full h-full md:rounded-lg" src={pathUrl + `storage/${data.blog.image}`} alt={data.blog.image} />
+          <div className="md:mx-20 h-3/2">
+              <LazyLoadImage effect="blur" className="object-cover w-full h-3/2 md:rounded-lg" src={pathUrl + `storage/${data.blog.image}`} alt={data.blog.image} />
           </div>
           <div className="flex grid m-10 md:m-20 justify-center">
               <div className="max-w-5xl text-xl antialiased tracking-wide text-justify">{HtmlParser(data.blog.content)}</div>
