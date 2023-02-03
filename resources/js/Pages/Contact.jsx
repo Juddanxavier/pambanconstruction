@@ -6,7 +6,7 @@ import { People } from '../../images/index'
 import { motion as m } from 'framer-motion'
 import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
 
-export default function Contact({ errors }) {
+export default function Contact({errors}) {
   const { data, setData, post, processing } = useForm({
     name: "",
     phone: "",
@@ -76,7 +76,7 @@ export default function Contact({ errors }) {
               <textarea name="messages" id="comment" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment" value={data.messages} onChange={(e) => setData('messages', e.target.value)}></textarea>
               {errors.messages && <div className="text-red-600">{errors.messages}</div>}
 </div>
-<button onClick={submit} disabled={processing} className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
+<button onClick={submit} type="submit" disabled={processing} className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
           </form>
     </m.div>
           </m.div>
