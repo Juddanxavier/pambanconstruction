@@ -15,17 +15,17 @@
     "file": "assets/pambanlogomark.e6a80b29.png",
     "src": "resources/images/pambanlogomark.png"
   },
-  "resources/images/rupee.svg": {
-    "file": "assets/rupee.87e9f11e.svg",
-    "src": "resources/images/rupee.svg"
+  "resources/images/clock.svg": {
+    "file": "assets/clock.4f7aa5a0.svg",
+    "src": "resources/images/clock.svg"
   },
   "resources/images/safety.svg": {
     "file": "assets/safety.34115155.svg",
     "src": "resources/images/safety.svg"
   },
-  "resources/images/clock.svg": {
-    "file": "assets/clock.4f7aa5a0.svg",
-    "src": "resources/images/clock.svg"
+  "resources/images/rupee.svg": {
+    "file": "assets/rupee.87e9f11e.svg",
+    "src": "resources/images/rupee.svg"
   },
   "resources/images/medal.svg": {
     "file": "assets/medal.0a66ea69.svg",
@@ -244,14 +244,14 @@
       "assets/modernbuilding.b8fb38c7.png"
     ]
   },
-  "resources/js/app.css": {
-    "file": "assets/app.a03f1a34.css",
-    "src": "resources/js/app.css"
-  },
   "resources/css/filament.css": {
     "file": "assets/filament.ea04c7b7.css",
     "src": "resources/css/filament.css",
     "isEntry": true
+  },
+  "resources/js/app.css": {
+    "file": "assets/app.a03f1a34.css",
+    "src": "resources/js/app.css"
   },
   "resources/images/Pinkbuilding.jpg": {
     "file": "assets/pinkbuilding.905336ff.jpg",
