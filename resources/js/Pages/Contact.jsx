@@ -7,7 +7,7 @@ import { motion as m } from 'framer-motion'
 import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
 
 export default function Contact({errors}) {
-  const { data, setData, post, processing } = useForm({
+  const form = useForm({
     name: "",
     phone: "",
     email: "",
@@ -15,10 +15,10 @@ export default function Contact({errors}) {
   })
   const submit = (event) => {
     event.preventDefault()
-    console.log(data)
-    post(route('pages.sendmail'), {
+    console.log(form)
+    form.post(route('pages.sendmail'), {
       preserveScroll: true,
-    }, data)
+    }, form)
   }
   return (
       <Frontendlayout>
@@ -56,27 +56,28 @@ export default function Contact({errors}) {
           <form>
               <div className="mb-6">
   <label className="block mb-2 text-md font-bold text-gray-800">Your name</label>
-              <input type="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Name " value={data.name} onChange={(e) => setData('name', e.target.value)} />
-              {errors.name && <div className="text-red-600">{errors.name}</div>}
+              <input type="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Name " value={form.name} />
+              {/* {errors.name && <div className="text-red-600">{errors.name}</div>} */}
   {/* <p class="mt-2 text-sm text-green-600 dark:text-green-500"><span class="font-medium">Alright!</span> Username available!</p> */}
           </div>
           <div className="mb-6">
             <label className="block mb-2 text-md font-bold text-gray-900">Your Phone number</label>
-              <input type="tel" id="phone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Phone Number" value={data.phone} onChange={(e) => setData('phone', e.target.value)} />
-              {errors.phone && <div className="text-red-600">{errors.phone}</div>}
+              <input type="tel" id="phone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Phone Number" value={form.phone}  />
+              {/* {errors.phone && <div className="text-red-600">{errors.phone}</div>} */}
         </div>
 <div className="mb-6">
   <label className="block mb-2 text-md font-bold text-gray-900">Your Email</label>
-              <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Email" value={data.email} onChange={(e) => setData('email', e.target.value)} />
-              {errors.email && <div className="text-red-600">{errors.email}</div>}
+              <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Email" value={form.email} />
+              {/* {errors.email && <div className="text-red-600">{errors.email}</div>} */}
   {/* <p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> Username already taken!</p> */}
 </div>
             <div className="mb-6">
               <label className="block mb-2 text-md font-bold text-gray-900 dark:text-white">Your message</label>
-              <textarea name="messages" id="comment" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment" value={data.messages} onChange={(e) => setData('messages', e.target.value)}></textarea>
-              {errors.messages && <div className="text-red-600">{errors.messages}</div>}
+              <textarea name="messages" id="comment" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment" value={form.messages} ></textarea>
+              {/* {errors.messages && <div className="text-red-600">{errors.messages}</div>}
+              onChange={(e) => setData('messages', e.target.value)} */}
 </div>
-<button onClick={submit} type="submit" disabled={processing} className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
+<button onClick={submit} type="submit" className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
           </form>
     </m.div>
           </m.div>
