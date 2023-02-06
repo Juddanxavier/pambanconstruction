@@ -57,7 +57,7 @@ export default function Contact({errors}) {
         <m.div variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }}className="p-10 md:rounded-md md:shadow-xl bg-white">
           <p className="my-5 text-lg font-bold text-slate-800">Connect with Our Team Effortlessly</p>
           <p className="text-md text-gray-500 my-5 font-medium">Fill Out Our Contact Form for Quick Assistance. Simply provide your information and message, and one of our representatives will get back to you promptly. We're here to help!</p>
-          <form>
+          <form onSubmit={submit}>
               <div className="mb-6">
   <label className="block mb-2 text-md font-bold text-gray-800">Your name</label>
               <input type="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Name " value={form.name} />
@@ -81,7 +81,7 @@ export default function Contact({errors}) {
               {/* {errors.messages && <div className="text-red-600">{errors.messages}</div>}
               onChange={(e) => setData('messages', e.target.value)} */}
 </div>
-<button onClick={submit} type="submit" className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
+<button type="submit" className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
           </form>
     </m.div>
           </m.div>
