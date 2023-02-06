@@ -22,7 +22,7 @@ use Inertia\Inertia;
 
 Route::get('project/{slug}', [ProjectController::class, 'detail']);
 Route::get('blog/{slug}', [BlogController::class, 'detail']);
-Route::post('/sendmail', ContactController::class)->name('pages.sendmail');
+Route::get('/sendmail', ContactController::class)->name('pages.sendmail');
 Route::get('/packages', [PackagesController::class, 'index']);
 
 Route::get('/about', function() {
