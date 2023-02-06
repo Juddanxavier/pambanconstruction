@@ -18,6 +18,7 @@ export default function Contact({errors}) {
     console.log(form)
     form.post(route('pages.sendmail'), {
       onSuccess: () => {
+        console.log('working')
         return to_route('pages.contact')
       },
       preserveScroll: true,
