@@ -25,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (App::environment(['staging', 'prod'])) {
+            URL::forceScheme('https');
+        }
         Filament::serving(function() {
             Filament::registerTheme(
                 app(Vite::class)('resources/css/filament.css')
