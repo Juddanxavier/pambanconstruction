@@ -1,13 +1,14 @@
 import Frontendlayout from '@/Layouts/Frontend'
 import { ArrowTrendingUpIcon, MapPinIcon, DevicePhoneMobileIcon, AtSymbolIcon } from '@heroicons/react/24/solid'
-import { Head, useForm } from '@inertiajs/inertia-react'
+import { Head, useForm, usePage } from '@inertiajs/inertia-react'
 import React, { useState } from 'react'
 import { People } from '../../images/index'
 import { motion as m } from 'framer-motion'
 import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
 
 export default function Contact({errors}) {
-  
+  const { flash } = usePage().props
+  console.log(flash)
   const {feedbackShow, setFeedbackShow} = useState(false);
 const {feedbackDesc, setFeedbackDesc} = useState('');
   const { data, setData, post, processing, reset  } = useForm({
@@ -86,9 +87,9 @@ const {feedbackDesc, setFeedbackDesc} = useState('');
 </div>
 <button onClick={submit} type="submit" disabled={processing} className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
           </form>
-          <div className="p-4 my-5 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-  {feedbackDesc}
-</div>
+          {flash.message && (
+          <div class="alert">{flash.message}</div>
+        )}
     </m.div>
           </m.div>
       </Frontendlayout>
