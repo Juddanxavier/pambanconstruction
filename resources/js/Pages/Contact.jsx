@@ -1,7 +1,7 @@
 import Frontendlayout from '@/Layouts/Frontend'
 import { ArrowTrendingUpIcon, MapPinIcon, DevicePhoneMobileIcon, AtSymbolIcon } from '@heroicons/react/24/solid'
 import { Head, useForm, usePage } from '@inertiajs/inertia-react'
-import React, { useState } from 'react'
+import React from 'react'
 import { People } from '../../images/index'
 import { motion as m } from 'framer-motion'
 import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
@@ -9,8 +9,7 @@ import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
 export default function Contact({errors}) {
   const { flash } = usePage().props
   console.log(flash)
-  const {feedbackShow, setFeedbackShow} = useState(false);
-const {feedbackDesc, setFeedbackDesc} = useState('');
+
   const { data, setData, post, processing, reset  } = useForm({
     name: "",
     phone: "",
@@ -23,8 +22,6 @@ const {feedbackDesc, setFeedbackDesc} = useState('');
     post(route('pages.sendmail'), {
       preserveScroll: true,
       onSuccess: () => {
-      setFeedbackDesc('We have received your message and would like to thank you for writing to us.')
-      setFeedbackShow(true)
         reset()
       }
     }, data)
