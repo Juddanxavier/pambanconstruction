@@ -22,11 +22,11 @@ export default function Blog() {
               </div>
           </div>
 
-          <div className="md:mx-20 h-3/2">
-              <LazyLoadImage effect="blur" className="object-cover w-full h-3/2 md:rounded-lg" src={pathUrl + `storage/${data.blog.image}`} alt={data.blog.image} />
+          <div className="md:mx-20 h-3/2 flex justify-center">
+              <LazyLoadImage effect="blur" className="object-cover max-w-5xl h-3/2 md:rounded-sm" src={pathUrl + `storage/${data.blog.image}`} alt={data.blog.image} />
           </div>
           <div className="flex grid m-10 md:m-20 justify-center">
-              <div className="max-w-5xl text-xl antialiased tracking-wide text-justify">{HtmlParser(data.blog.content)}</div>
+              <div className="max-w-5xl text-lg antialiased tracking-wide text-justify">{HtmlParser(data.blog.content)}</div>
           </div>
           <div className="flex justify-center gap-2">
               <div className="capitalize text-lg font-bold">Share us on :  </div>
