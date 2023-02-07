@@ -18,7 +18,7 @@ export default function Contact({errors}) {
     console.log(data)
     post(route('pages.sendmail'), {
       preserveScroll: true,
-      onSuccess: () => this.form.reset()
+      onSuccess: () => data.reset()
     }, data)
   }
   return (
