@@ -7,14 +7,6 @@
     "file": "assets/interior.bb306485.png",
     "src": "resources/images/interior.png"
   },
-  "resources/images/rupee.svg": {
-    "file": "assets/rupee.87e9f11e.svg",
-    "src": "resources/images/rupee.svg"
-  },
-  "resources/images/clock.svg": {
-    "file": "assets/clock.4f7aa5a0.svg",
-    "src": "resources/images/clock.svg"
-  },
   "resources/images/pambanlogo.png": {
     "file": "assets/pambanlogo.aafb3821.png",
     "src": "resources/images/pambanlogo.png"
@@ -23,13 +15,21 @@
     "file": "assets/pambanlogomark.e6a80b29.png",
     "src": "resources/images/pambanlogomark.png"
   },
-  "resources/images/safety.svg": {
-    "file": "assets/safety.34115155.svg",
-    "src": "resources/images/safety.svg"
+  "resources/images/clock.svg": {
+    "file": "assets/clock.4f7aa5a0.svg",
+    "src": "resources/images/clock.svg"
   },
   "resources/images/medal.svg": {
     "file": "assets/medal.0a66ea69.svg",
     "src": "resources/images/medal.svg"
+  },
+  "resources/images/safety.svg": {
+    "file": "assets/safety.34115155.svg",
+    "src": "resources/images/safety.svg"
+  },
+  "resources/images/rupee.svg": {
+    "file": "assets/rupee.87e9f11e.svg",
+    "src": "resources/images/rupee.svg"
   },
   "resources/images/people.jpg": {
     "file": "assets/people.404d878b.jpg",
@@ -40,7 +40,7 @@
     "src": "resources/images/modernbuilding.png"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app.03624db1.js",
+    "file": "assets/app.110adb12.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
@@ -57,7 +57,7 @@
       "resources/js/Pages/Welcome.jsx"
     ],
     "css": [
-      "assets/app.5e50ad7c.css"
+      "assets/app.82dd64b5.css"
     ],
     "assets": [
       "assets/pinkbuilding.905336ff.jpg",
@@ -65,18 +65,18 @@
     ]
   },
   "resources/js/Pages/About.jsx": {
-    "file": "assets/About.5b5b4fe2.js",
+    "file": "assets/About.2380c3ae.js",
     "src": "resources/js/Pages/About.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.34b02946.js",
-      "_Prefooter.e4a57501.js",
-      "_ArrowTrendingUpIcon.3f96b22d.js"
+      "_Frontend.d3017125.js",
+      "_Prefooter.81ec48c9.js",
+      "_ArrowTrendingUpIcon.1fca643e.js"
     ]
   },
-  "_Frontend.34b02946.js": {
-    "file": "assets/Frontend.34b02946.js",
+  "_Frontend.d3017125.js": {
+    "file": "assets/Frontend.d3017125.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -85,75 +85,75 @@
       "assets/pambanlogomark.e6a80b29.png"
     ]
   },
-  "_Prefooter.e4a57501.js": {
-    "file": "assets/Prefooter.e4a57501.js",
+  "_Prefooter.81ec48c9.js": {
+    "file": "assets/Prefooter.81ec48c9.js",
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.34b02946.js",
-      "_ArrowTrendingUpIcon.3f96b22d.js"
+      "_Frontend.d3017125.js",
+      "_ArrowTrendingUpIcon.1fca643e.js"
     ]
   },
-  "_ArrowTrendingUpIcon.3f96b22d.js": {
-    "file": "assets/ArrowTrendingUpIcon.3f96b22d.js",
+  "_ArrowTrendingUpIcon.1fca643e.js": {
+    "file": "assets/ArrowTrendingUpIcon.1fca643e.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Blog.jsx": {
-    "file": "assets/Blog.5fc977c0.js",
+    "file": "assets/Blog.d871b413.js",
     "src": "resources/js/Pages/Blog.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.34b02946.js",
+      "_Frontend.d3017125.js",
       "resources/js/app.jsx",
-      "_HtmlParser.33208f57.js",
-      "_WhatsappShareButton.9e1e3168.js"
+      "_HtmlParser.5890a4b0.js",
+      "_WhatsappShareButton.012e245c.js"
     ]
   },
-  "_HtmlParser.33208f57.js": {
-    "file": "assets/HtmlParser.33208f57.js",
+  "_HtmlParser.5890a4b0.js": {
+    "file": "assets/HtmlParser.5890a4b0.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_WhatsappShareButton.9e1e3168.js": {
-    "file": "assets/WhatsappShareButton.9e1e3168.js",
+  "_WhatsappShareButton.012e245c.js": {
+    "file": "assets/WhatsappShareButton.012e245c.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Bloglist.jsx": {
-    "file": "assets/Bloglist.e1b23fdc.js",
+    "file": "assets/Bloglist.ed760ca1.js",
     "src": "resources/js/Pages/Bloglist.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.34b02946.js",
+      "_Frontend.d3017125.js",
       "resources/js/app.jsx",
-      "_HtmlParser.33208f57.js"
+      "_HtmlParser.5890a4b0.js"
     ]
   },
   "resources/js/Pages/Contact.jsx": {
-    "file": "assets/Contact.02148778.js",
+    "file": "assets/Contact.61e0fe5b.js",
     "src": "resources/js/Pages/Contact.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.34b02946.js",
+      "_Frontend.d3017125.js",
       "resources/js/app.jsx",
-      "_MapPinIcon.34d2f16c.js",
-      "_ArrowTrendingUpIcon.3f96b22d.js"
+      "_MapPinIcon.259df09a.js",
+      "_ArrowTrendingUpIcon.1fca643e.js"
     ],
     "assets": [
       "assets/people.404d878b.jpg"
     ]
   },
-  "_MapPinIcon.34d2f16c.js": {
-    "file": "assets/MapPinIcon.34d2f16c.js",
+  "_MapPinIcon.259df09a.js": {
+    "file": "assets/MapPinIcon.259df09a.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Error.jsx": {
-    "file": "assets/Error.e0c4e4a5.js",
+    "file": "assets/Error.a8f9e16c.js",
     "src": "resources/js/Pages/Error.jsx",
     "isDynamicEntry": true,
     "imports": [
@@ -161,80 +161,80 @@
     ]
   },
   "resources/js/Pages/Packages.jsx": {
-    "file": "assets/Packages.2af0c6c7.js",
+    "file": "assets/Packages.659563ac.js",
     "src": "resources/js/Pages/Packages.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_AccordionUI.4c3e6e4c.js",
-      "_Frontend.34b02946.js",
+      "_AccordionUI.1342bfdd.js",
+      "_Frontend.d3017125.js",
       "resources/js/app.jsx"
     ]
   },
-  "_AccordionUI.4c3e6e4c.js": {
-    "file": "assets/AccordionUI.4c3e6e4c.js",
+  "_AccordionUI.1342bfdd.js": {
+    "file": "assets/AccordionUI.1342bfdd.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Privacy.jsx": {
-    "file": "assets/Privacy.f9431fe1.js",
+    "file": "assets/Privacy.850deeae.js",
     "src": "resources/js/Pages/Privacy.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.34b02946.js",
+      "_Frontend.d3017125.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projectdetail.jsx": {
-    "file": "assets/Projectdetail.b11b5d12.js",
+    "file": "assets/Projectdetail.434e98ba.js",
     "src": "resources/js/Pages/Projectdetail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.34b02946.js",
-      "_ArrowLongRightIcon.52d1ae63.js",
-      "_Prefooter.e4a57501.js",
-      "_MapPinIcon.34d2f16c.js",
-      "_AccordionUI.4c3e6e4c.js",
-      "_WhatsappShareButton.9e1e3168.js",
-      "_ArrowTrendingUpIcon.3f96b22d.js"
+      "_Frontend.d3017125.js",
+      "_ArrowLongRightIcon.934ba83e.js",
+      "_Prefooter.81ec48c9.js",
+      "_MapPinIcon.259df09a.js",
+      "_AccordionUI.1342bfdd.js",
+      "_WhatsappShareButton.012e245c.js",
+      "_ArrowTrendingUpIcon.1fca643e.js"
     ]
   },
-  "_ArrowLongRightIcon.52d1ae63.js": {
-    "file": "assets/ArrowLongRightIcon.52d1ae63.js",
+  "_ArrowLongRightIcon.934ba83e.js": {
+    "file": "assets/ArrowLongRightIcon.934ba83e.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Projects.jsx": {
-    "file": "assets/Projects.28fb37ee.js",
+    "file": "assets/Projects.e0692691.js",
     "src": "resources/js/Pages/Projects.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.34b02946.js"
+      "_Frontend.d3017125.js"
     ]
   },
   "resources/js/Pages/Terms.jsx": {
-    "file": "assets/Terms.cfb9bdd6.js",
+    "file": "assets/Terms.d97456d5.js",
     "src": "resources/js/Pages/Terms.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "_Frontend.34b02946.js",
+      "_Frontend.d3017125.js",
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome.8fbd8f46.js",
+    "file": "assets/Welcome.4ab90db9.js",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Frontend.34b02946.js",
-      "_ArrowLongRightIcon.52d1ae63.js",
-      "_HtmlParser.33208f57.js",
-      "_Prefooter.e4a57501.js",
-      "_ArrowTrendingUpIcon.3f96b22d.js"
+      "_Frontend.d3017125.js",
+      "_ArrowLongRightIcon.934ba83e.js",
+      "_HtmlParser.5890a4b0.js",
+      "_Prefooter.81ec48c9.js",
+      "_ArrowTrendingUpIcon.1fca643e.js"
     ],
     "assets": [
       "assets/clock.4f7aa5a0.svg",
@@ -245,11 +245,11 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.5e50ad7c.css",
+    "file": "assets/app.82dd64b5.css",
     "src": "resources/js/app.css"
   },
   "resources/css/filament.css": {
-    "file": "assets/filament.67e6f53b.css",
+    "file": "assets/filament.a59681f4.css",
     "src": "resources/css/filament.css",
     "isEntry": true
   },
