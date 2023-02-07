@@ -8,7 +8,7 @@ import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
 
 export default function Contact({errors}) {
   
-  const { data, setData, post, processing } = useForm({
+  const { data, setData, post, processing, reset  } = useForm({
     name: "",
     phone: "",
     email: "",
