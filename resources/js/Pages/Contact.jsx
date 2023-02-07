@@ -19,7 +19,7 @@ export default function Contact({errors}) {
     post(route('pages.sendmail'), {
       preserveScroll: true,
       onSuccess: () => {
-        preserveState: false
+        data = {},
         console.log("working");
       },
     }, data)
