@@ -7,6 +7,7 @@ import { motion as m } from 'framer-motion'
 import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
 
 export default function Contact({errors}) {
+  
   const { data, setData, post, processing } = useForm({
     name: "",
     phone: "",
@@ -18,10 +19,7 @@ export default function Contact({errors}) {
     console.log(data)
     post(route('pages.sendmail'), {
       preserveScroll: true,
-      onSuccess: () => {
-        data = {},
-        console.log("working");
-      },
+      onSuccess: () => reset()
     }, data)
   }
   return (
