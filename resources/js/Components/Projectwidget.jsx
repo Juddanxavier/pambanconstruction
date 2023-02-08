@@ -55,7 +55,7 @@ const ProjectWidget = () => {
                                     key={project.id}
                                     src={ pathUrl + project.gallery[0]}
                                     alt={project.title}
-                                    className="h-64 w-auto object-cover rounded-t-sm"
+                                    className="h-64 w-fit object-cover rounded-t-sm"
                                 />
                                 <div className="p-4">
                                     
