@@ -18,7 +18,7 @@ class PackagesController extends Controller
         $request->email,
         $request->package
     ));
-    return redirect()->back()->with('message', 'We have received your message and would like to thank you for writing to us, We will get back to you shortly.');
+    return back()->with('message', 'We have received your message and would like to thank you for writing to us, We will get back to you shortly.');
 }
     public function index() {
         $packages = Packages::all();

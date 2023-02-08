@@ -8,6 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Address;
 
 class PackageForm extends Mailable
 {
@@ -44,7 +45,7 @@ class PackageForm extends Mailable
     public function content()
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.package',
         );
     }
 public function build() {

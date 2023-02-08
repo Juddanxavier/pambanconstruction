@@ -30,10 +30,10 @@ export default function Modal({ setOpenModal, packageName }) {
                 ></div>
                 <div className="flex items-center min-h-screen px-4 py-8">
                     <div className="relative w-full max-w-lg p-4 mx-auto bg-white rounded-md shadow-lg">
-                        <div className="mt-3 flex">
+                        {/* <div className="mt-3 flex"> */}
                             <div className="mt-2 text-center sm:ml-4 sm:text-left">
-                                <h4 className="text-lg font-medium text-gray-800">
-                                    Delete account ?
+                                <h4 className="text-lg mb-2 font-bold text-gray-800">
+                                   Fill up the form, We will get back to you.
                                 </h4>
                                 <div className="mt-2 leading-relaxed text-gray-500">
                                      <form>
@@ -59,16 +59,13 @@ export default function Modal({ setOpenModal, packageName }) {
               <textarea name="messages" id="comment" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment" value={packageName} onChange={(e) => setData('messages', e.target.value)}></textarea>
               {errors.package && <div className="text-red-600">{errors.package}</div>}
 </div> */}
-<button onClick={submit} type="submit" disabled={processing} className="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Let's Talk <ArrowTrendingUpIcon className="w-6 ml-2" /></button>
-          </form>
-                                </div>
-                                <div className="items-center gap-2 mt-3 sm:flex">
-                                    <button
-                                        className="w-full mt-2 p-2.5 flex-1 text-white bg-red-600 rounded-md outline-none ring-offset-2 ring-red-600 focus:ring-2"
-                                        onClick={() => setOpenModal(false)}
-                                    >
-                                        Delete
-                                    </button>
+                                                                        <div className="items-center gap-2 mt-3 sm:flex">
+
+                                    <button onClick={submit} type="submit" disabled={processing} className="w-full mt-2 p-2.5 flex-1 text-white bg-indigo-600 rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2">Get Quote</button>
+                                    {/* <button button onClick={submit} type="submit"
+                                        className="w-full mt-2 p-2.5 flex-1 text-white bg-indigo-600 rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2"
+                                    >Get Quote
+                                    </button> */}
                                     <button
                                         className="w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md outline-none border ring-offset-2 ring-indigo-600 focus:ring-2"
                                         onClick={() => setOpenModal(false)}
@@ -76,11 +73,14 @@ export default function Modal({ setOpenModal, packageName }) {
                                         Cancel
                                     </button>
                                 </div>
+          </form>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            {/* </div> */}
         </>
     );
 }    
