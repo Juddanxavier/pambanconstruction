@@ -114,7 +114,7 @@ export default function ProjectGrid(props) {
                         <Link key={index} href={`project/${item.slug}`}>
                             <div className="rounded-sm shadow-md">
                                 <LazyLoadImage effect="blur"
-                                    className="rounded-t-sm  w-full h-64 object-cover"
+                                    className="rounded-t-sm  w-full h-64 object-fill"
                                     src={pathUrl + item.gallery[0]}
                                     alt={item.gallery[0]}
                                 />
