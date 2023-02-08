@@ -55,7 +55,7 @@ const ProjectWidget = () => {
                                     key={project.id}
                                     src={ pathUrl + project.gallery[0]}
                                     alt={project.title}
-                                    className="max-w-full h-auto rounded-t-sm"
+                                    className="h-48 w-96 object-cover rounded-t-sm"
                                 />
                                 <div className="p-4">
                                     
