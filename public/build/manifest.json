@@ -11,14 +11,6 @@
     "file": "assets/pambanlogo.aafb3821.png",
     "src": "resources/images/pambanlogo.png"
   },
-  "resources/images/clock.svg": {
-    "file": "assets/clock.4f7aa5a0.svg",
-    "src": "resources/images/clock.svg"
-  },
-  "resources/images/safety.svg": {
-    "file": "assets/safety.34115155.svg",
-    "src": "resources/images/safety.svg"
-  },
   "resources/images/pambanlogomark.png": {
     "file": "assets/pambanlogomark.e6a80b29.png",
     "src": "resources/images/pambanlogomark.png"
@@ -26,6 +18,14 @@
   "resources/images/rupee.svg": {
     "file": "assets/rupee.87e9f11e.svg",
     "src": "resources/images/rupee.svg"
+  },
+  "resources/images/clock.svg": {
+    "file": "assets/clock.4f7aa5a0.svg",
+    "src": "resources/images/clock.svg"
+  },
+  "resources/images/safety.svg": {
+    "file": "assets/safety.34115155.svg",
+    "src": "resources/images/safety.svg"
   },
   "resources/images/medal.svg": {
     "file": "assets/medal.0a66ea69.svg",
