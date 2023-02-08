@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Mail;
 class PackagesController extends Controller
 {
      public function mail(PackageRequest $request) {
-    Mail::to('sales@pambanconstructions.com')->send(new PackageForm(
+    Mail::to('sales@pambanconstructions.com ')->send(new PackageForm(
         $request->name,
         $request->phone,
         $request->email,
