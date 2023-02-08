@@ -50,12 +50,14 @@ const ProjectWidget = () => {
                         >
                             <m.div variants={variants} initial="hidden" whileInView="visible" viewport={{once:true}} custom={index} 
                                 className="hover:bg-gray-100 dark:border-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 bg-white border rounded-md shadow-sm  max-w-xs md:max-w-none overflow-hidden">
-                                <LazyLoadImage effect="blur"
+                                <div className="h-64 w-auto">
+                                    <LazyLoadImage effect="blur"
                                     key={project.id}
                                     src={ pathUrl + project.gallery[0]}
                                     alt={project.title}
-                                    className="h-56 lg:h-60 w-full object-cover rounded-t-sm"
+                                    className="object-cover h-auto w-auto rounded-t-sm"
                                 />
+                                </div>
                                 <div className="p-4">
                                     
                                     <h3 className="font-bold text-lg leading-6 text-slate-700 my-2 uppercase">
