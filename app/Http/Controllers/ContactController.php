@@ -17,7 +17,7 @@ class ContactController extends Controller
         $request->messages
     ));
 // return to_route('pages.contact');
-    return redirect()->back()->with('message', 'We have received your message and would like to thank you for writing to us.');
+    return redirect()->back()->with('message', 'We have received your message and would like to thank you for writing to us, We will get back to you shortly.');
 }
 
 

@@ -2,10 +2,13 @@ import AccordionUI from '@/Components/AccordionUI'
 import Frontendlayout from '@/Layouts/Frontend'
 import { Head, usePage } from '@inertiajs/inertia-react'
 import React, { useState } from 'react'
+import ModalPackage from '@/Components/ModalPackage'
 
 export default function Packages() {
     const packages = usePage().props.packages
     const [Index, setIndex] = useState(false) 
+    const [showModal, setShowModal] = useState(false)
+    const [packageName, setPackageName] = useState(false)
     const packageItems = []
     // const specifications = []
     packages.map((item, index) => {
@@ -26,7 +29,6 @@ export default function Packages() {
         }
         packageItems.push(data)
     })
-    console.log(packageItems)
     return (
         <Frontendlayout>
           <Head title={"Packages - Pamban Construction"} />
@@ -44,7 +46,10 @@ export default function Packages() {
                         <div key={i} className="p-5 grid grid-row rounded-md text-center cursor-pointer capitialize bg-white shadow-sm">
                             <span className="text-2xl text-blue-600 font-black">{item.title}</span>
                             <span className="text-lg my-3 text-gray-600 font-black">{item.rate}</span>
-                            <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none h-12 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Get Quote</button>
+                            <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none h-12 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={() => {
+                                setShowModal(true)
+                                setPackageName(item.title)
+                            }}>Get Quote</button>
 
                             {item.specifications.map((content, index) => (
                                 <div key={index}>
@@ -59,6 +64,7 @@ export default function Packages() {
                 <div>
                     <p className="text-right">** All prices are exclusive of GST</p>
                 </div>
+                {showModal && <ModalPackage setOpenModal={setShowModal} packageName={packageName} />}
           </div>   
     </Frontendlayout>
     )
