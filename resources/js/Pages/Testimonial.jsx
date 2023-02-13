@@ -2,10 +2,12 @@ import Frontendlayout from '@/Layouts/Frontend';
 import { Head, Link } from '@inertiajs/inertia-react';
 import React, { useEffect, useState } from 'react'
 import HtmlParser from 'react-html-parser';
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { motion as m } from 'framer-motion'
+import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
 
-export default function Blogdetail() {
-  const [blogs, setBlogs] = useState([]);
+function Testimonial() {
+    const [testimonials, setTestimonials] = useState([]);
   const [filter, setFilter] = useState({
         page: 1,
   });
@@ -20,14 +22,14 @@ useEffect(() => {
                 arr.push(`page=${filter.page}`);
             }
             const xhr = await new XMLHttpRequest()
-            xhr.open('GET', `api/blogAll?${arr.join("&")}`)
+            xhr.open('GET', `api/testimonialAPI?${arr.join("&")}`)
     xhr.setRequestHeader('Content-Type', 'application/xml')
     xhr.responseType = 'json'
     xhr.onload = () => {
-      setBlogs(
+      setTestimonials(
                         filter.page === 1
                             ? xhr.response.data
-                            : [...[...blogs, ...xhr.response.data]]
+                            : [...[...testimonials, ...xhr.response.data]]
                     );
                     setLastPage(xhr.response.last_page);
                     setIsLoading(false);
@@ -42,7 +44,6 @@ useEffect(() => {
             page: filter.page + 1,
         });
     };
-    console.log(filter, isLoading)
   let button;
     if (filter.page !== lastPage) {
         button = (
@@ -84,37 +85,42 @@ useEffect(() => {
   return (
     <Frontendlayout>
       <Head title="Blogs & News" />
-      <div className="interior grid grid-cols-1 justify-center item-center h-96 mt-5 py-10 md:px-20">
-                {/* <LazyLoadImage effect="blur" src={Pinkbuilding} alt="pink Building"  /> */}
-                <div className="flex flex-col md:items-center items-center justify-center col-span-1">
-                    <div>
-                        <h1 className="text-white text-6xl text-shadow capitalize font-black">
-                            Blogs and News
-                        </h1>
-                    </div>
-                </div>
-            </div>
-     <div>
-      <div className="grid gap-12 lg:grid-cols-2 m-20">          
-          {blogs.map((item) => (
-              <div key={item.id } className="rounded-sm group sm:flex space-x-6 bg-white bg-opacity-50 shadow-md">
-          <LazyLoadImage src={pathUrl + `storage/${item.image}`} alt={item.image} width="1000" height="667" className="h-56 sm:h-full w-auto sm:w-5/12 object-cover object-top rounded-sm transition duration-500 group-hover:rounded-sm" />
-          <div className="sm:w-7/12 pl-0 p-5">
-            <div className="space-y-2">
-              <div className="space-y-4">
-                <h4 className="text-2xl font-semibold text-cyan-900 capitalize">{item.title}</h4>
-                              <span className="text-gray-600">{HtmlParser(item.content.substring(0, 200)) }</span>
+        <m.div variants={staggerContainer} className="grid my-10">
+              <m.div variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="grid gap-5 mx-auto mt-10 md:mt-20">
+                  <div className="justify-left">
+                      <p className="capitalize font-bold text-slate-800">testimonials</p>
+                      <h1 className="md:text-4xl text-3xl text-indigo-900 font-bold">What Our Customers Say About Us</h1>
+                  </div>
+              </m.div>   
+              <m.div variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="mx-10 md:mx-20 my-10">
+                      <p className="capitalize text-md text-slate-600">
+                          we are committed to providing the highest quality products and services to our customers. We take pride in the feedback we receive from our satisfied customers, and we would like to share their experiences with you. Here's what some of our customers have to say about us. We would like to thank our customers for their continued support and for taking the time to share their experiences with us. We are proud to serve such a wonderful community, and we will continue to work hard to provide the best products and services possible.
+                      </p>
+              </m.div>
+              <div className="grid grid-cols gap-5 mx-10 md:mx-20">
+                      {testimonials.map((item, index) => (
+                          <m.div variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} div key={index} className="grid grid-cols-2 gap-5 border-2 p-5 rounded-lg hover:shadow-lg hover:bg-white cursor-pointer">
+                              
+                              <div className="flex">
+                                  <LazyLoadImage src={pathUrl + `storage/${item.photo}`} alt={item.name} width="705" height="423" className="place-self-center  transition duration-500 rounded-md object-cover" />
+                              </div>
+                              <div className="place-self-center ml-10">
+                                  <blockquote className="text-md italic">
+    <svg aria-hidden="true" className="w-10 h-10 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/></svg>
+    <span className="text-gray-600 place-self-center">{HtmlParser(item.content)}</span>
+</blockquote>
+                                  
+                                  <p className="place-self-center mx-5 font-bold text-xl leading-loose antialiased md:subpixel-antialiased">~ { item.name}</p>
+                              </div>
+                          </m.div>
+                      ))}
               </div>
-              <Link href={ `blog/${item.slug}`} className="block w-max text-blue-800">Read more</Link>
-            </div>
-          </div>
-        </div>
-          ))}
-    </div>
-            <div className="flex">
+              <div className="flex">
                 <div className="my-5 md:my-10 mx-auto">{button}</div>
       </div>
-      </div>
+        </m.div>
       </Frontendlayout>
   )
 }
+
+export default Testimonial

@@ -10,7 +10,7 @@ function About() {
   return (
     <Frontendlayout>
       <Head title="About" />
-      <m.div variants={staggerContainer} initial="hidden" animate="animate">
+      <m.div variants={staggerContainer} initial="hidden" whileInView="animate">
       <div className="m-10 md:m-20">
         <div className="flex flex-col">
         <m.h1 variants={fadeLeft} initial="hidden" whileInView="animate" viewport={{ once: true }} className="font-bold text-slate-800">About us</m.h1>
@@ -21,18 +21,18 @@ function About() {
         </div>
         <div className="grid grid-cols-1 my-10 md:my-20 lg:grid-cols-3 md:px-20 px-10 text-center">
                 <div>
-            <p className="font-bold text-8xl text-slate-900">100+</p>
+            <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }}  className="font-bold text-8xl text-slate-900">100+</m.p>
                                 <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="font-bold mt-5 text-blue-800">Our Satified Customer.</m.p>
 
             <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="mx-3 text-slate-600">we are proud of the work we do and the relationships we have built with our clients. </m.p>
                 </div>
           <div>
-            <p className="font-bold text-8xl text-slate-900">50+</p>
+            <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }}  className="font-bold text-8xl text-slate-900">50+</m.p>
                     <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="font-bold mt-5 text-blue-800">Buildings Built.</m.p>
                     <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="mx-3 text-slate-600">we are proud of the work we do and the relationships we have built with our clients. </m.p>
                 </div>
           <div>
-                                <p className="font-bold text-8xl text-slate-900">20+</p>
+                                <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="font-bold text-8xl text-slate-900">20+</m.p>
             <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="font-bold mt-5 text-blue-800">Years of Operation.</m.p>
             <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="mx-3 text-slate-600">we are proud of the work we do and the relationships we have built with our clients. </m.p>
                 </div>
@@ -50,13 +50,13 @@ function About() {
       </div>
       <div className="grid grid-col mx-10 md:mx-20 my-10">
         <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="text-xl my-5 tracking-wide md:mx-20">
-          We are one of the <strong class="font-semibold text-gray-900 dark:text-white">best construction company </strong> in Chennai for all residential and commercial buildings. We are one of the most distinguished Construction companies in Chennai, founded by a strong team of experts, and we stand firm to uphold our practice of providing the finest spaces to our customers. Pamban construction than decade constructed and delivered <strong class="font-semibold text-gray-900 dark:text-white">40+ projects </strong>across Chennai. More than <strong class="font-semibold text-gray-900 dark:text-white">100+ happy customers.</strong> Leading by the person who has more than <strong class="font-semibold text-gray-900 dark:text-white">35 years of experience in construction industry.</strong> Supported by young experts collaborating technology with experience and deliver the best quality homes to the customers.
+          We are one of the <strong className="font-semibold text-gray-900 dark:text-white">best construction company </strong> in Chennai for all residential and commercial buildings. We are one of the most distinguished Construction companies in Chennai, founded by a strong team of experts, and we stand firm to uphold our practice of providing the finest spaces to our customers. Pamban construction than decade constructed and delivered <strong className="font-semibold text-gray-900 dark:text-white">40+ projects </strong>across Chennai. More than <strong className="font-semibold text-gray-900 dark:text-white">100+ happy customers.</strong> Leading by the person who has more than <strong className="font-semibold text-gray-900 dark:text-white">35 years of experience in construction industry.</strong> Supported by young experts collaborating technology with experience and deliver the best quality homes to the customers.
         </m.p>
         <m.p variants={fadeUp} initial="hidden" whileInView="animate" viewport={{ once: true }} className="text-xl my-5 tracking-wide md:mx-20">In addition to our residential construction services, we also specialize in commercial building projects. Whether you are looking to build a new office space or renovate an existing retail location, our team of experts has the skills and experience to bring your vision to life.
 
 At Pamban Constructions, we are always looking for new opportunities to grow and expand our business. That's why we are open to joint ventures with other companies or individuals who share our commitment to excellence.
 
-If you are in need of a <strong class="font-semibold text-gray-900 dark:text-white">reliable, experienced construction company </strong>to help you build your dream home or commercial building, look no further than pamban Constructions. Contact us today to schedule a consultation and learn more about how we can turn your construction goals into a reality.</m.p>
+If you are in need of a <strong className="font-semibold text-gray-900 dark:text-white">reliable, experienced construction company </strong>to help you build your dream home or commercial building, look no further than pamban Constructions. Contact us today to schedule a consultation and learn more about how we can turn your construction goals into a reality.</m.p>
       </div>
       <Team />
         <Prefooter />

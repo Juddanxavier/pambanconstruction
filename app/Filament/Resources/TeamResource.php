@@ -2,33 +2,28 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TestimonialResource\Pages;
-use App\Filament\Resources\TestimonialResource\RelationManagers;
-use App\Models\Testimonial;
+use App\Filament\Resources\TeamResource\Pages;
+use App\Filament\Resources\TeamResource\RelationManagers;
+use App\Models\Team;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\RichEditor;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\SelectFilter;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\FileUpload;
 
-class TestimonialResource extends Resource
+class TeamResource extends Resource
 {
-    protected static ?string $model = Testimonial::class;
+    protected static ?string $model = Team::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-chat';
-    // protected static ?string $navigationGroup = 'Testimonials';
-    protected static function getNavigationBadge(): ?string
-    {
-        return static::getModel()::count();
-    }
-    
+    protected static ?string $navigationIcon = 'heroicon-o-users';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -38,24 +33,24 @@ class TestimonialResource extends Resource
                     TextInput::make('name')-> required(),
                     FileUpload::make('photo')
                                             ->disk('public')
-                                            ->directory('blog')
+                                            ->directory('team')
                                             ->preserveFilenames()
                                             ->label('Featured Image')
                                             ->maxFiles(1)
                                             ->removeUploadedFileButtonPosition('right')
                                             ->required(),
-                    RichEditor::make('content')
+                    TextInput::make('designation')
                                             -> required(),
                 ])
             ]);
-    }
-
+        }
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
                 TextColumn::make('id')->sortable(),
                 TextColumn::make('name')->searchable(),
+                TextColumn::make('designation')->searchable()
             ])
             ->filters([
                 //
@@ -72,7 +67,7 @@ class TestimonialResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageTestimonials::route('/'),
+            'index' => Pages\ManageTeams::route('/'),
         ];
     }    
 }

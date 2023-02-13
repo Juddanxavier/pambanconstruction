@@ -55,20 +55,20 @@ function ProjectDetail() {
       </div>
         </div>
         <div>
-          <p className="hidden md:block text-white font-bold text-lg bg-indigo-600 p-3 rounded-sm">Specfications</p>
+          <p className="hidden md:block text-white font-bold text-lg bg-indigo-600 p-1 shadow-xl rounded-sm">Specfications</p>
           <div className="flex flex-row mb-5 hidden md:inline-grid">
-              <span className="text-xl mt-2">Status / <strong>{data.status}</strong></span>
-              <span className="text-xl mt-2">Area / <strong>{data.area} Sq.ft</strong></span>
-              <span className="text-xl mt-2">UDS / <strong>{data.uds} Sq.ft</strong></span>
+              <span className="text-lg mt-2">Status / <strong>{data.status}</strong></span>
+              <span className="text-lg mt-2">Area / <strong>{data.area} Sq.ft</strong></span>
+              <span className="text-lg mt-2">UDS / <strong>{data.uds} Sq.ft</strong></span>
           </div>
-          <p className="text-white font-bold text-lg bg-indigo-600 p-3 rounded-sm">Download Brochures</p>
+          <p className="text-white font-bold text-lg bg-indigo-600 p-1 shadow-xl rounded-sm">Download Brochures</p>
           <div className="flex flex-col mb-5">
             {data.files.map((item, index) => (
               <DownloadButton key={index} name={item.name} filePath={ item.file_path} />
             ))}
           </div>
           <div className="flex flex-col mb-5">
-            <p className="text-white font-bold text-lg bg-indigo-600 p-3 rounded-sm">EMI Calculator</p>
+            <p className="text-white font-bold text-lg bg-indigo-600 p-1 shadow-xl rounded-sm">EMI Calculator</p>
                       <EmiCalculator />
 
           </div>

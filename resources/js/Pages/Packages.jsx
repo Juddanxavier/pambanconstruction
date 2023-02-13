@@ -26,7 +26,7 @@ export default function Packages() {
             "title": item.title,
             "rate": item.rate,
             "specifications": specifications
-        }
+        };
         packageItems.push(data)
     })
     return (
@@ -43,16 +43,16 @@ export default function Packages() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 flex items-start my-10 gap-5 align-center">
                     {packageItems.map((item, i) => (
-                        <div key={i} className="p-5 grid grid-row rounded-md text-center cursor-pointer capitialize bg-white shadow-sm">
-                            <span className="text-2xl text-blue-600 font-black">{item.title}</span>
-                            <span className="text-lg my-3 text-gray-600 font-black">{item.rate}</span>
-                            <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none h-12 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={() => {
+                        <div key={i} className="p-5 grid grid-row hover:rounded-lg cursor-pointer capitialize hover:bg-indigo-600 hover:text-white hover:shadow-xl">
+                            <span className="text-2xl font-black">{item.title}</span>
+                            <span className="text-lg my-3 font-black">{item.rate}</span>
+                            <button type="button" className="text-blue-600 bg-white border border-gray-300 focus:outline-none h-12 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={() => {
                                 setShowModal(true)
                                 setPackageName(item.title)
                             }}>Get Quote</button>
 
                             {item.specifications.map((content, index) => (
-                                <div key={index}>
+                                <div key={index} className="hover:font-white">
                                <AccordionUI title={content.category} children={content.specs} Id={item.title + index} Index={Index} setIndex={setIndex}>
                                 </AccordionUI>
                                </div>

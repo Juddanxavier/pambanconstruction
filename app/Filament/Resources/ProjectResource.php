@@ -69,8 +69,8 @@ class ProjectResource extends Resource
                                     )->columnSpan('full'),
                                     Grid::make(3)
                                         ->schema([
-                                            TextInput::make('area')->required()->numeric()->suffix('Sq.Ft'),
-                                    TextInput::make('uds')->required()->numeric()->suffix('Sq.Ft'),
+                                            TextInput::make('area')->required()->suffix('Sq.Ft'),
+                                    TextInput::make('uds')->required()->suffix('Sq.Ft'),
                                     Checkbox::make('is_featured')->inline(false)->label('Is Featured?')
 
                                         ]),

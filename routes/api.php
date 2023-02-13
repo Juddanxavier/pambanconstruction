@@ -7,7 +7,9 @@ use App\Http\Resources\ProjectResource;
 use App\Models\Testimonial;
 use App\Http\Resources\TestimonialResource;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TestimonialController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,16 +26,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/projectsAPI', [ProjectController::class, 'ProjectsAPI']);
-
+Route::get('/teamAPI', [TeamController::class, 'index']);
 Route::get('/projectsHero', [ProjectController::class, 'hero']);
 Route::get('/projectfeatured', [ProjectController::class, 'index']);
 Route::get('blogwidget', [BlogController::class, 'widgetGet']);
 Route::get('/blogAll', [BlogController::class, 'Bloglist']);
-// Route::get('/package', [PackagesController::class, 'index'])
-// Route::get('/testimonial', function() {
-//     $testimonial = Testimonial::orderBy('name')->get();
+Route::get('/testimonialAPI', [TestimonialController::class, 'index']);
 
-//     return TestimonialResource::collection($testimonial);
-// });
-
-// Route::get('/projects/{slug}', [ProjectController::class, 'detail']);

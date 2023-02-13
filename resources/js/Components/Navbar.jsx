@@ -33,16 +33,18 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center md:mt-5 md:justify-between sm:items-stretch sm:justify-start">
                   <m.div variants={logoAnimation} className="flex flex-shrink-0 items-center">
+                    <Link href='/'>
                   <LazyLoadImage effect="blur"
                     className="block h-12 w-auto lg:hidden"
                     src={logoMark}
                     alt="Pamban Constructions"
-                  />
+                    /></Link>
+                    <Link href='/'>
                   <LazyLoadImage effect="blur"
                     className="hidden h-16 w-auto lg:block"
                     src={logo}
                     alt="Pamban Constructions"
-                  />
+                  /></Link>
                 </m.div>
                 <m.div variants={fadeIn} className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4"> 

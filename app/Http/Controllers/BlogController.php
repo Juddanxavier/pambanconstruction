@@ -27,7 +27,7 @@ class BlogController extends Controller
     }
     public function Bloglist(Request $request) {
         $query = Blog::query();
-        $perPage = 9;
+        $perPage = 6;
         $page = $request->input('page', 1);
         $total = $query->count();
 
