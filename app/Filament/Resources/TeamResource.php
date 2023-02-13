@@ -23,7 +23,10 @@ class TeamResource extends Resource
     protected static ?string $model = Team::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
-
+protected static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function form(Form $form): Form
     {
         return $form
