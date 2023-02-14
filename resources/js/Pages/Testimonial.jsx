@@ -1,10 +1,10 @@
 import Frontendlayout from '@/Layouts/Frontend';
-import { Head, Link } from '@inertiajs/inertia-react';
+import { Head } from '@inertiajs/inertia-react';
 import React, { useEffect, useState } from 'react'
 import HtmlParser from 'react-html-parser';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { motion as m } from 'framer-motion'
-import { fadeLeft, fadeUp, staggerContainer } from '@/FramerMotion/Variants'
+import { fadeUp, staggerContainer } from '@/FramerMotion/Variants'
 
 function Testimonial() {
     const [testimonials, setTestimonials] = useState([]);

@@ -42,9 +42,7 @@ const ImageSlider = ({ slides }) => {
   return (
     <div style={sliderStyle}>
 
-      <div className='h-4/5 w-full'>
         <LazyLoadImage effect="blur" className="object-cover h-auto w-auto " src={pathUrl + `storage/${slides[currentIndex]}`} alt="" />
-      </div>
       <div className="flex flex-row-reverse mr-6">
         <div className="my-5 mr-12" style={leftArrow} onClick={goToPrevious}>      <ArrowLongLeftIcon className="h-8 w-8 text-slate-500" />
         </div>

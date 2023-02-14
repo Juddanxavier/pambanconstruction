@@ -2,7 +2,7 @@ import Frontendlayout from '@/Layouts/Frontend'
 import { ClockIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 import { Head, usePage } from '@inertiajs/inertia-react'
 import format from 'date-fns/format';
-import React, { useState } from 'react'
+import React from 'react'
 import HtmlParser from 'react-html-parser';
 import { EmailIcon, EmailShareButton, FacebookIcon, FacebookMessengerIcon, FacebookMessengerShareButton, FacebookShareButton, LinkedinIcon, LinkedinShareButton, TelegramIcon, TelegramShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from 'react-share';
 import { LazyLoadImage } from 'react-lazy-load-image-component'
