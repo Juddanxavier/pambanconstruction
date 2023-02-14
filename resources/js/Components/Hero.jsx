@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Modernbuilding, Pinkbuilding } from '../../images/index'
 import { motion as m } from 'framer-motion'
 import { fadeUpProject, homeImg, letter, staggerContainer } from '@/FramerMotion/Variants'
 import ReactTyped from 'react-typed';
@@ -8,7 +7,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { ArrowTrendingUpIcon } from '@heroicons/react/24/solid';
 
 function Hero() {
 
@@ -28,11 +26,12 @@ function Hero() {
         getData();
     }, []);
    const settings = {
-      dots: true,
-      // infinite: true,
-      // speed: 500,
-      // slidesToShow: 1,
-      // slidesToScroll: 1
+     dots: true,
+     autoplay: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
     };
   
   return (
@@ -62,8 +61,9 @@ function Hero() {
             {projects.map((item, index) => (
               <div className="grid content-center md:mx-20">
                 <Link key={index} href={`project/${item.slug}`}>
-                      <m.div variants={homeImg} className="rounded-sm md:w-[600px]  md:h-[600px]">
-            <LazyLoadImage src={pathUrl + item.gallery[0]} effect="blur" alt={item.title} className="w-full h-full object-cover rounded-xl " />
+                      <m.div variants={homeImg} className="h-56 grid content-center rounded-sm md:w-[600px] md:h-[600px]">
+                    {/* <LazyLoadImage src={pathUrl + item.gallery[0]} effect="blur" alt={item.title} className="w-full h-full object-cover rounded-xl " /> */}
+                               <LazyLoadImage src={Pinkbuilding} effect="blur" alt={item.title} className="w-full h-full object-cover rounded-xl " />
               <h2 className="text-slate-900 text-md font-bold capitalize p-2">{item.title}</h2>
                     </m.div>
                             </Link>
