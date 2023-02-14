@@ -63,7 +63,7 @@ function Hero() {
               <div className="grid content-center md:mx-20">
                 <Link key={index} href={`project/${item.slug}`}>
                       <m.div variants={homeImg} className="rounded-sm md:w-[600px]  md:h-[600px]">
-            <LazyLoadImage src={pathUrl + `${item.image}`} effect="blur" alt={item.title} className="w-full h-full object-cover rounded-xl " />
+            <LazyLoadImage src={pathUrl + item.gallery[0]} effect="blur" alt={item.title} className="w-full h-full object-cover rounded-xl " />
               <h2 className="text-slate-900 text-md font-bold capitalize p-2">{item.title}</h2>
                     </m.div>
                             </Link>
